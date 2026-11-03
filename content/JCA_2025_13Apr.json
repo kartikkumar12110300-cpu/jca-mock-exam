@@ -1,0 +1,2270 @@
+{
+  "paper": {
+    "title": "SCI JCA 2025 - 13 April",
+    "source": "JCA_2025_13Apr.pdf",
+    "sourceType": "pyq",
+    "keyStatus": "unofficial",
+    "status": "published"
+  },
+  "questions": [
+    {
+      "section": "english",
+      "topic": "Synonym pairs (legal)",
+      "difficulty": "easy",
+      "stem": "Choose the pair which is closest to the similar in meaning",
+      "options": [
+        "Plaintiff - Defendant",
+        "Lawsuit - Litigation",
+        "Judge - Jury",
+        "Contract - Breach"
+      ],
+      "answer": "B",
+      "explanation": "Lawsuit and litigation both mean the process of taking a dispute to court. The other pairs are related or opposed, not similar.",
+      "sourceRef": "Eng Q1",
+      "tags": [
+        "legal-vocab"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Synonym pairs (legal)",
+      "difficulty": "medium",
+      "stem": "Choose the pair which is closest to the similar in meaning",
+      "options": [
+        "Guilty - Innocent",
+        "Libelous - Slanderous",
+        "Prosecutor - Defense",
+        "Evidence - Testimony"
+      ],
+      "answer": "B",
+      "explanation": "Libelous (written) and slanderous (spoken) both mean defamatory. Guilty/innocent and prosecutor/defense are opposites.",
+      "sourceRef": "Eng Q2",
+      "tags": [
+        "legal-vocab"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Synonym pairs (legal)",
+      "difficulty": "medium",
+      "stem": "Choose the pair which is closest to the similar in meaning",
+      "options": [
+        "Conviction - Acquittal",
+        "Sentence - Pardon",
+        "Appeal - Trial",
+        "Mitigating - Extenuating"
+      ],
+      "answer": "D",
+      "explanation": "Mitigating and extenuating both describe circumstances that reduce the seriousness of an offence.",
+      "sourceRef": "Eng Q3",
+      "tags": [
+        "legal-vocab"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Synonym pairs (legal)",
+      "difficulty": "easy",
+      "stem": "Choose the pair which is closest to the similar in meaning",
+      "options": [
+        "Damages - Compensation",
+        "Negligence - Cautious",
+        "Crime - Wrong",
+        "Liability - Immunity"
+      ],
+      "answer": "A",
+      "explanation": "Damages (money awarded by a court) means compensation. Liability and immunity are opposites; negligence is the opposite of cautious.",
+      "sourceRef": "Eng Q4",
+      "tags": [
+        "legal-vocab"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Synonym pairs (legal)",
+      "difficulty": "easy",
+      "stem": "Choose the pair which is closest to the similar in meaning",
+      "options": [
+        "Testament - Will",
+        "Inheritance - Legacy",
+        "Beneficiary - Executor",
+        "Probate - Estate"
+      ],
+      "answer": "A",
+      "explanation": "A testament is a will. Beneficiary (receives) and executor (administers) are different roles.",
+      "sourceRef": "Eng Q5",
+      "tags": [
+        "legal-vocab"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "One-word substitution",
+      "difficulty": "easy",
+      "stem": "Choose the option which can be substituted for the given words/sentence: A person who speaks many languages fluently",
+      "options": [
+        "Translator",
+        "Polyglot",
+        "Grammarian",
+        "Linguist"
+      ],
+      "answer": "B",
+      "explanation": "Polyglot = one who speaks many languages. A linguist studies language; a translator converts text.",
+      "sourceRef": "Eng Q6",
+      "tags": [
+        "one-word"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "One-word substitution",
+      "difficulty": "easy",
+      "stem": "Choose the option which can be substituted for the given words/sentence: A person who deliberately sets fire to property",
+      "options": [
+        "Vandal",
+        "Arsonist",
+        "Saboteur",
+        "Pyromaniac"
+      ],
+      "answer": "B",
+      "explanation": "Arsonist = one who deliberately sets fire to property. A pyromaniac has an irresistible urge to start fires.",
+      "sourceRef": "Eng Q7",
+      "tags": [
+        "one-word"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "One-word substitution",
+      "difficulty": "medium",
+      "stem": "Choose the option which can be substituted for the given words/sentence: The philosophical study of the nature of being, reality and existence",
+      "options": [
+        "Epistemology",
+        "Ontology",
+        "Metaphysics",
+        "Hermeneutics"
+      ],
+      "answer": "B",
+      "explanation": "Ontology is the study of being and existence. Epistemology is the study of knowledge. (Metaphysics is the wider branch, but the key is ontology.)",
+      "sourceRef": "Eng Q8",
+      "tags": [
+        "one-word"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "One-word substitution",
+      "difficulty": "easy",
+      "stem": "Choose the option which can be substituted for the given words/sentence: A speech in which a person talks to themselves, often used in drama",
+      "options": [
+        "Monologue",
+        "Dialogue",
+        "Soliloquy",
+        "Oration"
+      ],
+      "answer": "C",
+      "explanation": "A soliloquy is a speech made alone on stage. A monologue is addressed to others.",
+      "sourceRef": "Eng Q9",
+      "tags": [
+        "one-word"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "One-word substitution",
+      "difficulty": "medium",
+      "stem": "Choose the option which can be substituted for the given words/sentence: The process by which something, especially a word or phrase, is adapted into a new cultural or social context",
+      "options": [
+        "Assimilation",
+        "Integration",
+        "Culturalization",
+        "Naturalization"
+      ],
+      "answer": "A",
+      "explanation": "Assimilation is absorbing and adapting something into a new cultural setting. Treat this one as medium-ambiguous; the key is A.",
+      "sourceRef": "Eng Q10",
+      "tags": [
+        "one-word"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Error spotting",
+      "difficulty": "easy",
+      "stem": "Identify that part of the given sentence which is not acceptable in standard written English: The new employee, who's name is John, is very friendly.",
+      "options": [
+        "The new employee",
+        "who's name is John,",
+        "is very friendly",
+        "NO ERROR"
+      ],
+      "answer": "B",
+      "explanation": "'Who's' means 'who is'. The possessive is 'whose'.",
+      "sourceRef": "Eng Q11",
+      "tags": [
+        "error-spotting"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Error spotting",
+      "difficulty": "easy",
+      "stem": "Identify that part of the given sentence which is not acceptable in standard written English: The new policy will effect all employees starting next month.",
+      "options": [
+        "The new policy will",
+        "effect",
+        "all employees",
+        "starting next month"
+      ],
+      "answer": "B",
+      "explanation": "'Affect' (verb) = influence. 'Effect' as a verb means to bring about.",
+      "sourceRef": "Eng Q12",
+      "tags": [
+        "error-spotting"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Error spotting",
+      "difficulty": "easy",
+      "stem": "Identify that part of the given sentence which is not acceptable in standard written English: The new employee is very friendly and helpful, but he dont know much about the company.",
+      "options": [
+        "The new employee is",
+        "very friendly and helpful",
+        "but he",
+        "dont know much about the company"
+      ],
+      "answer": "D",
+      "explanation": "Should be 'doesn't know'. With 'he' the auxiliary is 'does'.",
+      "sourceRef": "Eng Q13",
+      "tags": [
+        "error-spotting"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Error spotting",
+      "difficulty": "easy",
+      "stem": "Identify that part of the given sentence which is not acceptable in standard written English: The company will hire hundreds of new employees in the next few month.",
+      "options": [
+        "The company will",
+        "hire",
+        "hundreds of new employees",
+        "in the next few month"
+      ],
+      "answer": "D",
+      "explanation": "'A few' / 'few' takes a plural noun: 'months'.",
+      "sourceRef": "Eng Q14",
+      "tags": [
+        "error-spotting"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Error spotting",
+      "difficulty": "easy",
+      "stem": "Identify that part of the given sentence which is not acceptable in standard written English: I feel so week after running a marathon, but I will be back to my normal self by next day.",
+      "options": [
+        "I feel so week",
+        "after running a marathon,",
+        "but I will be back to",
+        "my normal self by next day"
+      ],
+      "answer": "A",
+      "explanation": "'Week' (7 days) is wrongly used for 'weak' (lacking strength).",
+      "sourceRef": "Eng Q15",
+      "tags": [
+        "error-spotting"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Idioms",
+      "difficulty": "easy",
+      "stem": "Choose the option which best expresses the meaning of the idiom/phrase: She decided to 'bite the bullet' and start her own business despite the risks.",
+      "options": [
+        "Ignore the problem",
+        "Face a difficult situation bravely",
+        "Avoid confrontation",
+        "Chew gum while working"
+      ],
+      "answer": "B",
+      "explanation": "To bite the bullet = to face something unpleasant or difficult with courage.",
+      "sourceRef": "Eng Q16",
+      "tags": [
+        "idiom"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Idioms",
+      "difficulty": "easy",
+      "stem": "Choose the option which best expresses the meaning of the idiom/phrase: He tried to 'throw his weight around' to get the team to follow his orders.",
+      "options": [
+        "Use influence or authority in an overbearing way",
+        "Carry heavy objects",
+        "Lose weight through exercise",
+        "Act generously and kindly"
+      ],
+      "answer": "A",
+      "explanation": "To throw one's weight around = to use power or authority in a bossy way.",
+      "sourceRef": "Eng Q17",
+      "tags": [
+        "idiom"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Idioms",
+      "difficulty": "easy",
+      "stem": "Choose the option which best expresses the meaning of the idiom/phrase: The manager's promises turned out to be a 'red herring'.",
+      "options": [
+        "A deliberate distraction from the main issue",
+        "A symbol of good luck",
+        "A factual and important point",
+        "A type of fish"
+      ],
+      "answer": "A",
+      "explanation": "A red herring is a misleading clue or distraction.",
+      "sourceRef": "Eng Q18",
+      "tags": [
+        "idiom"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Idioms",
+      "difficulty": "easy",
+      "stem": "Choose the option which best expresses the meaning of the idiom/phrase: He was determined to 'hit the ground running' on the new project.",
+      "options": [
+        "Start something with enthusiasm and energy",
+        "Take a slow and cautious approach",
+        "Abandon a project midway",
+        "Avoid hard work altogether"
+      ],
+      "answer": "A",
+      "explanation": "Hit the ground running = start a task quickly and effectively.",
+      "sourceRef": "Eng Q19",
+      "tags": [
+        "idiom"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Idioms",
+      "difficulty": "medium",
+      "stem": "Choose the option which best expresses the meaning of the idiom/phrase: The plan worked, but it was a 'Pyrrhic victory' for the company.",
+      "options": [
+        "A loss disguised as a win",
+        "A victory achieved at great cost, almost to the point of being a loss",
+        "A symbolic and irrelevant success",
+        "A flawless and effortless win"
+      ],
+      "answer": "B",
+      "explanation": "Named after King Pyrrhus, whose victories cost him most of his army.",
+      "sourceRef": "Eng Q20",
+      "tags": [
+        "idiom"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Fill in the blanks",
+      "difficulty": "easy",
+      "stem": "Fill in the blanks: The government is determined to put an end to the illegal practices that have been going on ____ the radar and bring the perpetrators to ____.",
+      "options": [
+        "Over, happiness",
+        "Under, justice",
+        "On, trial",
+        "Below, shame"
+      ],
+      "answer": "B",
+      "explanation": "'Under the radar' (unnoticed) and 'bring to justice' are the standard collocations.",
+      "sourceRef": "Eng Q21",
+      "tags": [
+        "fill-blanks"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Fill in the blanks",
+      "difficulty": "easy",
+      "stem": "Fill in the blanks: The witness's statement added ____ to the investigation and ultimately helped to ____ the mystery surrounding the case.",
+      "options": [
+        "Confusion, deepen",
+        "Clarity, solve",
+        "Ambiguity, escalate",
+        "Evidence, delay"
+      ],
+      "answer": "B",
+      "explanation": "A helpful statement adds clarity and helps solve a mystery.",
+      "sourceRef": "Eng Q22",
+      "tags": [
+        "fill-blanks"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Fill in the blanks",
+      "difficulty": "medium",
+      "stem": "Fill in the blanks: When the storm hit, the people took ____ in the shelters and waited for the situation to ____.",
+      "options": [
+        "Charge, intensify",
+        "Risks, worsen",
+        "Shelter, calm",
+        "Refuge, subside"
+      ],
+      "answer": "D",
+      "explanation": "'Took refuge' and 'subside' fit. 'Took shelter in the shelters' repeats the word awkwardly.",
+      "sourceRef": "Eng Q23",
+      "tags": [
+        "fill-blanks"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Fill in the blanks",
+      "difficulty": "medium",
+      "stem": "Fill in the blanks: The scientist's groundbreaking discovery opened ____ to new possibilities and set ____ for further research.",
+      "options": [
+        "Windows, restrictions",
+        "Doors, trends",
+        "Pathways, barriers",
+        "Valves, rules"
+      ],
+      "answer": "B",
+      "explanation": "'Opened doors' and 'set trends' are the natural collocations.",
+      "sourceRef": "Eng Q24",
+      "tags": [
+        "fill-blanks"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Fill in the blanks",
+      "difficulty": "easy",
+      "stem": "Fill in the blanks: Despite being criticized, the athlete managed to keep her ____ held high and rose ____ the occasion in the final match.",
+      "options": [
+        "Head, to",
+        "Spirits, against",
+        "Confidence, with",
+        "Standards, over"
+      ],
+      "answer": "A",
+      "explanation": "'Keep one's head held high' and 'rise to the occasion'.",
+      "sourceRef": "Eng Q25",
+      "tags": [
+        "fill-blanks"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Sentence ordering",
+      "difficulty": "easy",
+      "stem": "Choose the paragraph which has the most logical order of sentences. (1) The new policy was implemented to reduce traffic congestion. (2) The policy restricted traffic in the city center during peak hours. (3) The number of accidents de-escalated after the policy was implemented.",
+      "options": [
+        "1, 2, 3",
+        "2, 1, 3",
+        "3, 1, 2",
+        "1, 3, 2"
+      ],
+      "answer": "A",
+      "explanation": "Purpose first (1), then what the policy did (2), then the result (3).",
+      "sourceRef": "Eng Q26",
+      "tags": [
+        "para-jumble"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Fill in the blanks",
+      "difficulty": "easy",
+      "stem": "Fill in the blanks: French people love cooking, ____ the English don't seem very interested.",
+      "options": [
+        "when",
+        "whenever",
+        "where",
+        "whereas"
+      ],
+      "answer": "D",
+      "explanation": "'Whereas' contrasts two facts.",
+      "sourceRef": "Eng Q27",
+      "tags": [
+        "fill-blanks",
+        "conjunctions"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Fill in the blanks",
+      "difficulty": "easy",
+      "stem": "Fill in the blanks: A ____ is a unit of sound.",
+      "options": [
+        "syllable",
+        "letter",
+        "spelling",
+        "stress"
+      ],
+      "answer": "A",
+      "explanation": "A syllable is a unit of pronunciation containing one vowel sound.",
+      "sourceRef": "Eng Q28",
+      "tags": [
+        "fill-blanks"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Vocabulary",
+      "difficulty": "easy",
+      "stem": "Select the most appropriate meaning of the word: TRUCE",
+      "options": [
+        "Skirmish",
+        "Cessation of hostilities",
+        "Onslaught",
+        "Contention"
+      ],
+      "answer": "B",
+      "explanation": "A truce is an agreement to stop fighting for a time.",
+      "sourceRef": "Eng Q29",
+      "tags": [
+        "vocab"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Fill in the blanks",
+      "difficulty": "medium",
+      "stem": "Fill in the blanks: At one point, it looked as if an area of agreement would ____, especially over the issue of productivity-linked wages.",
+      "options": [
+        "grow",
+        "create",
+        "develop",
+        "emerge"
+      ],
+      "answer": "D",
+      "explanation": "'Emerge' is intransitive and fits 'an area of agreement would emerge'. 'Create' needs an object.",
+      "sourceRef": "Eng Q30",
+      "tags": [
+        "fill-blanks"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Spelling",
+      "difficulty": "medium",
+      "stem": "Select the word with the incorrect spelling.",
+      "options": [
+        "Incriminating",
+        "Cancellation",
+        "Unpretensious",
+        "Embodiment"
+      ],
+      "answer": "C",
+      "explanation": "Correct spelling: unpretentious.",
+      "sourceRef": "Eng Q31",
+      "tags": [
+        "spelling"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Spelling",
+      "difficulty": "easy",
+      "stem": "Select the word with the incorrect spelling.",
+      "options": [
+        "Pedestrain",
+        "Plaintiff",
+        "Potatoes",
+        "Potassium"
+      ],
+      "answer": "A",
+      "explanation": "Correct spelling: pedestrian.",
+      "sourceRef": "Eng Q32",
+      "tags": [
+        "spelling"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Spelling",
+      "difficulty": "medium",
+      "stem": "Select the word with the incorrect spelling.",
+      "options": [
+        "Fabulous",
+        "Gorgeous",
+        "Heterogeneous",
+        "Inocuous"
+      ],
+      "answer": "D",
+      "explanation": "Correct spelling: innocuous (double n).",
+      "sourceRef": "Eng Q33",
+      "tags": [
+        "spelling"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Antonyms",
+      "difficulty": "medium",
+      "stem": "Choose the correct antonym of the word 'generosity'.",
+      "options": [
+        "altruism",
+        "general",
+        "largesse",
+        "malevolence"
+      ],
+      "answer": "D",
+      "explanation": "Altruism and largesse are synonyms of generosity. Of the options, malevolence (ill will) is the opposite.",
+      "sourceRef": "Eng Q34",
+      "tags": [
+        "antonym"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Antonyms",
+      "difficulty": "medium",
+      "stem": "Choose the antonym of the word 'analogue'.",
+      "options": [
+        "correlate",
+        "cognate",
+        "dialogue",
+        "difference"
+      ],
+      "answer": "D",
+      "explanation": "An analogue is something similar or parallel. 'Difference' is the opposite of similarity. (The sheet shows a candidate chose 'correlate', which is a synonym.)",
+      "sourceRef": "Eng Q35",
+      "tags": [
+        "antonym"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Antonyms",
+      "difficulty": "easy",
+      "stem": "Choose the antonym of 'amusement'.",
+      "options": [
+        "mischief",
+        "naughty",
+        "melancholy",
+        "hilarity"
+      ],
+      "answer": "C",
+      "explanation": "Amusement = enjoyment; melancholy = sadness.",
+      "sourceRef": "Eng Q36",
+      "tags": [
+        "antonym"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Spelling",
+      "difficulty": "easy",
+      "stem": "Choose the word which is correctly spelt:",
+      "options": [
+        "Exenerate",
+        "Exonerate",
+        "Exanrate",
+        "Exonarate"
+      ],
+      "answer": "B",
+      "explanation": "Exonerate = to clear of blame.",
+      "sourceRef": "Eng Q37",
+      "tags": [
+        "spelling"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Idioms",
+      "difficulty": "easy",
+      "stem": "Choose the correct meaning of the idiom 'to take someone for a ride':",
+      "options": [
+        "to give a ride to someone",
+        "to deceive someone",
+        "to be indifferent",
+        "to disclose a secret"
+      ],
+      "answer": "B",
+      "explanation": "To take someone for a ride = to cheat or trick them.",
+      "sourceRef": "Eng Q38",
+      "tags": [
+        "idiom"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Idioms",
+      "difficulty": "easy",
+      "stem": "Choose the correct meaning of the idiom 'to move heaven and earth':",
+      "options": [
+        "to cause an earthquake",
+        "to try everything possible",
+        "to be indifferent",
+        "to travel in a rocket"
+      ],
+      "answer": "B",
+      "explanation": "To move heaven and earth = to make every possible effort.",
+      "sourceRef": "Eng Q39",
+      "tags": [
+        "idiom"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "One-word substitution",
+      "difficulty": "easy",
+      "stem": "Give a single word for 'One who eats everything'.",
+      "options": [
+        "Omnivorous",
+        "Omniscient",
+        "Omnipresent",
+        "Omnipotent"
+      ],
+      "answer": "A",
+      "explanation": "Omnivorous = eating all kinds of food. Omniscient = all-knowing; omnipresent = everywhere; omnipotent = all-powerful.",
+      "sourceRef": "Eng Q40",
+      "tags": [
+        "one-word"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Vocabulary",
+      "difficulty": "easy",
+      "stem": "Choose the alternative which gives the best meaning of the word 'compensate':",
+      "options": [
+        "compile",
+        "make up for",
+        "result in",
+        "transparent"
+      ],
+      "answer": "B",
+      "explanation": "Compensate = to make up for a loss or harm.",
+      "sourceRef": "Eng Q41",
+      "tags": [
+        "vocab"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Punctuation",
+      "difficulty": "easy",
+      "stem": "Identify the sentence with correct punctuation:",
+      "options": [
+        "I love eating cake.",
+        "I love eating, cake.",
+        "I love, eating cake.",
+        "I love; eating, cake."
+      ],
+      "answer": "A",
+      "explanation": "No comma is needed inside this simple sentence.",
+      "sourceRef": "Eng Q42",
+      "tags": [
+        "punctuation"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Comprehension",
+      "difficulty": "easy",
+      "stem": "Passage: Mohan works in a restaurant in the centre of New Delhi. He goes to work at 5pm, but yesterday at 5pm, he wasn't on the bus, he was in a taxi going to the hospital. He was very sick! Usually, he works in the kitchen all evening, but yesterday he wasn't in the kitchen. He was in the X-ray department of the hospital because the doctors were worried about his stomach pains. Normally, at 11pm, Mohan takes a bus to go home after finishing at the restaurant, but yesterday at 11pm, he was still in the hospital and he was still unhappy and sick. He was in a bed and he was very hot - 102 degrees! Was he worried? Yes, he was! In the morning, he was better and the doctors were pleased. What was the problem? It was bad food - from his restaurant!\n\nStatement: Mohan was in the restaurant yesterday afternoon.",
+      "options": [
+        "Yes",
+        "No",
+        "Both Yes and No",
+        "Neither Yes nor No"
+      ],
+      "answer": "B",
+      "explanation": "At 5pm he was in a taxi going to hospital, so he wasn't at the restaurant.",
+      "sourceRef": "Eng Q43",
+      "tags": [
+        "comprehension"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Comprehension",
+      "difficulty": "easy",
+      "stem": "Passage: Mohan works in a restaurant in the centre of New Delhi. He goes to work at 5pm, but yesterday at 5pm, he wasn't on the bus, he was in a taxi going to the hospital. He was very sick! Usually, he works in the kitchen all evening, but yesterday he wasn't in the kitchen. He was in the X-ray department of the hospital because the doctors were worried about his stomach pains. Normally, at 11pm, Mohan takes a bus to go home after finishing at the restaurant, but yesterday at 11pm, he was still in the hospital and he was still unhappy and sick. He was in a bed and he was very hot - 102 degrees! Was he worried? Yes, he was! In the morning, he was better and the doctors were pleased. What was the problem? It was bad food - from his restaurant!\n\nStatement: He goes to work in the restaurant by bus.",
+      "options": [
+        "Yes",
+        "No",
+        "Both Yes and No",
+        "Neither Yes nor No"
+      ],
+      "answer": "A",
+      "explanation": "'Usually' he takes the bus; yesterday was the exception.",
+      "sourceRef": "Eng Q44",
+      "tags": [
+        "comprehension"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Comprehension",
+      "difficulty": "easy",
+      "stem": "Passage: Mohan works in a restaurant in the centre of New Delhi. He goes to work at 5pm, but yesterday at 5pm, he wasn't on the bus, he was in a taxi going to the hospital. He was very sick! Usually, he works in the kitchen all evening, but yesterday he wasn't in the kitchen. He was in the X-ray department of the hospital because the doctors were worried about his stomach pains. Normally, at 11pm, Mohan takes a bus to go home after finishing at the restaurant, but yesterday at 11pm, he was still in the hospital and he was still unhappy and sick. He was in a bed and he was very hot - 102 degrees! Was he worried? Yes, he was! In the morning, he was better and the doctors were pleased. What was the problem? It was bad food - from his restaurant!\n\nStatement: Yesterday, he was in a bus going to the hospital.",
+      "options": [
+        "Yes",
+        "No",
+        "Both Yes and No",
+        "Neither Yes nor No"
+      ],
+      "answer": "B",
+      "explanation": "He went by taxi, not bus.",
+      "sourceRef": "Eng Q45",
+      "tags": [
+        "comprehension"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Comprehension",
+      "difficulty": "easy",
+      "stem": "Passage: Mohan works in a restaurant in the centre of New Delhi. He goes to work at 5pm, but yesterday at 5pm, he wasn't on the bus, he was in a taxi going to the hospital. He was very sick! Usually, he works in the kitchen all evening, but yesterday he wasn't in the kitchen. He was in the X-ray department of the hospital because the doctors were worried about his stomach pains. Normally, at 11pm, Mohan takes a bus to go home after finishing at the restaurant, but yesterday at 11pm, he was still in the hospital and he was still unhappy and sick. He was in a bed and he was very hot - 102 degrees! Was he worried? Yes, he was! In the morning, he was better and the doctors were pleased. What was the problem? It was bad food - from his restaurant!\n\nStatement: He was in the hospital because of his head.",
+      "options": [
+        "Yes",
+        "No",
+        "Both Yes and No",
+        "Neither Yes nor No"
+      ],
+      "answer": "B",
+      "explanation": "The doctors were worried about his stomach pains.",
+      "sourceRef": "Eng Q46",
+      "tags": [
+        "comprehension"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Comprehension",
+      "difficulty": "easy",
+      "stem": "Passage: Mohan works in a restaurant in the centre of New Delhi. He goes to work at 5pm, but yesterday at 5pm, he wasn't on the bus, he was in a taxi going to the hospital. He was very sick! Usually, he works in the kitchen all evening, but yesterday he wasn't in the kitchen. He was in the X-ray department of the hospital because the doctors were worried about his stomach pains. Normally, at 11pm, Mohan takes a bus to go home after finishing at the restaurant, but yesterday at 11pm, he was still in the hospital and he was still unhappy and sick. He was in a bed and he was very hot - 102 degrees! Was he worried? Yes, he was! In the morning, he was better and the doctors were pleased. What was the problem? It was bad food - from his restaurant!\n\nStatement: He was in the X-ray department of the hospital.",
+      "options": [
+        "Yes",
+        "No",
+        "Both Yes and No",
+        "Neither Yes nor No"
+      ],
+      "answer": "A",
+      "explanation": "Stated directly in the passage.",
+      "sourceRef": "Eng Q47",
+      "tags": [
+        "comprehension"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Comprehension",
+      "difficulty": "easy",
+      "stem": "Passage: Mohan works in a restaurant in the centre of New Delhi. He goes to work at 5pm, but yesterday at 5pm, he wasn't on the bus, he was in a taxi going to the hospital. He was very sick! Usually, he works in the kitchen all evening, but yesterday he wasn't in the kitchen. He was in the X-ray department of the hospital because the doctors were worried about his stomach pains. Normally, at 11pm, Mohan takes a bus to go home after finishing at the restaurant, but yesterday at 11pm, he was still in the hospital and he was still unhappy and sick. He was in a bed and he was very hot - 102 degrees! Was he worried? Yes, he was! In the morning, he was better and the doctors were pleased. What was the problem? It was bad food - from his restaurant!\n\nStatement: He was in the hospital until 11 pm.",
+      "options": [
+        "Yes",
+        "No",
+        "Both Yes and No",
+        "Neither Yes nor No"
+      ],
+      "answer": "B",
+      "explanation": "This is a tricky one. He was still there at 11pm and into the morning, so he was there beyond 11pm. The official key marks No, but the wording is ambiguous.",
+      "sourceRef": "Eng Q48",
+      "tags": [
+        "comprehension"
+      ],
+      "keyStatus": "disputed"
+    },
+    {
+      "section": "english",
+      "topic": "Comprehension",
+      "difficulty": "easy",
+      "stem": "Passage: Mohan works in a restaurant in the centre of New Delhi. He goes to work at 5pm, but yesterday at 5pm, he wasn't on the bus, he was in a taxi going to the hospital. He was very sick! Usually, he works in the kitchen all evening, but yesterday he wasn't in the kitchen. He was in the X-ray department of the hospital because the doctors were worried about his stomach pains. Normally, at 11pm, Mohan takes a bus to go home after finishing at the restaurant, but yesterday at 11pm, he was still in the hospital and he was still unhappy and sick. He was in a bed and he was very hot - 102 degrees! Was he worried? Yes, he was! In the morning, he was better and the doctors were pleased. What was the problem? It was bad food - from his restaurant!\n\nStatement: The doctors were very worried about him the next morning.",
+      "options": [
+        "Yes",
+        "No",
+        "Both Yes and No",
+        "Neither Yes nor No"
+      ],
+      "answer": "B",
+      "explanation": "In the morning he was better and the doctors were pleased.",
+      "sourceRef": "Eng Q49",
+      "tags": [
+        "comprehension"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Comprehension",
+      "difficulty": "easy",
+      "stem": "Passage: Mohan works in a restaurant in the centre of New Delhi. He goes to work at 5pm, but yesterday at 5pm, he wasn't on the bus, he was in a taxi going to the hospital. He was very sick! Usually, he works in the kitchen all evening, but yesterday he wasn't in the kitchen. He was in the X-ray department of the hospital because the doctors were worried about his stomach pains. Normally, at 11pm, Mohan takes a bus to go home after finishing at the restaurant, but yesterday at 11pm, he was still in the hospital and he was still unhappy and sick. He was in a bed and he was very hot - 102 degrees! Was he worried? Yes, he was! In the morning, he was better and the doctors were pleased. What was the problem? It was bad food - from his restaurant!\n\nStatement: The problem was food from his restaurant.",
+      "options": [
+        "Yes",
+        "No",
+        "Both Yes and No",
+        "Neither Yes nor No"
+      ],
+      "answer": "A",
+      "explanation": "The last line says it was bad food from his restaurant.",
+      "sourceRef": "Eng Q50",
+      "tags": [
+        "comprehension"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Number/letter series",
+      "difficulty": "easy",
+      "stem": "What comes next in the series in place of ? : X, T, P, L, ?",
+      "options": [
+        "F",
+        "H",
+        "G",
+        "J"
+      ],
+      "answer": "B",
+      "explanation": "Each letter moves back 4 places (X=24, T=20, P=16, L=12), so the next is 8 = H.",
+      "sourceRef": "Apt Q1",
+      "tags": [
+        "series"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Syllogism",
+      "difficulty": "easy",
+      "stem": "Statements: All dogs are animals. Some animals are cats.\nConclusion 1: Some dogs are cats.\nConclusion 2: Some animals are dogs.",
+      "options": [
+        "Only conclusion 1 follows",
+        "Only conclusion 2 follows",
+        "Both follow",
+        "Neither follows"
+      ],
+      "answer": "B",
+      "explanation": "All dogs are animals, so some animals are dogs (conversion). Nothing links dogs to cats.",
+      "sourceRef": "Apt Q2",
+      "tags": [
+        "syllogism"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Analogy",
+      "difficulty": "easy",
+      "stem": "Complete the analogy: Tennis : Racket :: Cricket : ?",
+      "options": [
+        "Bat",
+        "Ball",
+        "Wicket",
+        "Gloves"
+      ],
+      "answer": "A",
+      "explanation": "The racket is the equipment used to hit the ball in tennis; the bat does this in cricket.",
+      "sourceRef": "Apt Q3",
+      "tags": [
+        "analogy"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Word formation",
+      "difficulty": "medium",
+      "stem": "How many meaningful words can you form from the letters 'LEAP'?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "D",
+      "explanation": "LEAP, PALE, PEAL and PLEA make four. (Candidates who picked 3 missed one.)",
+      "sourceRef": "Apt Q4",
+      "tags": [
+        "word-formation"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Direction sense",
+      "difficulty": "easy",
+      "stem": "Aman starts walking 10 m east, then turns left and walks 5 m. He turns left again and walks 10 m. He turns left again and goes 10 m. In which direction is he now facing?",
+      "options": [
+        "North",
+        "West",
+        "South",
+        "East"
+      ],
+      "answer": "C",
+      "explanation": "East, then left = North, left = West, left = South. He is facing South.",
+      "sourceRef": "Apt Q5",
+      "tags": [
+        "direction"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Blood relations",
+      "difficulty": "easy",
+      "stem": "X says, \"Y is my mother's only daughter.\" How is Y related to X?",
+      "options": [
+        "Sister",
+        "Mother",
+        "Aunt",
+        "Cousin"
+      ],
+      "answer": "A",
+      "explanation": "The mother's only daughter, from X's point of view, is X's sister.",
+      "sourceRef": "Apt Q6",
+      "tags": [
+        "blood-relations"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Blood relations",
+      "difficulty": "medium",
+      "stem": "In a family of six members, A is married to B. C is B's sister, and D is C's father. F is D's mother. How is F related to A?",
+      "options": [
+        "Grandmother-in-law",
+        "Mother-in-law",
+        "Aunt",
+        "Mother"
+      ],
+      "answer": "A",
+      "explanation": "D is B's father, so F (D's mother) is B's grandmother, which makes her A's grandmother-in-law.",
+      "sourceRef": "Apt Q7",
+      "tags": [
+        "blood-relations"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Coding-decoding",
+      "difficulty": "easy",
+      "stem": "In a certain code, ROAD is written as URDG. How is FAST written in that code?",
+      "options": [
+        "IEXU",
+        "IBVU",
+        "IDVW",
+        "IBXU"
+      ],
+      "answer": "C",
+      "explanation": "Each letter is shifted forward by 3: F-I, A-D, S-V, T-W gives IDVW.",
+      "sourceRef": "Apt Q8",
+      "tags": [
+        "coding"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Coding-decoding",
+      "difficulty": "medium",
+      "stem": "If in a certain language NATURE is coded as MASUQE, how is FAMINE coded in that language?",
+      "options": [
+        "FBMJND",
+        "FZMHND",
+        "GANIOE",
+        "EALIME"
+      ],
+      "answer": "D",
+      "explanation": "Letters 1, 3, 5 move back 1; letters 2, 4, 6 stay. F-E, A-A, M-L, I-I, N-M, E-E gives EALIME.",
+      "sourceRef": "Apt Q9",
+      "tags": [
+        "coding"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Analogy",
+      "difficulty": "easy",
+      "stem": "Complete the analogy: Flow : River :: Stagnant : ?",
+      "options": [
+        "Rain",
+        "Stream",
+        "Pool",
+        "Canal"
+      ],
+      "answer": "C",
+      "explanation": "A river flows; a pool is stagnant water.",
+      "sourceRef": "Apt Q10",
+      "tags": [
+        "analogy"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Mirror image",
+      "difficulty": "easy",
+      "stem": "How will the word 'FLOWER' appear in the mirror?",
+      "options": [
+        "REWOLF",
+        "REWOLR",
+        "ROLFWE",
+        "REWOLP"
+      ],
+      "answer": "A",
+      "explanation": "A lateral mirror reverses the order of letters (each also flipped). The letters in reverse order are REWOLF.",
+      "sourceRef": "Apt Q11",
+      "tags": [
+        "mirror-image"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Analogy",
+      "difficulty": "easy",
+      "stem": "Complete the analogy: Peacock : India :: Bear : ?",
+      "options": [
+        "Australia",
+        "America",
+        "Russia",
+        "England"
+      ],
+      "answer": "C",
+      "explanation": "The peacock is India's national bird; the bear is Russia's national animal.",
+      "sourceRef": "Apt Q12",
+      "tags": [
+        "analogy"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Water image",
+      "difficulty": "medium",
+      "stem": "If the image of the letter 'A' is seen in a water reflection, how will it appear?",
+      "options": [
+        "Upside down 'A'",
+        "Backward 'A'",
+        "Completely reversed",
+        "No change in 'A'"
+      ],
+      "answer": "A",
+      "explanation": "A water reflection flips the figure top to bottom, so 'A' appears upside down. (The sheet shows a candidate chose 'completely reversed'.)",
+      "sourceRef": "Apt Q13",
+      "tags": [
+        "water-image"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Analogy",
+      "difficulty": "easy",
+      "stem": "Circle : Sphere :: Square : ?",
+      "options": [
+        "Rectangle",
+        "Cube",
+        "Triangle",
+        "Hexagon"
+      ],
+      "answer": "B",
+      "explanation": "A sphere is the 3D form of a circle; a cube is the 3D form of a square.",
+      "sourceRef": "Apt Q14",
+      "tags": [
+        "analogy"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Ranking",
+      "difficulty": "easy",
+      "stem": "A is taller than B but shorter than C. D is shorter than A but taller than B. Who is the tallest?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C",
+      "explanation": "Order: C > A > D > B.",
+      "sourceRef": "Apt Q15",
+      "tags": [
+        "ranking"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Seating arrangement",
+      "difficulty": "medium",
+      "stem": "Five friends (A, B, C, D and E) are sitting in a straight line, all facing north. A is sitting to the immediate right of B. C is sitting to the immediate left of D. E is not sitting at any end. Who is sitting in the middle?",
+      "options": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": "D",
+      "explanation": "The pairs (B,A) and (C,D) are each adjacent blocks, so the five seats are two blocks plus E. E cannot be at an end, so E is in the middle.",
+      "sourceRef": "Apt Q16",
+      "tags": [
+        "seating"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Odd one out",
+      "difficulty": "easy",
+      "stem": "Find the odd one out: Axe, Dagger, Arrow, Knife",
+      "options": [
+        "Axe",
+        "Dagger",
+        "Arrow",
+        "Knife"
+      ],
+      "answer": "C",
+      "explanation": "Axe, dagger and knife are hand-held tools or weapons. An arrow is a projectile.",
+      "sourceRef": "Apt Q17",
+      "tags": [
+        "odd-one-out"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Sentence ordering",
+      "difficulty": "easy",
+      "stem": "Arrange to make a coherent paragraph: A. It has offices at both Bangalore and Mumbai. B. Out of these, perhaps Goldman Sachs is the most well known in India. C. Some of the leading ones include Goldman Sachs, Lehman Brothers etc. D. There are many investment banks.",
+      "options": [
+        "DBCA",
+        "BCDA",
+        "DCBA",
+        "CBDA"
+      ],
+      "answer": "C",
+      "explanation": "D introduces the topic, C lists examples, B picks one ('Out of these'), A talks about it ('It').",
+      "sourceRef": "Apt Q18",
+      "tags": [
+        "para-jumble"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Blood relations",
+      "difficulty": "medium",
+      "stem": "Looking at a portrait of a man, Varun said, \"His mother is the wife of my father's son. Brothers and sisters I have none.\" At whose portrait was Varun looking?",
+      "options": [
+        "His nephew",
+        "His son",
+        "His cousin",
+        "His uncle"
+      ],
+      "answer": "B",
+      "explanation": "With no siblings, 'my father's son' is Varun himself. His wife is the man's mother, so the man is Varun's son.",
+      "sourceRef": "Apt Q19",
+      "tags": [
+        "blood-relations"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Dictionary order",
+      "difficulty": "easy",
+      "stem": "Arrange in dictionary order: 1. Read 2. Real 3. Ready 4. Rather 5. Ratify",
+      "options": [
+        "32415",
+        "12543",
+        "45123",
+        "45132"
+      ],
+      "answer": "D",
+      "explanation": "Rather, Ratify, Read, Ready, Real = 4, 5, 1, 3, 2.",
+      "sourceRef": "Apt Q20",
+      "tags": [
+        "dictionary-order"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Analogy",
+      "difficulty": "easy",
+      "stem": "Marathon is to Race as hibernation is to:",
+      "options": [
+        "winter",
+        "bear",
+        "dream",
+        "sleep"
+      ],
+      "answer": "D",
+      "explanation": "A marathon is a type of race; hibernation is a type of (long) sleep.",
+      "sourceRef": "Apt Q21",
+      "tags": [
+        "analogy"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Dice",
+      "difficulty": "easy",
+      "stem": "A dice is rolled, and the top face shows 3. What number is on the bottom face?",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "6"
+      ],
+      "answer": "C",
+      "explanation": "Opposite faces of a standard die add up to 7, so 7 - 3 = 4.",
+      "sourceRef": "Apt Q22",
+      "tags": [
+        "dice"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Dictionary order",
+      "difficulty": "easy",
+      "stem": "Arrange in dictionary order: 1. Telephone 2. Teleworker 3. Tendency 4. Temperature 5. Themselves",
+      "options": [
+        "34521",
+        "42153",
+        "52314",
+        "12435"
+      ],
+      "answer": "D",
+      "explanation": "Telephone, Teleworker, Temperature, Tendency, Themselves = 1, 2, 4, 3, 5.",
+      "sourceRef": "Apt Q23",
+      "tags": [
+        "dictionary-order"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Odd one out",
+      "difficulty": "easy",
+      "stem": "Select the odd one out: Elephant, Cow, Lion, Hare",
+      "options": [
+        "Elephant",
+        "Cow",
+        "Lion",
+        "Hare"
+      ],
+      "answer": "C",
+      "explanation": "Elephant, cow and hare are herbivores; the lion is a carnivore.",
+      "sourceRef": "Apt Q24",
+      "tags": [
+        "odd-one-out"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Coding-decoding",
+      "difficulty": "easy",
+      "stem": "If in a certain language SPACE is coded as TQBDF, how will PURSE be coded?",
+      "options": [
+        "QTSRF",
+        "QVTSD",
+        "QVSTF",
+        "ESRUP"
+      ],
+      "answer": "C",
+      "explanation": "Every letter moves forward by 1: P-Q, U-V, R-S, S-T, E-F gives QVSTF.",
+      "sourceRef": "Apt Q25",
+      "tags": [
+        "coding"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Ethics / conduct",
+      "difficulty": "easy",
+      "stem": "What should a government employee do if they are offered a bribe?",
+      "options": [
+        "Accept the bribe but report later",
+        "Refuse the bribe and report the incident immediately",
+        "Ignore and continue working",
+        "Discuss the incident with colleagues first"
+      ],
+      "answer": "B",
+      "explanation": "Offering or taking a bribe is an offence under the Prevention of Corruption Act. The correct step is to refuse and report at once.",
+      "sourceRef": "GK Q1",
+      "tags": [
+        "ethics"
+      ]
+    },
+    {
+      "section": "constitution",
+      "topic": "Citizenship",
+      "difficulty": "medium",
+      "stem": "In India, the power to grant citizenship lies with which of the following?",
+      "options": [
+        "President",
+        "Prime Minister",
+        "Ministry of Home Affairs",
+        "State Government"
+      ],
+      "answer": "C",
+      "explanation": "Citizenship is a Union subject. Under the Citizenship Act, 1955 it is granted by the Central Government, administered through the Ministry of Home Affairs.",
+      "sourceRef": "GK Q2",
+      "tags": [
+        "citizenship"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Energy",
+      "difficulty": "medium",
+      "stem": "India's first solar-powered village is located in which state?",
+      "options": [
+        "Rajasthan",
+        "Gujarat",
+        "Madhya Pradesh",
+        "Kerala"
+      ],
+      "answer": "B",
+      "explanation": "Modhera in Gujarat's Mehsana district was declared India's first 24x7 solar-powered village. Note that the sheet shows a candidate chose Rajasthan.",
+      "sourceRef": "GK Q3",
+      "tags": [
+        "solar"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Science",
+      "difficulty": "easy",
+      "stem": "Which vitamin is also known as Ascorbic Acid?",
+      "options": [
+        "Vitamin A",
+        "Vitamin C",
+        "Vitamin D",
+        "Vitamin K"
+      ],
+      "answer": "B",
+      "explanation": "Vitamin C is ascorbic acid. Its deficiency causes scurvy.",
+      "sourceRef": "GK Q4",
+      "tags": [
+        "vitamins"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Economy",
+      "difficulty": "easy",
+      "stem": "The concept of 'Minimum Support Price' (MSP) is primarily associated with:",
+      "options": [
+        "Industrial goods",
+        "Agricultural products",
+        "Infrastructure projects",
+        "Urban development"
+      ],
+      "answer": "B",
+      "explanation": "MSP is the price at which the government buys crops from farmers.",
+      "sourceRef": "GK Q5",
+      "tags": [
+        "msp"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Judiciary / e-Courts",
+      "difficulty": "easy",
+      "stem": "What is the significance of the 'e-Filing' system introduced under the e-Courts project?",
+      "options": [
+        "It allows lawyers to file cases online",
+        "It totally eliminates physical presence during hearings",
+        "It restricts access to case records",
+        "It replaces judges with automated systems"
+      ],
+      "answer": "A",
+      "explanation": "e-Filing lets advocates and litigants file petitions and documents online. It does not replace judges or remove hearings.",
+      "sourceRef": "GK Q6",
+      "tags": [
+        "e-courts",
+        "judiciary"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Science",
+      "difficulty": "easy",
+      "stem": "Which particle has a negative charge?",
+      "options": [
+        "Proton",
+        "Neutron",
+        "Electron",
+        "Positron"
+      ],
+      "answer": "C",
+      "explanation": "Electrons are negative. Protons are positive, neutrons neutral, and a positron is the positively charged antiparticle.",
+      "sourceRef": "GK Q7",
+      "tags": [
+        "physics"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Famous firsts",
+      "difficulty": "medium",
+      "stem": "The first woman airline pilot was:",
+      "options": [
+        "Hema Devi",
+        "Babita Savarkar",
+        "Durga Banerjee",
+        "Neha Sharma"
+      ],
+      "answer": "C",
+      "explanation": "Durga Banerjee became India's first woman commercial airline pilot in the 1950s. SCI later revised the answer key for this question, so check the final key.",
+      "sourceRef": "GK Q8",
+      "tags": [
+        "firsts"
+      ],
+      "keyStatus": "disputed"
+    },
+    {
+      "section": "gk",
+      "topic": "Science",
+      "difficulty": "easy",
+      "stem": "The study of sound and sound waves is:",
+      "options": [
+        "Mechanical",
+        "Technical",
+        "Acoustics",
+        "Sound Waves"
+      ],
+      "answer": "C",
+      "explanation": "Acoustics is the branch of physics dealing with sound. SCI revised the key for this question after objections.",
+      "sourceRef": "GK Q9",
+      "tags": [
+        "physics"
+      ],
+      "keyStatus": "disputed"
+    },
+    {
+      "section": "gk",
+      "topic": "Books",
+      "difficulty": "medium",
+      "stem": "'Wake Up India' book was written by:",
+      "options": [
+        "Annie Besant",
+        "Helen Keller",
+        "Javed Akhtar",
+        "Lisa Ray"
+      ],
+      "answer": "A",
+      "explanation": "'Wake Up, India: A Plea for Social Reform' (1913) is by Annie Besant. (The sheet shows a candidate chose Lisa Ray.)",
+      "sourceRef": "GK Q10",
+      "tags": [
+        "books"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Science",
+      "difficulty": "medium",
+      "stem": "Which gas is responsible for the blue colour of the Earth's atmosphere?",
+      "options": [
+        "Oxygen and Carbon dioxide",
+        "Nitrogen (N2) and Oxygen",
+        "Helium and Lithium",
+        "Argon and Helium"
+      ],
+      "answer": "B",
+      "explanation": "The sky looks blue because N2 and O2 molecules scatter short (blue) wavelengths more (Rayleigh scattering).",
+      "sourceRef": "GK Q11",
+      "tags": [
+        "atmosphere"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "General",
+      "difficulty": "easy",
+      "stem": "Which country is famous for inventing the sandwich?",
+      "options": [
+        "India",
+        "England",
+        "Italy",
+        "United States of America"
+      ],
+      "answer": "B",
+      "explanation": "The sandwich is named after the Earl of Sandwich (England), 18th century.",
+      "sourceRef": "GK Q12",
+      "tags": [
+        "inventions"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Geography",
+      "difficulty": "easy",
+      "stem": "Which two countries share the longest international border?",
+      "options": [
+        "India and Pakistan",
+        "Russia - Kazakhstan",
+        "Canada and United States",
+        "China - Russia"
+      ],
+      "answer": "C",
+      "explanation": "The Canada-US border is the longest between two countries at about 8,900 km.",
+      "sourceRef": "GK Q13",
+      "tags": [
+        "borders"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Current affairs",
+      "difficulty": "medium",
+      "stem": "What is the highest-grossing animated movie of all time?",
+      "options": [
+        "Inside Out 2",
+        "Frozen II",
+        "Ne Zha 2",
+        "The Super Mario Bros"
+      ],
+      "answer": "C",
+      "explanation": "Ne Zha 2 (2025) overtook Inside Out 2 to become the highest-grossing animated film. Time-sensitive: re-check if a newer film has passed it.",
+      "sourceRef": "GK Q14",
+      "tags": [
+        "current-affairs",
+        "films"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Human body",
+      "difficulty": "medium",
+      "stem": "When do humans use more facial muscles?",
+      "options": [
+        "While smiling",
+        "While frowning",
+        "While sleeping",
+        "While talking"
+      ],
+      "answer": "B",
+      "explanation": "The popular claim is that frowning uses more muscles than smiling. The scientific evidence is weak, so this question is better learned as 'the key says frowning'.",
+      "sourceRef": "GK Q15",
+      "tags": [
+        "human-body"
+      ],
+      "keyStatus": "disputed"
+    },
+    {
+      "section": "gk",
+      "topic": "General",
+      "difficulty": "easy",
+      "stem": "What is the official currency of Japan?",
+      "options": [
+        "Won",
+        "Yuan",
+        "Yen",
+        "Dollars"
+      ],
+      "answer": "C",
+      "explanation": "Yen. The won is South Korea's and the yuan is China's.",
+      "sourceRef": "GK Q16",
+      "tags": [
+        "currency"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Science",
+      "difficulty": "easy",
+      "stem": "What is the name of the science that studies the past of life on earth?",
+      "options": [
+        "Anthropology",
+        "Astronomy",
+        "Palaeontology",
+        "Geology"
+      ],
+      "answer": "C",
+      "explanation": "Palaeontology studies fossils and ancient life.",
+      "sourceRef": "GK Q17",
+      "tags": [
+        "science"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Biology",
+      "difficulty": "medium",
+      "stem": "Pollen grains in plants are produced in:",
+      "options": [
+        "roots",
+        "leaves",
+        "flower",
+        "stamen"
+      ],
+      "answer": "D",
+      "explanation": "Pollen is produced in the anthers, which are part of the stamen (the male organ). 'Flower' is true but less precise.",
+      "sourceRef": "GK Q18",
+      "tags": [
+        "biology"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "International organisations",
+      "difficulty": "easy",
+      "stem": "Amnesty International has its headquarters at:",
+      "options": [
+        "Berlin",
+        "New York",
+        "Washington",
+        "London"
+      ],
+      "answer": "D",
+      "explanation": "Amnesty International is headquartered in London.",
+      "sourceRef": "GK Q19",
+      "tags": [
+        "organisations"
+      ]
+    },
+    {
+      "section": "constitution",
+      "topic": "Preamble",
+      "difficulty": "easy",
+      "stem": "The Preamble to our Constitution includes all the following except:",
+      "options": [
+        "adult franchise",
+        "equality of status",
+        "fraternity",
+        "justice"
+      ],
+      "answer": "A",
+      "explanation": "The Preamble mentions justice, liberty, equality of status and opportunity, and fraternity. 'Adult franchise' is in Article 326, not the Preamble.",
+      "sourceRef": "GK Q20",
+      "tags": [
+        "preamble"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Geography",
+      "difficulty": "medium",
+      "stem": "Shendurney Wildlife Sanctuary is located in which state?",
+      "options": [
+        "Kerala",
+        "Tamil Nadu",
+        "Maharashtra",
+        "Gujarat"
+      ],
+      "answer": "A",
+      "explanation": "Shendurney is in Kollam district, Kerala (Agasthyamala Biosphere Reserve).",
+      "sourceRef": "GK Q21",
+      "tags": [
+        "sanctuaries"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "World facts",
+      "difficulty": "medium",
+      "stem": "Which country has the highest life expectancy?",
+      "options": [
+        "China",
+        "Singapore",
+        "Hongkong",
+        "United Kingdom"
+      ],
+      "answer": "C",
+      "explanation": "Hong Kong tops this list at about 85 years, but rankings differ by year and source. SCI revised the key for this question, so check the final key.",
+      "sourceRef": "GK Q22",
+      "tags": [
+        "world-facts"
+      ],
+      "keyStatus": "disputed"
+    },
+    {
+      "section": "gk",
+      "topic": "General",
+      "difficulty": "easy",
+      "stem": "What is acrophobia a fear of?",
+      "options": [
+        "Depth of water",
+        "Heights",
+        "Darkness",
+        "Loud noise"
+      ],
+      "answer": "B",
+      "explanation": "Acrophobia = fear of heights.",
+      "sourceRef": "GK Q23",
+      "tags": [
+        "phobias"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "International organisations",
+      "difficulty": "easy",
+      "stem": "What colours is the flag of the United Nations?",
+      "options": [
+        "Blue and red",
+        "White and red",
+        "Red and green",
+        "Blue and white"
+      ],
+      "answer": "D",
+      "explanation": "The UN flag is a white emblem on a light blue field.",
+      "sourceRef": "GK Q24",
+      "tags": [
+        "un"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Sports",
+      "difficulty": "easy",
+      "stem": "What sporting event has a strict dress code of all-white?",
+      "options": [
+        "The French Open",
+        "Wimbledon",
+        "The Australian Open",
+        "The US Open"
+      ],
+      "answer": "B",
+      "explanation": "Wimbledon is famous for its all-white dress rule.",
+      "sourceRef": "GK Q25",
+      "tags": [
+        "sports"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "OS stands for:",
+      "options": [
+        "Order of significance",
+        "Open software",
+        "Operating System",
+        "Optical sensor"
+      ],
+      "answer": "C",
+      "explanation": "OS = Operating System.",
+      "sourceRef": "Comp Q1",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "WINDOWS is a:",
+      "options": [
+        "Computer",
+        "Operating system",
+        "Virus",
+        "Memory card"
+      ],
+      "answer": "B",
+      "explanation": "Windows is Microsoft's operating system.",
+      "sourceRef": "Comp Q2",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Video conferencing is the conduct of:",
+      "options": [
+        "Video calls using telecom technology",
+        "Telephone calls",
+        "Video conference using a set of telescopic technology",
+        "None of the above"
+      ],
+      "answer": "A",
+      "explanation": "Video conferencing uses live audio-video links over telecom/internet.",
+      "sourceRef": "Comp Q3",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Which of the following produces the best quality graphics reproduction?",
+      "options": [
+        "Laser printer",
+        "Ink jet printer",
+        "Plotter",
+        "Dot matrix printer"
+      ],
+      "answer": "C",
+      "explanation": "Plotters draw precise vector lines and are used for engineering drawings and large graphics.",
+      "sourceRef": "Comp Q4",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Abacus was the first:",
+      "options": [
+        "electronic computer",
+        "mechanical computer",
+        "electronic calculator",
+        "mechanical calculator"
+      ],
+      "answer": "D",
+      "explanation": "The abacus is a manual (mechanical) calculating tool.",
+      "sourceRef": "Comp Q5",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "People often call ____ the brain of the computer system.",
+      "options": [
+        "Control Unit",
+        "Arithmetic Logic Unit",
+        "Central Processing Unit",
+        "Storage Unit"
+      ],
+      "answer": "C",
+      "explanation": "The CPU is called the brain of the computer.",
+      "sourceRef": "Comp Q6",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Whereas a computer mouse moves over the table surface, the trackball is:",
+      "options": [
+        "Stationary",
+        "Difficult to move",
+        "Dragged",
+        "Moved in small steps"
+      ],
+      "answer": "A",
+      "explanation": "In a trackball the ball is rolled by hand while the device body stays still.",
+      "sourceRef": "Comp Q7",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Programs such as Mozilla Firefox that serve as navigable windows into the Web are called:",
+      "options": [
+        "Hypertext",
+        "Network",
+        "Internet",
+        "Web Browsers"
+      ],
+      "answer": "D",
+      "explanation": "Firefox is a web browser.",
+      "sourceRef": "Comp Q8",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "What is the shortcut key for printing a document on a computer with Windows?",
+      "options": [
+        "Shift+P",
+        "Ctrl+P",
+        "Alt+P",
+        "Ctrl+Alt+P"
+      ],
+      "answer": "B",
+      "explanation": "Ctrl+P opens the Print dialog.",
+      "sourceRef": "Comp Q9",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "An error in a computer program is called:",
+      "options": [
+        "Chip",
+        "Bug",
+        "Hacking",
+        "None of the options"
+      ],
+      "answer": "B",
+      "explanation": "A bug is an error or flaw in software.",
+      "sourceRef": "Comp Q10",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "What does URL stand for?",
+      "options": [
+        "Uniform Resource Locator",
+        "Uniform Resource Link",
+        "Universal Resource Locator",
+        "Universal Resource Link"
+      ],
+      "answer": "A",
+      "explanation": "URL = Uniform Resource Locator.",
+      "sourceRef": "Comp Q11",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Which type of software is used to surf the web?",
+      "options": [
+        "Operating system",
+        "Web browser",
+        "Database",
+        "Text editor"
+      ],
+      "answer": "B",
+      "explanation": "A web browser is used to browse websites.",
+      "sourceRef": "Comp Q12",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Which key is used to delete the character to the left of the cursor?",
+      "options": [
+        "Enter",
+        "Backspace",
+        "Delete",
+        "Shift"
+      ],
+      "answer": "B",
+      "explanation": "Backspace deletes to the left; Delete removes the character to the right.",
+      "sourceRef": "Comp Q13",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "What does the shortcut Ctrl + C do?",
+      "options": [
+        "Cuts the selected text",
+        "Copies the selected text",
+        "Pastes the copied text",
+        "Saves the document"
+      ],
+      "answer": "B",
+      "explanation": "Ctrl+C = Copy; Ctrl+X = Cut; Ctrl+V = Paste.",
+      "sourceRef": "Comp Q14",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "What does LAN stand for?",
+      "options": [
+        "Local Access Network",
+        "Large Area Network",
+        "Local Area Network",
+        "Long Area Network"
+      ],
+      "answer": "C",
+      "explanation": "LAN = Local Area Network.",
+      "sourceRef": "Comp Q15",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Which part of the computer is responsible for logical operations?",
+      "options": [
+        "RAM",
+        "Control Unit",
+        "ALU",
+        "Hard Disk"
+      ],
+      "answer": "C",
+      "explanation": "The Arithmetic Logic Unit performs arithmetic and logical operations.",
+      "sourceRef": "Comp Q16",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "What does the acronym 'IP' in IP Address mean?",
+      "options": [
+        "Internet Protocol",
+        "Integrated Platform",
+        "Internal Processing",
+        "Instant Programming"
+      ],
+      "answer": "A",
+      "explanation": "IP = Internet Protocol.",
+      "sourceRef": "Comp Q17",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Which shortcut is used for undo?",
+      "options": [
+        "Ctrl+X",
+        "Ctrl+C",
+        "Ctrl+V",
+        "Ctrl+Z"
+      ],
+      "answer": "D",
+      "explanation": "Ctrl+Z undoes the last action.",
+      "sourceRef": "Comp Q18",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Which shortcut is used to paste the selected text?",
+      "options": [
+        "Ctrl+P",
+        "Ctrl+J",
+        "Ctrl+V",
+        "Ctrl+I"
+      ],
+      "answer": "C",
+      "explanation": "Ctrl+V pastes.",
+      "sourceRef": "Comp Q19",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "How can you export a PowerPoint presentation as a PDF?",
+      "options": [
+        "File Tab > Export > Create PDF",
+        "Design Tab > Export",
+        "Animations Tab > Export",
+        "Home Tab > Create PDF"
+      ],
+      "answer": "A",
+      "explanation": "In PowerPoint: File, then Export, then Create PDF/XPS Document.",
+      "sourceRef": "Comp Q20",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Which of the following is a good practice for creating a strong password?",
+      "options": [
+        "Using your name or birthdate",
+        "Using '123456' for easy recall",
+        "Using a mix of uppercase, lowercase, numbers and symbols",
+        "Using the same password for all accounts"
+      ],
+      "answer": "C",
+      "explanation": "Strong passwords are long, mixed and unique to each account.",
+      "sourceRef": "Comp Q21",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Which of the following is an example of cybercrime?",
+      "options": [
+        "Hacking into someone's social media account",
+        "Writing code for a new application",
+        "Hosting an online seminar",
+        "Downloading apps from verified stores"
+      ],
+      "answer": "A",
+      "explanation": "Unauthorised access to an account is a cybercrime (IT Act, 2000).",
+      "sourceRef": "Comp Q22",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Monitor, printer and speakers are:",
+      "options": [
+        "Input device",
+        "Software",
+        "Output device",
+        "Hardware"
+      ],
+      "answer": "C",
+      "explanation": "They present results to the user, so they are output devices. (They are also hardware, and SCI revised the key here, so check the final key.)",
+      "sourceRef": "Comp Q23",
+      "tags": [
+        "computer"
+      ],
+      "keyStatus": "disputed"
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Which application is commonly used to view PDFs?",
+      "options": [
+        "Microsoft Word",
+        "Adobe Acrobat Reader",
+        "VLC Media Player",
+        "Google Drive"
+      ],
+      "answer": "B",
+      "explanation": "Adobe Acrobat Reader is the standard PDF viewer.",
+      "sourceRef": "Comp Q24",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Microsoft Word is a software?",
+      "options": [
+        "Programming",
+        "Application",
+        "System",
+        "Compiler"
+      ],
+      "answer": "B",
+      "explanation": "Word is application software.",
+      "sourceRef": "Comp Q25",
+      "tags": [
+        "computer"
+      ]
+    }
+  ]
+}

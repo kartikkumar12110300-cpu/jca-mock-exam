@@ -1,0 +1,212 @@
+{
+  "paper": {
+    "title": "SCI Officers & Servants Rules, 1961 — key points",
+    "source": "SCI Officers & Servants (Conditions of Service and Conduct) Rules, 1961",
+    "sourceType": "manual",
+    "keyStatus": "official",
+    "status": "published"
+  },
+  "questions": [
+    {
+      "section": "sci-rules-1961",
+      "topic": "Enabling provision",
+      "difficulty": "easy",
+      "stem": "The Supreme Court Officers & Servants Rules, 1961 were framed under which Article of the Constitution?",
+      "options": ["145", "146", "147", "124"],
+      "answer": "B",
+      "explanation": "Article 146 provides that appointments of officers and servants of the Supreme Court, and their conditions of service, are made by the Chief Justice of India by rules.",
+      "sourceRef": "Constitution of India, Art. 146",
+      "tags": ["enabling", "article-146"]
+    },
+    {
+      "section": "sci-rules-1961",
+      "topic": "Appointments",
+      "difficulty": "easy",
+      "stem": "Under Article 146, appointments of officers and servants of the Supreme Court are made by:",
+      "options": [
+        "the Chief Justice of India",
+        "the President of India",
+        "the Secretary General of the Supreme Court",
+        "the Law Ministry"
+      ],
+      "answer": "A",
+      "explanation": "Article 146 vests appointment power for officers and servants of the Court in the Chief Justice of India, with conditions of service prescribed by rules.",
+      "sourceRef": "Constitution of India, Art. 146",
+      "tags": ["article-146", "appointments"]
+    },
+    {
+      "section": "sci-rules-1961",
+      "topic": "Structure of the Rules",
+      "difficulty": "medium",
+      "stem": "The SCI Officers & Servants Rules, 1961 consist of:",
+      "options": [
+        "49 rules in 5 Parts, with a Schedule",
+        "61 rules in 7 Parts",
+        "100 rules in 3 Parts",
+        "40 rules in 4 Parts, without a Schedule"
+      ],
+      "answer": "A",
+      "explanation": "The Rules are short — 49 rules in 5 Parts (I General, II Strength/Appointment/Conditions, III Control and Discipline, IV Conduct, V Miscellaneous) plus a Schedule.",
+      "sourceRef": "SCI Officers & Servants Rules, 1961",
+      "tags": ["structure"]
+    },
+    {
+      "section": "sci-rules-1961",
+      "topic": "Part IV — conduct",
+      "difficulty": "easy",
+      "stem": "Which Part of the SCI Officers & Servants Rules, 1961 deals with conduct?",
+      "options": ["Part II", "Part III", "Part IV", "Part V"],
+      "answer": "C",
+      "explanation": "Part IV (Rules 24–46) is the conduct code, covering intoxication, absence, gifts, private trade, relations with advocates, demonstrations and strikes, and so on.",
+      "sourceRef": "SCI Officers & Servants Rules, 1961",
+      "tags": ["parts", "conduct"]
+    },
+    {
+      "section": "sci-rules-1961",
+      "topic": "Rule 11 — penalties",
+      "difficulty": "easy",
+      "stem": "Which rule of the SCI Officers & Servants Rules, 1961 lists the penalties?",
+      "options": ["Rule 10", "Rule 11", "Rule 12", "Rule 13"],
+      "answer": "B",
+      "explanation": "Rule 11 lists the penalties, distinguishing minor and major penalties. Rule 12 names the disciplinary authorities and Rule 13 the procedure for major penalties.",
+      "sourceRef": "SCI Officers & Servants Rules, 1961, r.11",
+      "tags": ["penalties", "part-iii"]
+    },
+    {
+      "section": "sci-rules-1961",
+      "topic": "Rule 13 — major penalties",
+      "difficulty": "medium",
+      "stem": "The procedure for imposing major penalties under the SCI Officers & Servants Rules, 1961 is prescribed by:",
+      "options": ["Rule 12", "Rule 13", "Rule 14", "Rule 15"],
+      "answer": "B",
+      "explanation": "Rule 13 prescribes the procedure for imposing major penalties; Rule 14 prescribes the procedure for minor penalties. This distinction is a favourite exam point.",
+      "sourceRef": "SCI Officers & Servants Rules, 1961, r.13",
+      "tags": ["penalties", "part-iii"]
+    },
+    {
+      "section": "sci-rules-1961",
+      "topic": "Rule 14 — minor penalties",
+      "difficulty": "medium",
+      "stem": "The procedure for imposing minor penalties under the SCI Officers & Servants Rules, 1961 is prescribed by:",
+      "options": ["Rule 13", "Rule 14", "Rule 15", "Rule 16"],
+      "answer": "B",
+      "explanation": "Rule 14 prescribes the procedure for minor penalties, distinct from the major-penalty procedure in Rule 13.",
+      "sourceRef": "SCI Officers & Servants Rules, 1961, r.14",
+      "tags": ["penalties", "part-iii"]
+    },
+    {
+      "section": "sci-rules-1961",
+      "topic": "Part III — control and discipline",
+      "difficulty": "easy",
+      "stem": "Which Part of the SCI Officers & Servants Rules, 1961 governs control and discipline?",
+      "options": ["Part I", "Part II", "Part III", "Part IV"],
+      "answer": "C",
+      "explanation": "Part III (Rules 10–23) governs control and discipline: penalties, disciplinary authorities, procedures, suspension, appeals and the Chief Justice's powers.",
+      "sourceRef": "SCI Officers & Servants Rules, 1961",
+      "tags": ["parts", "part-iii"]
+    },
+    {
+      "section": "sci-rules-1961",
+      "topic": "Powers of control",
+      "difficulty": "easy",
+      "stem": "Under the SCI Officers & Servants Rules, 1961, the powers of control over Court servants reside with:",
+      "options": [
+        "the Chief Justice of India",
+        "the Secretary General",
+        "the Registrar",
+        "the President of India"
+      ],
+      "answer": "A",
+      "explanation": "Part III (Rules 10 and 23) vests control over Court servants in the Chief Justice of India, including powers in disciplinary matters.",
+      "sourceRef": "SCI Officers & Servants Rules, 1961, rr.10, 23",
+      "tags": ["control", "part-iii"]
+    },
+    {
+      "section": "sci-rules-1961",
+      "topic": "Rule 39 — relations with advocates",
+      "difficulty": "medium",
+      "stem": "Which rule of the SCI Officers & Servants Rules, 1961 deals with relations between Court servants and Advocates or Advocates on Record?",
+      "options": ["Rule 37", "Rule 38", "Rule 39", "Rule 40"],
+      "answer": "C",
+      "explanation": "Rule 39 regulates the relations of Court servants with Advocates or Advocates on Record — a rule unique to a court setting.",
+      "sourceRef": "SCI Officers & Servants Rules, 1961, r.39",
+      "tags": ["conduct", "part-iv"]
+    },
+    {
+      "section": "sci-rules-1961",
+      "topic": "Rule 24A — intoxication",
+      "difficulty": "hard",
+      "stem": "Rule 24A of the SCI Officers & Servants Rules, 1961 (inserted by amendment) deals with:",
+      "options": [
+        "consumption of intoxicating drinks and drugs",
+        "absence from duty",
+        "taking part in politics",
+        "private trade or employment"
+      ],
+      "answer": "A",
+      "explanation": "Rule 24A, inserted by amendment, governs the consumption of intoxicating drinks and drugs by Court servants.",
+      "sourceRef": "SCI Officers & Servants Rules, 1961, r.24A",
+      "tags": ["conduct", "part-iv"]
+    },
+    {
+      "section": "sci-rules-1961",
+      "topic": "Part II — appointment and conditions",
+      "difficulty": "easy",
+      "stem": "Which Part of the SCI Officers & Servants Rules, 1961 deals with strength, appointment and conditions of service?",
+      "options": ["Part I", "Part II", "Part III", "Part IV"],
+      "answer": "B",
+      "explanation": "Part II (Rules 3–9) covers strength and composition, method of recruitment, qualifications, appointing authority, probation, seniority and conditions of service.",
+      "sourceRef": "SCI Officers & Servants Rules, 1961",
+      "tags": ["parts", "part-ii"]
+    },
+    {
+      "section": "sci-rules-1961",
+      "topic": "Rule 20 — limitation for appeals",
+      "difficulty": "medium",
+      "stem": "The period of limitation for appeals under the SCI Officers & Servants Rules, 1961 is prescribed by:",
+      "options": ["Rule 18", "Rule 19", "Rule 20", "Rule 21"],
+      "answer": "C",
+      "explanation": "Rule 20 prescribes the period of limitation for appeals; Rule 21 deals with submission of appeals and Rule 22 with implementation of orders in appeal.",
+      "sourceRef": "SCI Officers & Servants Rules, 1961, r.20",
+      "tags": ["appeals", "part-iii"]
+    },
+    {
+      "section": "sci-rules-1961",
+      "topic": "Rule 44 — court property",
+      "difficulty": "medium",
+      "stem": "Under the SCI Officers & Servants Rules, 1961, the rule dealing with the care and preservation of Court property is:",
+      "options": ["Rule 43", "Rule 44", "Rule 45", "Rule 46"],
+      "answer": "B",
+      "explanation": "Rule 44 requires a Court servant to take due care of Court property and to prevent its damage or loss.",
+      "sourceRef": "SCI Officers & Servants Rules, 1961, r.44",
+      "tags": ["conduct", "part-iv"]
+    },
+    {
+      "section": "sci-rules-1961",
+      "topic": "Latest amendment",
+      "difficulty": "hard",
+      "stem": "The SCI Officers & Servants Rules, 1961, as applicable, were amended up to:",
+      "options": [
+        "6 November 2024",
+        "1 January 2023",
+        "15 August 2022",
+        "30 June 2025"
+      ],
+      "answer": "A",
+      "explanation": "The consolidated version of the Rules reflects amendments up to 6 November 2024.",
+      "sourceRef": "SCI Officers & Servants Rules, 1961 (consolidated)",
+      "tags": ["amendments", "dates"]
+    },
+    {
+      "section": "sci-rules-1961",
+      "topic": "Part III — suspension",
+      "difficulty": "medium",
+      "stem": "Suspension of a Court servant pending disciplinary proceedings under the SCI Officers & Servants Rules, 1961 is dealt with by:",
+      "options": ["Rule 13", "Rule 14", "Rule 15", "Rule 16"],
+      "answer": "C",
+      "explanation": "Rule 15 governs suspension pending disciplinary proceedings, while Rules 16 and 17 deal with Court servants on deputation.",
+      "sourceRef": "SCI Officers & Servants Rules, 1961, r.15",
+      "tags": ["suspension", "part-iii"]
+    }
+  ]
+}

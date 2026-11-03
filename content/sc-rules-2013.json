@@ -1,0 +1,237 @@
+{
+  "paper": {
+    "title": "Supreme Court Rules, 2013 — key points",
+    "source": "Supreme Court Rules, 2013 (G.S.R. 368(E))",
+    "sourceType": "manual",
+    "keyStatus": "official",
+    "status": "published"
+  },
+  "questions": [
+    {
+      "section": "sc-rules-2013",
+      "topic": "Enabling provision",
+      "difficulty": "easy",
+      "stem": "The Supreme Court Rules, 2013 were framed under which Article of the Constitution?",
+      "options": ["144", "145", "146", "147"],
+      "answer": "B",
+      "explanation": "Article 145 is the enabling provision under which the Supreme Court may make rules for regulating its practice and procedure.",
+      "sourceRef": "Constitution of India, Art. 145",
+      "tags": ["enabling", "article-145"]
+    },
+    {
+      "section": "sc-rules-2013",
+      "topic": "Commencement",
+      "difficulty": "medium",
+      "stem": "The Supreme Court Rules, 2013 came into force on:",
+      "options": [
+        "27 May 2014",
+        "19 August 2014",
+        "1 January 2014",
+        "26 January 2014"
+      ],
+      "answer": "B",
+      "explanation": "The Rules were notified on 27 May 2014 (G.S.R. 368(E)) and came into force on 19 August 2014, appointed by the CJI by notification.",
+      "sourceRef": "Supreme Court Rules, 2013 — citation and commencement",
+      "tags": ["commencement", "dates"]
+    },
+    {
+      "section": "sc-rules-2013",
+      "topic": "Structure of the Rules",
+      "difficulty": "medium",
+      "stem": "The Supreme Court Rules, 2013 are divided into:",
+      "options": [
+        "Parts I–IV and Orders I–LVI, with Forms appended",
+        "Parts I–X and Sections I–XX",
+        "Chapters I–VIII and Rules 1–200",
+        "Schedules I–IV only"
+      ],
+      "answer": "A",
+      "explanation": "The Rules are structured as Part I (General) through Part IV, divided into Orders I–LVI, with Forms appended. They replaced the Supreme Court Rules, 1966.",
+      "sourceRef": "Supreme Court Rules, 2013",
+      "tags": ["structure"]
+    },
+    {
+      "section": "sc-rules-2013",
+      "topic": "Order I r.2 — 'Court appealed from'",
+      "difficulty": "easy",
+      "stem": "Under Order I rule 2 of the Supreme Court Rules, 2013, the expression 'Court appealed from' includes:",
+      "options": [
+        "a Tribunal or any other judicial body from which an appeal is preferred to the Court",
+        "only a High Court",
+        "only a Sessions Court",
+        "any court subordinate to a High Court"
+      ],
+      "answer": "A",
+      "explanation": "'Court appealed from' includes a Tribunal or any other judicial body from which an appeal is preferred to the Court — the definition is inclusive, not exhaustive.",
+      "sourceRef": "Supreme Court Rules, 2013, Order I r.2",
+      "tags": ["definitions", "order-i"]
+    },
+    {
+      "section": "sc-rules-2013",
+      "topic": "Order IV r.5 — AoR eligibility",
+      "difficulty": "easy",
+      "stem": "To qualify as an advocate-on-record under Order IV rule 5, an advocate must have been on the roll of a State Bar Council for at least:",
+      "options": ["two years", "four years", "five years", "one year"],
+      "answer": "B",
+      "explanation": "Order IV r.5 requires the name to be on a State Bar Council roll for at least four years as on the commencement of training, plus one year's training and passing the AoR examination.",
+      "sourceRef": "Supreme Court Rules, 2013, Order IV r.5",
+      "tags": ["aor", "order-iv"]
+    },
+    {
+      "section": "sc-rules-2013",
+      "topic": "Order II — summer vacation",
+      "difficulty": "easy",
+      "stem": "Under the Supreme Court Rules, 2013, the summer vacation of the Court shall not exceed:",
+      "options": ["five weeks", "six weeks", "seven weeks", "eight weeks"],
+      "answer": "C",
+      "explanation": "Order II provides that the summer vacation shall not exceed seven weeks, and total vacation plus holidays shall not exceed 103 days.",
+      "sourceRef": "Supreme Court Rules, 2013, Order II",
+      "tags": ["vacation", "order-ii"]
+    },
+    {
+      "section": "sc-rules-2013",
+      "topic": "Order II — total holidays",
+      "difficulty": "medium",
+      "stem": "The total of vacations and holidays of the Supreme Court shall not exceed:",
+      "options": ["90 days", "103 days", "110 days", "120 days"],
+      "answer": "B",
+      "explanation": "Order II caps the total of vacation and holidays at 103 days, excluding Sundays that do not fall within a vacation.",
+      "sourceRef": "Supreme Court Rules, 2013, Order II",
+      "tags": ["vacation", "order-ii"]
+    },
+    {
+      "section": "sc-rules-2013",
+      "topic": "Order III — custody of records",
+      "difficulty": "easy",
+      "stem": "Under the Supreme Court Rules, 2013, the custody of the records of the Court is with:",
+      "options": [
+        "the Secretary General",
+        "the Registrar (Judicial)",
+        "the Chief Justice of India",
+        "the Attorney General"
+      ],
+      "answer": "A",
+      "explanation": "Order III provides that the Secretary General has custody of the records of the Court, and keeps the official seal.",
+      "sourceRef": "Supreme Court Rules, 2013, Order III",
+      "tags": ["officers", "order-iii"]
+    },
+    {
+      "section": "sc-rules-2013",
+      "topic": "Order IV — senior advocates",
+      "difficulty": "medium",
+      "stem": "A senior advocate is designated under:",
+      "options": [
+        "s.16(2) of the Advocates Act, 1961",
+        "Order IV rule 5 of the Supreme Court Rules, 2013",
+        "Article 145(3) of the Constitution",
+        "s.7 of the Bar Councils Act"
+      ],
+      "answer": "A",
+      "explanation": "The Rules define a senior advocate as one designated under s.16(2) of the Advocates Act, 1961.",
+      "sourceRef": "Supreme Court Rules, 2013, Order I r.2",
+      "tags": ["senior-advocate", "definitions"]
+    },
+    {
+      "section": "sc-rules-2013",
+      "topic": "Order I r.2 — 'Judge'",
+      "difficulty": "easy",
+      "stem": "Under the Supreme Court Rules, 2013, the expression 'Judge' means:",
+      "options": [
+        "a Judge of the Supreme Court",
+        "any judicial officer of a court in India",
+        "a Judge of a High Court only",
+        "the Chief Justice of India only"
+      ],
+      "answer": "A",
+      "explanation": "Order I r.2 defines 'Judge' as a Judge of the Court, i.e. the Supreme Court. 'Court' means the Supreme Court of India.",
+      "sourceRef": "Supreme Court Rules, 2013, Order I r.2",
+      "tags": ["definitions", "order-i"]
+    },
+    {
+      "section": "sc-rules-2013",
+      "topic": "Order II — office hours",
+      "difficulty": "medium",
+      "stem": "On Saturdays, the offices of the Supreme Court are open from 10:00 a.m. to 1:00 p.m., and no work is admitted after:",
+      "options": ["12 noon unless urgent", "12:30 p.m.", "1:00 p.m.", "11:30 a.m."],
+      "answer": "A",
+      "explanation": "Order II provides that offices open on Saturdays from 10:00 a.m. to 1:00 p.m., with no work admitted after 12 noon unless urgent. The Court does not ordinarily sit on Saturdays.",
+      "sourceRef": "Supreme Court Rules, 2013, Order II",
+      "tags": ["sittings", "order-ii"]
+    },
+    {
+      "section": "sc-rules-2013",
+      "topic": "Order IV — junior advocates",
+      "difficulty": "medium",
+      "stem": "An advocate enrolled for less than one year on a State Bar Council roll may, under the Supreme Court Rules, 2013:",
+      "options": [
+        "only mention matters and not argue them",
+        "argue matters but not file appearances",
+        "file appearances but not argue",
+        "do everything an advocate-on-record may do"
+      ],
+      "answer": "A",
+      "explanation": "Order IV allows an advocate enrolled for less than one year to only mention matters (time, date, adjournment) and not argue; only an advocate-on-record may act or file an appearance.",
+      "sourceRef": "Supreme Court Rules, 2013, Order IV",
+      "tags": ["advocates", "order-iv"]
+    },
+    {
+      "section": "sc-rules-2013",
+      "topic": "Order I r.2 — 'respondent'",
+      "difficulty": "hard",
+      "stem": "Under Order I rule 2 of the Supreme Court Rules, 2013, the expression 'respondent' includes:",
+      "options": ["an intervener", "a defendant in a suit", "a counter-petitioner", "a co-respondent"],
+      "answer": "A",
+      "explanation": "The definition of 'respondent' includes an intervener — a classic 'includes' trap where the listed item extends, not restricts, the meaning.",
+      "sourceRef": "Supreme Court Rules, 2013, Order I r.2",
+      "tags": ["definitions", "order-i"]
+    },
+    {
+      "section": "sc-rules-2013",
+      "topic": "Order I r.2 — 'advocate'",
+      "difficulty": "hard",
+      "stem": "Under the Supreme Court Rules, 2013, an 'advocate' means a person whose name is entered on the roll of advocates prepared and maintained by:",
+      "options": [
+        "a State Bar Council under the Advocates Act, 1961",
+        "the Bar Council of India",
+        "the Supreme Court Registry",
+        "the High Court concerned"
+      ],
+      "answer": "A",
+      "explanation": "An 'advocate' is one whose name is on the roll prepared and maintained by a State Bar Council under the Advocates Act, 1961.",
+      "sourceRef": "Supreme Court Rules, 2013, Order I r.2",
+      "tags": ["definitions", "order-i"]
+    },
+    {
+      "section": "sc-rules-2013",
+      "topic": "Order I r.2 — 'Chief Justice'",
+      "difficulty": "hard",
+      "stem": "Under the Supreme Court Rules, 2013, the expression 'Chief Justice' includes:",
+      "options": [
+        "a Judge appointed under Article 126 to perform the duties of the Chief Justice",
+        "the Chief Justice of any High Court",
+        "the senior-most puisne Judge of the Supreme Court",
+        "the Chief Justice of India only"
+      ],
+      "answer": "A",
+      "explanation": "'Chief Justice' means the Chief Justice of India and includes a Judge appointed under Article 126 to perform the duties of the office of the Chief Justice.",
+      "sourceRef": "Supreme Court Rules, 2013, Order I r.2",
+      "tags": ["definitions", "order-i"]
+    },
+    {
+      "section": "sc-rules-2013",
+      "topic": "Replacement of 1966 Rules",
+      "difficulty": "easy",
+      "stem": "The Supreme Court Rules, 2013 replaced the:",
+      "options": [
+        "Supreme Court Rules, 1966",
+        "Supreme Court Rules, 1950",
+        "Supreme Court Rules, 1978",
+        "Supreme Court (Appellate) Rules, 1966"
+      ],
+      "answer": "A",
+      "explanation": "The 2013 Rules repealed and replaced the earlier Supreme Court Rules, 1966.",
+      "sourceRef": "Supreme Court Rules, 2013",
+      "tags": ["history"]
+    }
+  ]
+}

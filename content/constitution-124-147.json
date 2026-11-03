@@ -1,0 +1,161 @@
+{
+  "paper": {
+    "title": "Constitution — Articles 124–147",
+    "source": "Constitution of India, Part V, Chapter IV",
+    "sourceType": "manual",
+    "keyStatus": "official",
+    "status": "published"
+  },
+  "questions": [
+    {
+      "section": "constitution",
+      "topic": "Article 124 — constitution of the Court",
+      "difficulty": "easy",
+      "stem": "Under Article 124, the Supreme Court of India consists of the Chief Justice of India and:",
+      "options": [
+        "such number of other Judges as the President may appoint",
+        "such number of other Judges as Parliament may by law prescribe",
+        "thirty other Judges, fixed by the Constitution",
+        "such number of other Judges as the Chief Justice of India may determine"
+      ],
+      "answer": "B",
+      "explanation": "Article 124(1): the Supreme Court shall consist of a Chief Justice of India and, until Parliament by law prescribes a larger number, of not more than seven other Judges. Parliament has since prescribed 33, giving a sanctioned strength of 34.",
+      "sourceRef": "Constitution of India, Art. 124(1)",
+      "tags": ["article-124"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 124B — tenure",
+      "difficulty": "easy",
+      "stem": "A Judge of the Supreme Court holds office until attaining the age of:",
+      "options": ["60 years", "62 years", "65 years", "68 years"],
+      "answer": "C",
+      "explanation": "Article 124B(a) fixes 65 years for a Supreme Court Judge; a High Court Judge retires at 62 under Article 217.",
+      "sourceRef": "Constitution of India, Art. 124B",
+      "tags": ["article-124b", "tenure"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 124C — practice after retirement",
+      "difficulty": "medium",
+      "stem": "Article 124C prohibits a person who has held office as a Judge of the Supreme Court from:",
+      "options": [
+        "holding any office of profit under the Union",
+        "pleading or acting before any court or authority in India",
+        "contesting elections to Parliament",
+        "accepting appointment as a High Court Judge"
+      ],
+      "answer": "B",
+      "explanation": "Article 124C (inserted by the 99th Amendment) bars a retired Supreme Court Judge from pleading or acting before any court or authority within India. Note that the 99th Amendment's NJAC provisions were struck down in 2015, but Article 124C was not the subject of that ruling.",
+      "sourceRef": "Constitution of India, Art. 124C",
+      "tags": ["article-124c"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 126 — acting Chief Justice",
+      "difficulty": "medium",
+      "stem": "When the office of the Chief Justice of India is vacant, who appoints an acting Chief Justice?",
+      "options": [
+        "The President",
+        "The senior-most puisne Judge",
+        "The collegium",
+        "The Chief Justice of the senior-most High Court"
+      ],
+      "answer": "A",
+      "explanation": "Article 126 empowers the President to appoint another Judge of the Supreme Court to perform the duties of the office of Chief Justice of India while it is vacant, or while the CJI is unable to perform them.",
+      "sourceRef": "Constitution of India, Art. 126",
+      "tags": ["article-126"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 129 — court of record",
+      "difficulty": "easy",
+      "stem": "Article 129 declares the Supreme Court to be:",
+      "options": [
+        "the guardian of the Constitution",
+        "a court of record with power to punish for contempt",
+        "the final appellate authority in all civil matters only",
+        "a court with original jurisdiction in all disputes"
+      ],
+      "answer": "B",
+      "explanation": "Article 129 makes the Supreme Court a court of record and confers the power to punish for its contempt. Article 215 does the same for High Courts.",
+      "sourceRef": "Constitution of India, Art. 129",
+      "tags": ["article-129", "contempt"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 130 — seat of the Court",
+      "difficulty": "medium",
+      "stem": "Under Article 130, the Supreme Court sits in Delhi or at such other place as the Chief Justice of India may appoint:",
+      "options": [
+        "with the approval of Parliament",
+        "with the approval of the President",
+        "after consulting the Chief Justice of the High Court concerned",
+        "with the concurrence of the collegium"
+      ],
+      "answer": "B",
+      "explanation": "Article 130 requires the approval of the President for the Chief Justice of India to appoint any place other than Delhi as a seat of the Court.",
+      "sourceRef": "Constitution of India, Art. 130",
+      "tags": ["article-130"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 131 — original jurisdiction",
+      "difficulty": "medium",
+      "stem": "The Supreme Court's exclusive original jurisdiction under Article 131 covers disputes between:",
+      "options": [
+        "two private parties where a constitutional question arises",
+        "the Government of India and one or more States, or between States",
+        "a State and a statutory corporation",
+        "the Union and a foreign State"
+      ],
+      "answer": "B",
+      "explanation": "Article 131 gives the Supreme Court original jurisdiction in any dispute between the Government of India and one or more States, or between States, where the dispute involves a question of law or fact on which a legal right depends.",
+      "sourceRef": "Constitution of India, Art. 131",
+      "tags": ["article-131", "jurisdiction"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 136 — special leave",
+      "difficulty": "medium",
+      "stem": "Special leave to appeal under Article 136 may be granted against any judgment or order of:",
+      "options": [
+        "a High Court only",
+        "any court or tribunal in India, except a military tribunal",
+        "any court, tribunal or military tribunal in India",
+        "a High Court or a Sessions Court only"
+      ],
+      "answer": "B",
+      "explanation": "Article 136 is a residuary discretionary power covering any cause or matter passed by any court or tribunal in the territory of India, expressly excluding military tribunals.",
+      "sourceRef": "Constitution of India, Art. 136",
+      "tags": ["article-136", "slp"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 141 — binding law",
+      "difficulty": "easy",
+      "stem": "A law declared by the Supreme Court under Article 141 is binding on:",
+      "options": [
+        "all courts within the territory of India",
+        "all courts and tribunals within the territory of India",
+        "subordinate courts only",
+        "all authorities, civil and judicial"
+      ],
+      "answer": "A",
+      "explanation": "Article 141 makes the law declared by the Supreme Court binding on all courts within the territory of India. Article 144 separately requires all authorities, civil and judicial, to act in aid of the Court.",
+      "sourceRef": "Constitution of India, Art. 141",
+      "tags": ["article-141", "precedent"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 145 — rules of court",
+      "difficulty": "medium",
+      "stem": "Under Article 145(3), the minimum number of Judges who must sit to decide a case involving a substantial question of law as to the interpretation of the Constitution is:",
+      "options": ["Three", "Five", "Seven", "Nine"],
+      "answer": "B",
+      "explanation": "Article 145(3) requires at least five Judges for a substantial constitutional question. Article 145(1) is also the enabling provision for the Supreme Court Rules, 2013.",
+      "sourceRef": "Constitution of India, Art. 145(3)",
+      "tags": ["article-145", "constitutional-bench"]
+    }
+  ]
+}

@@ -1,0 +1,2266 @@
+{
+  "paper": {
+    "title": "SCI JCA 2022 - 26 Sep Shift 1",
+    "source": "JCA_2022_26Sep_Shift1.pdf",
+    "sourceType": "pyq",
+    "keyStatus": "unofficial",
+    "status": "published"
+  },
+  "questions": [
+    {
+      "section": "english",
+      "topic": "Comprehension (vocab)",
+      "difficulty": "medium",
+      "stem": "Passage: A self-sufficient village, based on agriculture carried on with primitive plough and bullock-power and handicrafts created by means of simple instruments, was a basic feature of pre-British Indian society.\n\nThe self-sufficient village as the basic economic unit had existed for centuries in India and, except for some minor modifications, had survived till the advent of the British rule, in spite of all political convulsions, religious upheavals and devastating wars. It stood impregnable in the face of all foreign invasions, dynastic changes, all violent territorial shiftings in inter-state struggles. Kingdoms rose and collapsed but the self-sufficient village survived. The village communities are little republics having nearly everything that they want within themselves, and almost independent of any foreign relations. Dynasty after dynasty tumbles down; revolution succeeds revolution. Hindu, Pathan, Moghul, Maratha, Sikh, English are all masters in turn; but the village communities remain the same.\n\nThe village population was mainly composed of peasants. The village committee, representing the village community which was the de facto owner of the village land, distributed this land among the peasant families in the form of holdings. Each holding was cultivated by the peasant family by means of the collective labour of its members and with the aid of the primitive plough and bullocks. The peasant family enjoyed a traditional hereditary right to possess and cultivate its holding from generation to generation.\n\nQuestion: Which of the following pair of words are nearest in meaning to 'impregnable' and 'devastating' respectively?",
+      "options": [
+        "hard, challenging",
+        "unbreakable, destructive",
+        "firm, soothing",
+        "invincible, negating"
+      ],
+      "answer": "B",
+      "explanation": "Impregnable = unbreakable; devastating = destructive. 'Invincible' is close but 'negating' is not close to devastating.",
+      "sourceRef": "S1 QID 10",
+      "tags": [
+        "comprehension"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Comprehension (vocab)",
+      "difficulty": "easy",
+      "stem": "Passage: A self-sufficient village, based on agriculture carried on with primitive plough and bullock-power and handicrafts created by means of simple instruments, was a basic feature of pre-British Indian society.\n\nThe self-sufficient village as the basic economic unit had existed for centuries in India and, except for some minor modifications, had survived till the advent of the British rule, in spite of all political convulsions, religious upheavals and devastating wars. It stood impregnable in the face of all foreign invasions, dynastic changes, all violent territorial shiftings in inter-state struggles. Kingdoms rose and collapsed but the self-sufficient village survived. The village communities are little republics having nearly everything that they want within themselves, and almost independent of any foreign relations. Dynasty after dynasty tumbles down; revolution succeeds revolution. Hindu, Pathan, Moghul, Maratha, Sikh, English are all masters in turn; but the village communities remain the same.\n\nThe village population was mainly composed of peasants. The village committee, representing the village community which was the de facto owner of the village land, distributed this land among the peasant families in the form of holdings. Each holding was cultivated by the peasant family by means of the collective labour of its members and with the aid of the primitive plough and bullocks. The peasant family enjoyed a traditional hereditary right to possess and cultivate its holding from generation to generation.\n\nQuestion: The expression 'de facto' means:",
+      "options": [
+        "as per law",
+        "not based on facts",
+        "in name only",
+        "in reality"
+      ],
+      "answer": "D",
+      "explanation": "De facto is Latin for 'in fact', that is, in reality (opposite of de jure, by law).",
+      "sourceRef": "S1 QID 8",
+      "tags": [
+        "comprehension",
+        "latin-phrases"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Comprehension",
+      "difficulty": "easy",
+      "stem": "Passage: A self-sufficient village, based on agriculture carried on with primitive plough and bullock-power and handicrafts created by means of simple instruments, was a basic feature of pre-British Indian society.\n\nThe self-sufficient village as the basic economic unit had existed for centuries in India and, except for some minor modifications, had survived till the advent of the British rule, in spite of all political convulsions, religious upheavals and devastating wars. It stood impregnable in the face of all foreign invasions, dynastic changes, all violent territorial shiftings in inter-state struggles. Kingdoms rose and collapsed but the self-sufficient village survived. The village communities are little republics having nearly everything that they want within themselves, and almost independent of any foreign relations. Dynasty after dynasty tumbles down; revolution succeeds revolution. Hindu, Pathan, Moghul, Maratha, Sikh, English are all masters in turn; but the village communities remain the same.\n\nThe village population was mainly composed of peasants. The village committee, representing the village community which was the de facto owner of the village land, distributed this land among the peasant families in the form of holdings. Each holding was cultivated by the peasant family by means of the collective labour of its members and with the aid of the primitive plough and bullocks. The peasant family enjoyed a traditional hereditary right to possess and cultivate its holding from generation to generation.\n\nQuestion: By 'a self-sufficient village based on agriculture', the author means:",
+      "options": [
+        "a village which is not the part of a wider administrative set-up",
+        "a village where people were ignorant of what happened elsewhere",
+        "a village which worked with bullock-driven ploughs and handicrafts",
+        "a village which refused to change with the times"
+      ],
+      "answer": "C",
+      "explanation": "The first sentence describes the village as based on agriculture with primitive plough and bullock power, plus handicrafts.",
+      "sourceRef": "S1 QID 6",
+      "tags": [
+        "comprehension"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Comprehension",
+      "difficulty": "easy",
+      "stem": "Passage: A self-sufficient village, based on agriculture carried on with primitive plough and bullock-power and handicrafts created by means of simple instruments, was a basic feature of pre-British Indian society.\n\nThe self-sufficient village as the basic economic unit had existed for centuries in India and, except for some minor modifications, had survived till the advent of the British rule, in spite of all political convulsions, religious upheavals and devastating wars. It stood impregnable in the face of all foreign invasions, dynastic changes, all violent territorial shiftings in inter-state struggles. Kingdoms rose and collapsed but the self-sufficient village survived. The village communities are little republics having nearly everything that they want within themselves, and almost independent of any foreign relations. Dynasty after dynasty tumbles down; revolution succeeds revolution. Hindu, Pathan, Moghul, Maratha, Sikh, English are all masters in turn; but the village communities remain the same.\n\nThe village population was mainly composed of peasants. The village committee, representing the village community which was the de facto owner of the village land, distributed this land among the peasant families in the form of holdings. Each holding was cultivated by the peasant family by means of the collective labour of its members and with the aid of the primitive plough and bullocks. The peasant family enjoyed a traditional hereditary right to possess and cultivate its holding from generation to generation.\n\nQuestion: The defining characteristic of a village was that:",
+      "options": [
+        "it was willing to change but could not",
+        "it did not change though the world around it saw radical changes and violent upheavals",
+        "it doggedly refused to change",
+        "it had no interest in progress and development"
+      ],
+      "answer": "B",
+      "explanation": "The passage stresses that kingdoms rose and fell while the village communities remained the same.",
+      "sourceRef": "S1 QID 7",
+      "tags": [
+        "comprehension"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Comprehension",
+      "difficulty": "easy",
+      "stem": "Passage: A self-sufficient village, based on agriculture carried on with primitive plough and bullock-power and handicrafts created by means of simple instruments, was a basic feature of pre-British Indian society.\n\nThe self-sufficient village as the basic economic unit had existed for centuries in India and, except for some minor modifications, had survived till the advent of the British rule, in spite of all political convulsions, religious upheavals and devastating wars. It stood impregnable in the face of all foreign invasions, dynastic changes, all violent territorial shiftings in inter-state struggles. Kingdoms rose and collapsed but the self-sufficient village survived. The village communities are little republics having nearly everything that they want within themselves, and almost independent of any foreign relations. Dynasty after dynasty tumbles down; revolution succeeds revolution. Hindu, Pathan, Moghul, Maratha, Sikh, English are all masters in turn; but the village communities remain the same.\n\nThe village population was mainly composed of peasants. The village committee, representing the village community which was the de facto owner of the village land, distributed this land among the peasant families in the form of holdings. Each holding was cultivated by the peasant family by means of the collective labour of its members and with the aid of the primitive plough and bullocks. The peasant family enjoyed a traditional hereditary right to possess and cultivate its holding from generation to generation.\n\nQuestion: The land was cultivated:",
+      "options": [
+        "by agricultural labour",
+        "by members of the family together",
+        "by hired contractual labour",
+        "by landlords"
+      ],
+      "answer": "B",
+      "explanation": "Each holding was cultivated by the peasant family through the collective labour of its members.",
+      "sourceRef": "S1 QID 9",
+      "tags": [
+        "comprehension"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Comprehension (vocab)",
+      "difficulty": "medium",
+      "stem": "Passage: All great thinkers live and move on a high plane of thought. It is only there that they can breathe freely. It is only in contact with spirits like themselves that they can live harmoniously and attain that serenity which comes from ideal companionship. The studies of all great thinkers must range along the highest altitudes of human thought. I cannot remember the name of any illuminative genius who did not drink his inspiration from the fountains of ancient Greek and Hebrew writers; or such among the moderns as were pupils in ancient thought, and in turn, became masters on their own. I have always thought that the strongest argument in favour of the Baconian theory was, that no man, however indubitable his genius, could have written the plays and sonnets that have come down to us under Shakespeare's name who did not have the liberal education that Francis Bacon received.\n\nThe magnificent ideals that have ever haunted the human mind, and given us our highest proofs of a future immortality by reason of the impossibility of their fulfilment here, are splintered into atoms by contact with life's realities. Hence comes our sublime discontent. You will notice that your first sensation after reading a great book is one of melancholy and dissatisfaction. The ideas, sentiments, expressions are so far beyond those of ordinary working life that you cannot turn aside from one to the other without an acute sensation and consciousness of the contrast. And the principles are so lofty, so super-human that it is a positive pain, if once you become imbued with them, to come down and mix in the squalid surroundings of ordinary humanity.\n\nQuestion: What does the author mean by 'squalid surroundings'?",
+      "options": [
+        "solitary environment",
+        "wretched environment",
+        "extraordinary environment",
+        "ordinary environment"
+      ],
+      "answer": "B",
+      "explanation": "Squalid means dirty and wretched. Candidates often choose 'ordinary' because of the phrase 'ordinary humanity', but 'wretched' is the true meaning of squalid. This key is not confirmed.",
+      "sourceRef": "S1 QID 14",
+      "tags": [
+        "comprehension"
+      ],
+      "keyStatus": "disputed"
+    },
+    {
+      "section": "english",
+      "topic": "Comprehension",
+      "difficulty": "medium",
+      "stem": "Passage: All great thinkers live and move on a high plane of thought. It is only there that they can breathe freely. It is only in contact with spirits like themselves that they can live harmoniously and attain that serenity which comes from ideal companionship. The studies of all great thinkers must range along the highest altitudes of human thought. I cannot remember the name of any illuminative genius who did not drink his inspiration from the fountains of ancient Greek and Hebrew writers; or such among the moderns as were pupils in ancient thought, and in turn, became masters on their own. I have always thought that the strongest argument in favour of the Baconian theory was, that no man, however indubitable his genius, could have written the plays and sonnets that have come down to us under Shakespeare's name who did not have the liberal education that Francis Bacon received.\n\nThe magnificent ideals that have ever haunted the human mind, and given us our highest proofs of a future immortality by reason of the impossibility of their fulfilment here, are splintered into atoms by contact with life's realities. Hence comes our sublime discontent. You will notice that your first sensation after reading a great book is one of melancholy and dissatisfaction. The ideas, sentiments, expressions are so far beyond those of ordinary working life that you cannot turn aside from one to the other without an acute sensation and consciousness of the contrast. And the principles are so lofty, so super-human that it is a positive pain, if once you become imbued with them, to come down and mix in the squalid surroundings of ordinary humanity.\n\nQuestion: In what context has the phrase 'highest altitude' been used?",
+      "options": [
+        "in the context of Baconian theory of liberal education",
+        "in the context of Shakespeare's plays and sonnets",
+        "in the context of human thoughts of great thinkers",
+        "in the context of Greek and Hebrew writers"
+      ],
+      "answer": "C",
+      "explanation": "The sentence says the studies of great thinkers range along the highest altitudes of human thought.",
+      "sourceRef": "S1 QID 12",
+      "tags": [
+        "comprehension"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Comprehension",
+      "difficulty": "medium",
+      "stem": "Passage: All great thinkers live and move on a high plane of thought. It is only there that they can breathe freely. It is only in contact with spirits like themselves that they can live harmoniously and attain that serenity which comes from ideal companionship. The studies of all great thinkers must range along the highest altitudes of human thought. I cannot remember the name of any illuminative genius who did not drink his inspiration from the fountains of ancient Greek and Hebrew writers; or such among the moderns as were pupils in ancient thought, and in turn, became masters on their own. I have always thought that the strongest argument in favour of the Baconian theory was, that no man, however indubitable his genius, could have written the plays and sonnets that have come down to us under Shakespeare's name who did not have the liberal education that Francis Bacon received.\n\nThe magnificent ideals that have ever haunted the human mind, and given us our highest proofs of a future immortality by reason of the impossibility of their fulfilment here, are splintered into atoms by contact with life's realities. Hence comes our sublime discontent. You will notice that your first sensation after reading a great book is one of melancholy and dissatisfaction. The ideas, sentiments, expressions are so far beyond those of ordinary working life that you cannot turn aside from one to the other without an acute sensation and consciousness of the contrast. And the principles are so lofty, so super-human that it is a positive pain, if once you become imbued with them, to come down and mix in the squalid surroundings of ordinary humanity.\n\nQuestion: What does the Baconian theory argue about the creation of great literature?",
+      "options": [
+        "One has to be well-versed in Hebrew and Greek writings.",
+        "Liberal education is a must to create great literature.",
+        "One must live in high altitudes.",
+        "One has to be a genius like Bacon."
+      ],
+      "answer": "B",
+      "explanation": "Shakespeare's works, the theory says, could only be written by someone with a liberal education like Bacon's.",
+      "sourceRef": "S1 QID 11",
+      "tags": [
+        "comprehension"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Comprehension",
+      "difficulty": "easy",
+      "stem": "Passage: All great thinkers live and move on a high plane of thought. It is only there that they can breathe freely. It is only in contact with spirits like themselves that they can live harmoniously and attain that serenity which comes from ideal companionship. The studies of all great thinkers must range along the highest altitudes of human thought. I cannot remember the name of any illuminative genius who did not drink his inspiration from the fountains of ancient Greek and Hebrew writers; or such among the moderns as were pupils in ancient thought, and in turn, became masters on their own. I have always thought that the strongest argument in favour of the Baconian theory was, that no man, however indubitable his genius, could have written the plays and sonnets that have come down to us under Shakespeare's name who did not have the liberal education that Francis Bacon received.\n\nThe magnificent ideals that have ever haunted the human mind, and given us our highest proofs of a future immortality by reason of the impossibility of their fulfilment here, are splintered into atoms by contact with life's realities. Hence comes our sublime discontent. You will notice that your first sensation after reading a great book is one of melancholy and dissatisfaction. The ideas, sentiments, expressions are so far beyond those of ordinary working life that you cannot turn aside from one to the other without an acute sensation and consciousness of the contrast. And the principles are so lofty, so super-human that it is a positive pain, if once you become imbued with them, to come down and mix in the squalid surroundings of ordinary humanity.\n\nQuestion: According to the author, why does the reading of a great book make one melancholic and disappointed?",
+      "options": [
+        "Because they are full of sorrowful stories.",
+        "Their ideas are far beyond those of ordinary working lives.",
+        "They have nothing in connection with the real world.",
+        "They only keep you in a make-believe world."
+      ],
+      "answer": "B",
+      "explanation": "The passage says the ideas and expressions are so far beyond ordinary working life that the contrast is acutely felt.",
+      "sourceRef": "S1 QID 13",
+      "tags": [
+        "comprehension"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Comprehension (vocab)",
+      "difficulty": "hard",
+      "stem": "Passage: All great thinkers live and move on a high plane of thought. It is only there that they can breathe freely. It is only in contact with spirits like themselves that they can live harmoniously and attain that serenity which comes from ideal companionship. The studies of all great thinkers must range along the highest altitudes of human thought. I cannot remember the name of any illuminative genius who did not drink his inspiration from the fountains of ancient Greek and Hebrew writers; or such among the moderns as were pupils in ancient thought, and in turn, became masters on their own. I have always thought that the strongest argument in favour of the Baconian theory was, that no man, however indubitable his genius, could have written the plays and sonnets that have come down to us under Shakespeare's name who did not have the liberal education that Francis Bacon received.\n\nThe magnificent ideals that have ever haunted the human mind, and given us our highest proofs of a future immortality by reason of the impossibility of their fulfilment here, are splintered into atoms by contact with life's realities. Hence comes our sublime discontent. You will notice that your first sensation after reading a great book is one of melancholy and dissatisfaction. The ideas, sentiments, expressions are so far beyond those of ordinary working life that you cannot turn aside from one to the other without an acute sensation and consciousness of the contrast. And the principles are so lofty, so super-human that it is a positive pain, if once you become imbued with them, to come down and mix in the squalid surroundings of ordinary humanity.\n\nQuestion: Choose the pair of words from the following which means the same as 'indubitable' and 'imbued with' respectively.",
+      "options": [
+        "permeate, undebatable",
+        "unquestionable, pervade",
+        "undeniable, inculcate",
+        "suffuse, undoubtable"
+      ],
+      "answer": "B",
+      "explanation": "Indubitable = unquestionable. 'Imbued with' means filled or permeated with, so 'pervade' fits better than 'inculcate' (to instil). The key is not confirmed.",
+      "sourceRef": "S1 QID 15",
+      "tags": [
+        "comprehension"
+      ],
+      "keyStatus": "disputed"
+    },
+    {
+      "section": "english",
+      "topic": "Sentence improvement",
+      "difficulty": "easy",
+      "stem": "Of the four given options, choose the most appropriate one.",
+      "options": [
+        "His father told him to go to the temple every morning.",
+        "His father tell him to go to the temple every morning.",
+        "His father tell him every morning to go to the temple.",
+        "His father told him every morning to go to the temple."
+      ],
+      "answer": "A",
+      "explanation": "'Told' (past tense), with 'every morning' placed at the end as the usual adverbial position.",
+      "sourceRef": "S1 QID 45",
+      "tags": [
+        "sentence-correction"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Error spotting",
+      "difficulty": "medium",
+      "stem": "This question consists of a sentence divided into four parts numbered (1) to (4). Only one part is not acceptable in standard written English. Identify the part which contains an error. (1) The documentary that was shown (2) was soul-stirring (3) and would be impacting on (4) a large part of the audience.",
+      "options": [
+        "The documentary that was shown",
+        "was soul-stirring",
+        "and would be impacting on",
+        "a large part of the audience."
+      ],
+      "answer": "C",
+      "explanation": "'Impact' is not used with 'on' in this form and the tense is wrong. It should be 'and would impact'.",
+      "sourceRef": "S1 QID 33",
+      "tags": [
+        "error-spotting"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Para jumble",
+      "difficulty": "hard",
+      "stem": "Choose the most logical order of sentences to construct a coherent paragraph.\nA. A sentence, or a short passage, has to be enlarged into a paragraph by the fuller and more elaborate expression of the meaning.\nB. In precis-writing we have to compress; and in this exercise we have to expand.\nC. This exercise is the exact opposite of precis-writing.\nD. Such an exercise practically amounts to the writing of a miniature essay on the subject of the original sentence or passage.",
+      "options": [
+        "DCBA",
+        "BACD",
+        "CBDA",
+        "CBAD"
+      ],
+      "answer": "D",
+      "explanation": "C introduces 'this exercise', B explains how it differs (expand vs compress), A defines expansion, D concludes with 'Such an exercise'. This matches the original textbook passage.",
+      "sourceRef": "S1 QID 30",
+      "tags": [
+        "para-jumble"
+      ],
+      "keyStatus": "disputed"
+    },
+    {
+      "section": "english",
+      "topic": "Error spotting",
+      "difficulty": "medium",
+      "stem": "This question consists of a sentence divided into four parts numbered (1) to (4). Only one part is not acceptable in standard written English. Identify the part which contains an error. (1) They are living in Delhi (2) for two decades now (3) and yet find it difficult (4) to locate places in it.",
+      "options": [
+        "They are living in Delhi",
+        "for two decades now",
+        "and yet find it difficult",
+        "to locate places in it."
+      ],
+      "answer": "A",
+      "explanation": "An action continuing from the past to now takes the present perfect continuous: 'They have been living in Delhi'.",
+      "sourceRef": "S1 QID 32",
+      "tags": [
+        "error-spotting",
+        "tenses"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Para jumble",
+      "difficulty": "medium",
+      "stem": "Choose the most logical order of sentences.\nA. Scholars specialize in single fields, teachers teach single works.\nB. Students leave school knowing a few landmark works but little of the landscape which surrounds them.\nC. Literary history can be useful and is increasingly necessary.\nD. Larger narratives are becoming lost; the perspective afforded by a general view is not widely available.",
+      "options": [
+        "ABCD",
+        "BADC",
+        "CADB",
+        "CABD"
+      ],
+      "answer": "D",
+      "explanation": "C states the claim, A and B give the reasons (specialisation, narrow learning), D sums up the loss.",
+      "sourceRef": "S1 QID 28",
+      "tags": [
+        "para-jumble"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Error spotting",
+      "difficulty": "easy",
+      "stem": "This question consists of a sentence divided into four parts numbered (1) to (4). Only one part is not acceptable in standard written English. Identify the part which contains an error. (1) There were many students (2) in the class (3) but only handful (4) could answer the difficult question.",
+      "options": [
+        "There were many students",
+        "in the class",
+        "but only handful",
+        "could answer the difficult question."
+      ],
+      "answer": "C",
+      "explanation": "'Handful' needs an article: 'but only a handful'.",
+      "sourceRef": "S1 QID 31",
+      "tags": [
+        "error-spotting"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Sentence improvement",
+      "difficulty": "easy",
+      "stem": "Of the four given options, choose the most appropriate one.",
+      "options": [
+        "The judge delivered the sentence in the courtroom yesterday.",
+        "The judge delivered the sentence yesterday in the courtroom.",
+        "The judge delivered yesterday in the courtroom the sentence.",
+        "The judge delivered in the courtroom the sentence yesterday."
+      ],
+      "answer": "A",
+      "explanation": "Standard adverbial order is object, then place, then time.",
+      "sourceRef": "S1 QID 44",
+      "tags": [
+        "sentence-order"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Antonyms",
+      "difficulty": "easy",
+      "stem": "Choose the alternative closest to the opposite in meaning of the underlined word: A cursory look at the text will not get you the essence of it.",
+      "options": [
+        "thorough",
+        "steadfast",
+        "rapid",
+        "long-lasting"
+      ],
+      "answer": "A",
+      "explanation": "Cursory = hasty and superficial; thorough is the opposite.",
+      "sourceRef": "S1 QID 21",
+      "tags": [
+        "antonym"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Sentence improvement",
+      "difficulty": "easy",
+      "stem": "Of the four given options, choose the most appropriate one.",
+      "options": [
+        "They have built across the river a dam.",
+        "They have built a dam over the river.",
+        "They have built a dam across the river.",
+        "They have built over the river a dam."
+      ],
+      "answer": "C",
+      "explanation": "'Across the river' is the correct preposition for a dam.",
+      "sourceRef": "S1 QID 42",
+      "tags": [
+        "prepositions"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Synonyms",
+      "difficulty": "easy",
+      "stem": "Choose the alternative which can replace the underlined word without changing the meaning: He could rise to the stature because of his invincible courage.",
+      "options": [
+        "unmanageable",
+        "inviolable",
+        "immeasurable",
+        "unbeatable"
+      ],
+      "answer": "D",
+      "explanation": "Invincible = unbeatable, impossible to defeat.",
+      "sourceRef": "S1 QID 46",
+      "tags": [
+        "synonym"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Para jumble",
+      "difficulty": "hard",
+      "stem": "Choose the most logical order of sentences.\nA. Is it possible to maintain this atmosphere, in which alone teaching and learning are possible?\nB. Just now we have created an atmosphere - because I want to find out and you want to find out.\nC. You have to create a feeling, an atmosphere, in the room.\nD. There is attention when the teacher and the taught both have a drive to learn and teach.",
+      "options": [
+        "DCBA",
+        "DABC",
+        "ACDB",
+        "CDBA"
+      ],
+      "answer": "D",
+      "explanation": "C sets the instruction, D explains what makes attention, B gives the live example, A asks whether it can be sustained. The key is not confirmed (a candidate chose DCBA).",
+      "sourceRef": "S1 QID 26",
+      "tags": [
+        "para-jumble"
+      ],
+      "keyStatus": "disputed"
+    },
+    {
+      "section": "english",
+      "topic": "One-word substitution",
+      "difficulty": "easy",
+      "stem": "Choose the option which can be substituted for: one who devotes his service or wealth for the love of mankind",
+      "options": [
+        "philatelist",
+        "misanthropist",
+        "philanthropist",
+        "altruist"
+      ],
+      "answer": "C",
+      "explanation": "A philanthropist loves mankind and gives wealth or service to help. A philatelist collects stamps; a misanthropist hates mankind.",
+      "sourceRef": "S1 QID 19",
+      "tags": [
+        "one-word"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Antonyms",
+      "difficulty": "medium",
+      "stem": "Choose the alternative closest to the opposite in meaning of the underlined word: It is an obsolete law and ought to be thrown out at the earliest.",
+      "options": [
+        "new",
+        "current",
+        "commendable",
+        "outdated"
+      ],
+      "answer": "B",
+      "explanation": "Obsolete = no longer in use; 'current' is the true opposite. 'New' is also close, so this key is not confirmed.",
+      "sourceRef": "S1 QID 25",
+      "tags": [
+        "antonym"
+      ],
+      "keyStatus": "disputed"
+    },
+    {
+      "section": "english",
+      "topic": "Synonyms",
+      "difficulty": "easy",
+      "stem": "Choose the alternative which can replace the underlined word: The success story of the factory is due to the indefatigable workers.",
+      "options": [
+        "tired",
+        "skilful",
+        "brave",
+        "tireless"
+      ],
+      "answer": "D",
+      "explanation": "Indefatigable = tireless.",
+      "sourceRef": "S1 QID 48",
+      "tags": [
+        "synonym"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Error spotting",
+      "difficulty": "medium",
+      "stem": "This question consists of a sentence divided into four parts numbered (1) to (4). Only one part is not acceptable in standard written English. Identify the part which contains an error. (1) The farmers (2) will have left their fields (3) if they had known (4) that a thunderstorm was approaching.",
+      "options": [
+        "The farmers",
+        "will have left their fields",
+        "if they had known",
+        "that a thunderstorm was approaching"
+      ],
+      "answer": "B",
+      "explanation": "The 'if ... had known' clause needs 'would have left'.",
+      "sourceRef": "S1 QID 34",
+      "tags": [
+        "error-spotting",
+        "conditionals"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "One-word substitution",
+      "difficulty": "medium",
+      "stem": "Choose the option which can be substituted for: one who delights in speaking about oneself",
+      "options": [
+        "altruist",
+        "selfish",
+        "egoist",
+        "arrogant"
+      ],
+      "answer": "C",
+      "explanation": "The sheet's key for this item is egoist. (Strictly, an egotist talks about himself and an egoist is self-interested, but egoist is the option intended.)",
+      "sourceRef": "S1 QID 16",
+      "tags": [
+        "one-word"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "One-word substitution",
+      "difficulty": "medium",
+      "stem": "Choose the option which can be substituted for: a leader of the people who can sway his followers by his oratory",
+      "options": [
+        "leader",
+        "orator",
+        "demagogue",
+        "firebrand"
+      ],
+      "answer": "C",
+      "explanation": "A demagogue is a leader who appeals to people's emotions through oratory.",
+      "sourceRef": "S1 QID 18",
+      "tags": [
+        "one-word"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Fill in the blanks",
+      "difficulty": "easy",
+      "stem": "Fill in the blanks: We all need ______ in times of ______.",
+      "options": [
+        "aid, imbalance",
+        "assistance, rejuvenation",
+        "abandon, catastrophe",
+        "support, adversity"
+      ],
+      "answer": "D",
+      "explanation": "'Support in times of adversity' is the natural collocation.",
+      "sourceRef": "S1 QID 53",
+      "tags": [
+        "fill-blanks"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Idioms",
+      "difficulty": "easy",
+      "stem": "Choose the meaning of the underlined idiom: Swati always beats about the bush in her arguments.",
+      "options": [
+        "to talk about the bush",
+        "to speak like hunters around the bush",
+        "to go about something in a roundabout way",
+        "to talk to the point"
+      ],
+      "answer": "C",
+      "explanation": "To beat about the bush = to avoid coming to the point.",
+      "sourceRef": "S1 QID 40",
+      "tags": [
+        "idiom"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "One-word substitution",
+      "difficulty": "easy",
+      "stem": "Choose the option which can be substituted for: a place where bees are kept",
+      "options": [
+        "aviary",
+        "apiary",
+        "dray",
+        "aerie"
+      ],
+      "answer": "B",
+      "explanation": "Apiary = place where bees are kept. Aviary is for birds; aerie is an eagle's nest.",
+      "sourceRef": "S1 QID 17",
+      "tags": [
+        "one-word"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Para jumble",
+      "difficulty": "medium",
+      "stem": "Choose the most logical order of sentences.\nA. The mindreading abilities of human beings are better than those of any other species on earth.\nB. They grasp the simple contrast between having and lacking knowledge.\nC. Chimpanzees monitor whether their rivals do or do not know about hidden food.\nD. But human beings can also keep track of the ways in which others are mistaken and this is something that no other animal does.",
+      "options": [
+        "ADCB",
+        "ACBD",
+        "DBAC",
+        "BCDA"
+      ],
+      "answer": "B",
+      "explanation": "A states the claim, C gives the chimp example, B explains what chimps grasp, D adds what only humans can do.",
+      "sourceRef": "S1 QID 27",
+      "tags": [
+        "para-jumble"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Antonyms",
+      "difficulty": "medium",
+      "stem": "Choose the alternative closest to the opposite in meaning of the underlined word: He received a fabulous prize after he won the much-publicised contest.",
+      "options": [
+        "miserly",
+        "animated",
+        "poor",
+        "ordinary"
+      ],
+      "answer": "D",
+      "explanation": "Fabulous = extraordinary, so ordinary is the opposite.",
+      "sourceRef": "S1 QID 23",
+      "tags": [
+        "antonym"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Synonyms",
+      "difficulty": "medium",
+      "stem": "Choose the alternative which can replace the underlined word: We saw scintillating fireworks display on the grand finale of the Annual Fest.",
+      "options": [
+        "sparkling",
+        "explosive",
+        "colourful",
+        "uncontrollable"
+      ],
+      "answer": "A",
+      "explanation": "Scintillating = sparkling or brilliant.",
+      "sourceRef": "S1 QID 49",
+      "tags": [
+        "synonym"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Idioms",
+      "difficulty": "easy",
+      "stem": "Choose the meaning of the underlined idiom: Ashis felt that he was in seventh heaven when he first saw the results.",
+      "options": [
+        "in delight",
+        "in sadness",
+        "in outrage",
+        "in pensive mood"
+      ],
+      "answer": "A",
+      "explanation": "In seventh heaven = extremely happy.",
+      "sourceRef": "S1 QID 38",
+      "tags": [
+        "idiom"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Fill in the blanks",
+      "difficulty": "medium",
+      "stem": "Fill in the blanks: Bacteria may ______ resistance to a particular antibiotic by its ______.",
+      "options": [
+        "attain, stale",
+        "access, trite",
+        "procure, hackneyed",
+        "acquire, overuse"
+      ],
+      "answer": "D",
+      "explanation": "Bacteria acquire resistance through overuse of an antibiotic.",
+      "sourceRef": "S1 QID 51",
+      "tags": [
+        "fill-blanks"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Fill in the blanks",
+      "difficulty": "medium",
+      "stem": "Fill in the blanks: He felt ______ when he was passed ______ for promotion.",
+      "options": [
+        "slighted, over",
+        "spurned, in",
+        "underrated, under",
+        "cold-shouldered, against"
+      ],
+      "answer": "A",
+      "explanation": "'Passed over for promotion' is the fixed phrase, and 'slighted' fits the feeling. (The sheet shows a candidate chose the last option.)",
+      "sourceRef": "S1 QID 55",
+      "tags": [
+        "fill-blanks"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Idioms",
+      "difficulty": "easy",
+      "stem": "Choose the meaning of the underlined idiom: Peter and Ravi agreed to bury the hatchet after a gap of ten years.",
+      "options": [
+        "to restore the relationship after a long quarrel",
+        "to live happily ever after",
+        "to become enemies",
+        "open for a discussion"
+      ],
+      "answer": "A",
+      "explanation": "To bury the hatchet = to make peace.",
+      "sourceRef": "S1 QID 39",
+      "tags": [
+        "idiom"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Fill in the blanks",
+      "difficulty": "easy",
+      "stem": "Fill in the blanks: The children were ______ because they were ______.",
+      "options": [
+        "noisy, satisfied",
+        "playful, undernourished",
+        "daring, greedy",
+        "irritable, hungry"
+      ],
+      "answer": "D",
+      "explanation": "Being hungry causes irritability; the other pairs don't link cause and effect.",
+      "sourceRef": "S1 QID 54",
+      "tags": [
+        "fill-blanks"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Error spotting",
+      "difficulty": "medium",
+      "stem": "This question consists of a sentence divided into four parts numbered (1) to (4). Only one part is not acceptable in standard written English. Identify the part which contains an error. (1) Though younger in age, (2) Mr. Sharma is (3) senior than Mr. Verma (4) in the official hierarchy.",
+      "options": [
+        "Though younger in age,",
+        "Mr. Sharma is",
+        "senior than Mr. Verma",
+        "in the official hierarchy."
+      ],
+      "answer": "C",
+      "explanation": "'Senior', 'junior', 'superior' take 'to', not 'than': 'senior to Mr. Verma'.",
+      "sourceRef": "S1 QID 35",
+      "tags": [
+        "error-spotting",
+        "prepositions"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Sentence improvement",
+      "difficulty": "easy",
+      "stem": "Of the four given options, choose the most appropriate one.",
+      "options": [
+        "You can safely with these kittens play.",
+        "You can play with these kittens safely.",
+        "You can play along with these kittens safely.",
+        "You can play safely along with the kittens."
+      ],
+      "answer": "B",
+      "explanation": "Standard word order: verb, then 'with' phrase, then adverb.",
+      "sourceRef": "S1 QID 43",
+      "tags": [
+        "sentence-order"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Antonyms",
+      "difficulty": "medium",
+      "stem": "Choose the alternative closest to the opposite in meaning of the underlined word: The once-flourishing tree was in an advanced state of decay now.",
+      "options": [
+        "innovation",
+        "freshness",
+        "novelty",
+        "regeneration"
+      ],
+      "answer": "D",
+      "explanation": "Decay is the opposite of regeneration (renewal and regrowth).",
+      "sourceRef": "S1 QID 22",
+      "tags": [
+        "antonym"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Synonyms",
+      "difficulty": "medium",
+      "stem": "Choose the alternative which can replace the underlined word: The government is taking expeditious steps to fill up the vacancies.",
+      "options": [
+        "necessary",
+        "prompt",
+        "strict",
+        "forceful"
+      ],
+      "answer": "B",
+      "explanation": "Expeditious = quick and efficient, so prompt.",
+      "sourceRef": "S1 QID 50",
+      "tags": [
+        "synonym"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Synonyms",
+      "difficulty": "medium",
+      "stem": "Choose the alternative which can replace the underlined word: The song had a soporific effect on the child.",
+      "options": [
+        "thought-provoking",
+        "terrific",
+        "supreme",
+        "sleep-inducing"
+      ],
+      "answer": "D",
+      "explanation": "Soporific = causing sleep.",
+      "sourceRef": "S1 QID 47",
+      "tags": [
+        "synonym"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Antonyms",
+      "difficulty": "medium",
+      "stem": "Choose the alternative closest to the opposite in meaning of the underlined word: Since he is garrulous by nature, he is generally shunned by decent, cultured people.",
+      "options": [
+        "silent",
+        "speechless",
+        "taciturn",
+        "dumb"
+      ],
+      "answer": "C",
+      "explanation": "Garrulous = excessively talkative; taciturn = habitually quiet by nature. (A candidate chose 'silent'.)",
+      "sourceRef": "S1 QID 24",
+      "tags": [
+        "antonym"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Idioms",
+      "difficulty": "easy",
+      "stem": "Choose the meaning of the underlined idiom: Aastha said that we need to fight tooth and nail for the cause.",
+      "options": [
+        "to fight fiercely",
+        "to fight with tooth and nail",
+        "to pick up a quarrel with anyone",
+        "to fight with a sword"
+      ],
+      "answer": "A",
+      "explanation": "To fight tooth and nail = to fight with great determination.",
+      "sourceRef": "S1 QID 36",
+      "tags": [
+        "idiom"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "One-word substitution",
+      "difficulty": "easy",
+      "stem": "Choose the option which can be substituted for: one who has special skill in judging art, music, tastes, etc.",
+      "options": [
+        "connoisseur",
+        "confectioner",
+        "convalescent",
+        "ignoramus"
+      ],
+      "answer": "A",
+      "explanation": "A connoisseur is an expert judge in matters of taste.",
+      "sourceRef": "S1 QID 20",
+      "tags": [
+        "one-word"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Sentence improvement",
+      "difficulty": "easy",
+      "stem": "Of the four given options, choose the most appropriate one.",
+      "options": [
+        "Do you get not easily embarrassed?",
+        "Do you got embarrassed easily?",
+        "Do you get easily not embarrassed?",
+        "Do you get embarrassed easily?"
+      ],
+      "answer": "D",
+      "explanation": "Correct word order and tense.",
+      "sourceRef": "S1 QID 41",
+      "tags": [
+        "sentence-correction"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Fill in the blanks",
+      "difficulty": "easy",
+      "stem": "Fill in the blanks: If that does not ______, we will have to think of a/an ______ plan.",
+      "options": [
+        "work, alternative",
+        "guide, substitute",
+        "develop, similar",
+        "formulate, choice"
+      ],
+      "answer": "A",
+      "explanation": "'If that does not work... an alternative plan'.",
+      "sourceRef": "S1 QID 52",
+      "tags": [
+        "fill-blanks"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Para jumble",
+      "difficulty": "hard",
+      "stem": "Choose the most logical order of sentences.\nA. It belongs to the family meliaceae.\nB. Neem is an evergreen tree of the tropics and sub-tropics.\nC. It is popular for its insect repellent traits and a unique property of inhibiting the nitrification process of the soil.\nD. In India neem grows in plains and in areas that reach an elevation of approximately 1850 metres.",
+      "options": [
+        "BACD",
+        "DBCA",
+        "ACBD",
+        "DBCA"
+      ],
+      "answer": "A",
+      "explanation": "B introduces the neem, A classifies it ('It belongs'), C gives its uses, D its distribution. Options 2 and 4 are identical in the original paper, so only the first option starts with B, A.",
+      "sourceRef": "S1 QID 29",
+      "tags": [
+        "para-jumble"
+      ]
+    },
+    {
+      "section": "english",
+      "topic": "Idioms",
+      "difficulty": "easy",
+      "stem": "Choose the meaning of the underlined idiom: His friends felt that Rukmini was in hot water for she could not submit her assignment on time.",
+      "options": [
+        "in an enjoying position",
+        "in a position to trouble others",
+        "in burning water for treatment",
+        "in serious trouble"
+      ],
+      "answer": "D",
+      "explanation": "In hot water = in serious trouble.",
+      "sourceRef": "S1 QID 37",
+      "tags": [
+        "idiom"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Partnership",
+      "difficulty": "medium",
+      "stem": "P started a work by investing Rs 6,000. After 6 months Q joined with Rs 14,000. After 1 year R joined with Rs 12,000. After two years of work, they earned a total profit of Rs 45,000. What is the share of P?",
+      "options": [
+        "Rs 12,000",
+        "Rs 12,800",
+        "Rs 14,400",
+        "Rs 16,000"
+      ],
+      "answer": "A",
+      "explanation": "Capital x time: P = 6000x24 = 1,44,000; Q = 14000x18 = 2,52,000; R = 12000x12 = 1,44,000. Ratio 4:7:4, so P's share = 4/15 x 45,000 = 12,000.",
+      "sourceRef": "S1 QID 63",
+      "tags": [
+        "partnership"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Direction sense",
+      "difficulty": "medium",
+      "stem": "Rekha starts from her house and goes 3 km straight. Then she turns towards her left and goes 1 km. She again turns towards her left and goes 2 km. If she is now in the North-East direction from her house, then in which direction did she go in the beginning?",
+      "options": [
+        "South-East",
+        "North-East",
+        "North",
+        "East"
+      ],
+      "answer": "D",
+      "explanation": "If she starts east: 3 km east, 1 km north, 2 km west leaves her 1 km east and 1 km north of home, which is North-East.",
+      "sourceRef": "S1 QID 58",
+      "tags": [
+        "direction"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Alphabet reversal",
+      "difficulty": "medium",
+      "stem": "If the letter sequence 'B T D S F R H Q J P L O N' is written in reversed order of the English alphabet (B is written as Y, N as M etc.), then which would be the 9th letter from the right to left?",
+      "options": [
+        "U",
+        "I",
+        "S",
+        "H"
+      ],
+      "answer": "A",
+      "explanation": "There are 13 letters, so the 9th from the right is the 5th from the left, F. In reversed alphabet F becomes U (6 + 21 = 27).",
+      "sourceRef": "S1 QID 62",
+      "tags": [
+        "alphabet"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Compound interest",
+      "difficulty": "easy",
+      "stem": "A sum of money doubles itself at compound interest x in 10 years. In how many years will it be four times at the same compound interest?",
+      "options": [
+        "15",
+        "20",
+        "25",
+        "30"
+      ],
+      "answer": "B",
+      "explanation": "Doubling again takes another 10 years, so four times takes 20 years.",
+      "sourceRef": "S1 QID 57",
+      "tags": [
+        "compound-interest"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Coding-decoding",
+      "difficulty": "medium",
+      "stem": "If APPLE is coded as MOOPQ, SIR is coded as ABC and MANGO is coded as TMVWX, then ORANGE is coded as:",
+      "options": [
+        "XCMQVW",
+        "XMCWVQ",
+        "XCMWQV",
+        "XCMVWQ"
+      ],
+      "answer": "D",
+      "explanation": "Letter map from the codes: O-X, R-C, A-M, N-V, G-W, E-Q. So ORANGE = XCMVWQ.",
+      "sourceRef": "S1 QID 60",
+      "tags": [
+        "coding"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Profit and loss",
+      "difficulty": "medium",
+      "stem": "An article is sold at a certain price. By selling it at 5/7th of that price one loses 20%. Find the gain percentage at the original sold price.",
+      "options": [
+        "20%",
+        "12%",
+        "6%",
+        "10%"
+      ],
+      "answer": "B",
+      "explanation": "Let the original price be 7x. At 5x there is a 20% loss, so CP = 5x/0.8 = 6.25x. Gain at 7x = 0.75/6.25 = 12%.",
+      "sourceRef": "S1 QID 61",
+      "tags": [
+        "profit-loss"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Averages",
+      "difficulty": "medium",
+      "stem": "The average weight of A, B and C is 60 kg. If the average weight of A and B is 55 kg and the average weight of B and C is 58 kg, then what is the weight of B?",
+      "options": [
+        "46 kg",
+        "48 kg",
+        "52 kg",
+        "54 kg"
+      ],
+      "answer": "A",
+      "explanation": "A+B+C = 180, A+B = 110, B+C = 116. Adding the last two: A+2B+C = 226, so B = 226 - 180 = 46.",
+      "sourceRef": "S1 QID 65",
+      "tags": [
+        "average"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Series",
+      "difficulty": "medium",
+      "stem": "Find the missing term: A, YZ, BCD, UVWX, ___ ?",
+      "options": [
+        "U V W X Y",
+        "P Q R S T",
+        "E F G H I",
+        "A B C D E"
+      ],
+      "answer": "C",
+      "explanation": "Groups grow by one letter, alternately from the start and end of the alphabet: A, YZ, BCD, UVWX, EFGHI.",
+      "sourceRef": "S1 QID 56",
+      "tags": [
+        "series"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Alligation",
+      "difficulty": "medium",
+      "stem": "Find the ratio at which rice at Rs 15.20 per kg is mixed with rice at Rs 18.10 per kg to get a mixture worth Rs 16.30 per kg.",
+      "options": [
+        "15 : 13",
+        "13 : 15",
+        "11 : 18",
+        "18 : 11"
+      ],
+      "answer": "D",
+      "explanation": "Ratio = (18.10 - 16.30) : (16.30 - 15.20) = 1.80 : 1.10 = 18 : 11.",
+      "sourceRef": "S1 QID 67",
+      "tags": [
+        "alligation"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Number theory",
+      "difficulty": "medium",
+      "stem": "For an integer n, n! = n(n-1)(n-2)...3.2.1. Then 1! + 2! + 3! + ... + 100! when divided by 5 leaves remainder ____.",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": "D",
+      "explanation": "From 5! onwards every term is divisible by 5. Remainder comes from 1+2+6+24 = 33, which leaves 3.",
+      "sourceRef": "S1 QID 59",
+      "tags": [
+        "number-theory"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Calendar",
+      "difficulty": "medium",
+      "stem": "I was born on 21st December. Monika is older than me by 11 days. That year Christmas was on Monday. Monika was born on:",
+      "options": [
+        "Saturday",
+        "Monday",
+        "Tuesday",
+        "Sunday"
+      ],
+      "answer": "D",
+      "explanation": "25 Dec is Monday, so 21 Dec is Thursday. Monika was born 11 days earlier; 11 mod 7 = 4, and Thursday minus 4 days is Sunday.",
+      "sourceRef": "S1 QID 66",
+      "tags": [
+        "calendar"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Blood relations (coded)",
+      "difficulty": "hard",
+      "stem": "If x + y means x is a sister of y; x - y means x is a brother of y; x x y means x is a daughter of y; x / y means x is the mother of y, then which of the following shows that l and n are wife and husband respectively?",
+      "options": [
+        "l + m x n",
+        "l / m x n",
+        "l - m x n",
+        "l x m - n"
+      ],
+      "answer": "B",
+      "explanation": "l / m means l is the mother of m; m x n means m is the daughter of n. So l and n are m's parents, with l the mother and n the father.",
+      "sourceRef": "S1 QID 68",
+      "tags": [
+        "blood-relations",
+        "coded-relations"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Blood relations (coded)",
+      "difficulty": "hard",
+      "stem": "If x + y means x is a sister of y; x - y means x is a brother of y; x x y means x is a daughter of y; x / y means x is the mother of y, then a + b - c x d / e means:",
+      "options": [
+        "a, b, c, e are children of d",
+        "a, b, c, d are children of e",
+        "b, c, d, e are children of a",
+        "a, b, d are children of c"
+      ],
+      "answer": "A",
+      "explanation": "a sister of b; b brother of c; c daughter of d; d mother of e. So a, b, c and e are all children of d.",
+      "sourceRef": "S1 QID 69",
+      "tags": [
+        "blood-relations",
+        "coded-relations"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Coding-decoding",
+      "difficulty": "medium",
+      "stem": "CASE : DCVI :: PACK : ?",
+      "options": [
+        "QCFO",
+        "QCFN",
+        "RCEM",
+        "RBDL"
+      ],
+      "answer": "A",
+      "explanation": "Letters move forward by 1, 2, 3, 4 in turn: C-D, A-C, S-V, E-I. So P-Q, A-C, C-F, K-O gives QCFO.",
+      "sourceRef": "S1 QID 72",
+      "tags": [
+        "coding"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Simple interest",
+      "difficulty": "easy",
+      "stem": "A sum of money at simple interest doubles in 8 years. It will become six times in:",
+      "options": [
+        "24 years",
+        "48 years",
+        "40 years",
+        "42 years"
+      ],
+      "answer": "C",
+      "explanation": "Interest equals the principal in 8 years. Six times means interest of 5 x principal, so 5 x 8 = 40 years.",
+      "sourceRef": "S1 QID 73",
+      "tags": [
+        "simple-interest"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Ratio",
+      "difficulty": "medium",
+      "stem": "An amount of Rs 62 is divided among A, B and C such that A gets Rs 12 more than B and B gets Rs 10 more than C. What is the ratio of their share?",
+      "options": [
+        "8 : 3 : 2",
+        "15 : 9 : 4",
+        "16 : 10 : 5",
+        "3 : 2 : 1"
+      ],
+      "answer": "C",
+      "explanation": "Let C = x, B = x+10, A = x+22. Then 3x + 32 = 62, so x = 10 and the shares are 32 : 20 : 10 = 16 : 10 : 5.",
+      "sourceRef": "S1 QID 75",
+      "tags": [
+        "ratio"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Blood relations",
+      "difficulty": "medium",
+      "stem": "If Neena says 'Amita's father Raman is the only son of my father-in-law Madhav', then how is Babita, who is the sister of Amita, related to Madhav?",
+      "options": [
+        "Daughter",
+        "Grand daughter",
+        "Sister",
+        "Sister-in-law"
+      ],
+      "answer": "B",
+      "explanation": "Raman is Madhav's only son and Neena's husband. Amita and Babita are Raman's daughters, so they are Madhav's granddaughters.",
+      "sourceRef": "S1 QID 76",
+      "tags": [
+        "blood-relations"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Trains",
+      "difficulty": "medium",
+      "stem": "A 200 m long train at the speed of 60 km/h crosses another train running at twice the speed of the first in the opposite direction in 10 sec. Find the length of the second train.",
+      "options": [
+        "250 m",
+        "275 m",
+        "300 m",
+        "350 m"
+      ],
+      "answer": "C",
+      "explanation": "Relative speed = 60 + 120 = 180 km/h = 50 m/s. Distance in 10 s = 500 m = 200 + L, so L = 300 m.",
+      "sourceRef": "S1 QID 70",
+      "tags": [
+        "trains"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Ages",
+      "difficulty": "easy",
+      "stem": "The age of Rajiv is twice the age of Suraj and half the age of Mohan. Suraj is elder than Mehul. Who is the eldest?",
+      "options": [
+        "Suraj",
+        "Mohan",
+        "Rajiv",
+        "Mehul"
+      ],
+      "answer": "B",
+      "explanation": "Mohan = 2 x Rajiv = 4 x Suraj, so Mohan is oldest.",
+      "sourceRef": "S1 QID 74",
+      "tags": [
+        "ages"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Profit and loss",
+      "difficulty": "hard",
+      "stem": "Ragini sold an article for Rs 4,500 and incurred a loss. Had she sold the article for Rs 5,850 her gain would have been equal to half of the amount of loss that she incurred. At what price should she sell the article to have 10% profit?",
+      "options": [
+        "Rs 5,650",
+        "Rs 5,940",
+        "Rs 6,290",
+        "Rs 7,920"
+      ],
+      "answer": "B",
+      "explanation": "Let CP = c. 5850 - c = (c - 4500)/2, which gives c = 5400. 10% profit price = 5,940.",
+      "sourceRef": "S1 QID 77",
+      "tags": [
+        "profit-loss"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Percentage",
+      "difficulty": "medium",
+      "stem": "If 4% of income tax is paid by me, my net income is Rs 5,76,000. What will be my net income if income tax is raised to 8%?",
+      "options": [
+        "Rs 5,25,000",
+        "Rs 5,00,000",
+        "Rs 5,52,000",
+        "Rs 5,67,000"
+      ],
+      "answer": "C",
+      "explanation": "Gross = 5,76,000/0.96 = 6,00,000. After 8% tax, net = 6,00,000 x 0.92 = 5,52,000.",
+      "sourceRef": "S1 QID 71",
+      "tags": [
+        "percentage"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Logical puzzle",
+      "difficulty": "medium",
+      "stem": "L, M, N, O and P are five buses of different sizes. Two of them provide food on board, 3 are luxurious buses and 3 are air conditioned buses. One has capacity of less than 20 passengers, 2 have capacity between 20 to 40 passengers, 2 have capacity of more than 40 passengers. The buses having capacity of more than 40 passengers are air-conditioned but not luxurious. Bus N has capacity of less than 20 passengers and is luxurious. Buses L and O provide food. The buses which provide food are luxurious and ply between Delhi and Agra.\n\nQuestion: The buses which ply between Delhi and Agra are:",
+      "options": [
+        "L and M",
+        "L and O",
+        "M and L",
+        "P and O"
+      ],
+      "answer": "B",
+      "explanation": "The food-serving buses ply between Delhi and Agra, and those are L and O.",
+      "sourceRef": "S1 QID 78",
+      "tags": [
+        "puzzle"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Logical puzzle",
+      "difficulty": "medium",
+      "stem": "L, M, N, O and P are five buses of different sizes. Two of them provide food on board, 3 are luxurious buses and 3 are air conditioned buses. One has capacity of less than 20 passengers, 2 have capacity between 20 to 40 passengers, 2 have capacity of more than 40 passengers. The buses having capacity of more than 40 passengers are air-conditioned but not luxurious. Bus N has capacity of less than 20 passengers and is luxurious. Buses L and O provide food. The buses which provide food are luxurious and ply between Delhi and Agra.\n\nQuestion: The buses which do not serve food are:",
+      "options": [
+        "O, N and M",
+        "O, M and P",
+        "L, P and M",
+        "N, P and M"
+      ],
+      "answer": "D",
+      "explanation": "Only L and O serve food, so N, P and M do not.",
+      "sourceRef": "S1 QID 80",
+      "tags": [
+        "puzzle"
+      ]
+    },
+    {
+      "section": "aptitude",
+      "topic": "Logical puzzle",
+      "difficulty": "medium",
+      "stem": "L, M, N, O and P are five buses of different sizes. Two of them provide food on board, 3 are luxurious buses and 3 are air conditioned buses. One has capacity of less than 20 passengers, 2 have capacity between 20 to 40 passengers, 2 have capacity of more than 40 passengers. The buses having capacity of more than 40 passengers are air-conditioned but not luxurious. Bus N has capacity of less than 20 passengers and is luxurious. Buses L and O provide food. The buses which provide food are luxurious and ply between Delhi and Agra.\n\nQuestion: The buses which are only air conditioned are:",
+      "options": [
+        "L and M",
+        "O and P",
+        "M and P",
+        "N and P"
+      ],
+      "answer": "C",
+      "explanation": "L, O and N are the three luxurious buses. The buses over 40 passengers are AC but not luxurious, so M and P are only AC.",
+      "sourceRef": "S1 QID 79",
+      "tags": [
+        "puzzle"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "International affairs",
+      "difficulty": "medium",
+      "stem": "International Decade for Women was observed globally between ______.",
+      "options": [
+        "1986-95",
+        "1976-85",
+        "1996-2005",
+        "1966-75"
+      ],
+      "answer": "B",
+      "explanation": "The UN Decade for Women ran from 1976 to 1985. (A candidate chose 1996-2005.)",
+      "sourceRef": "S1 QID 89",
+      "tags": [
+        "un",
+        "women"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Agriculture",
+      "difficulty": "easy",
+      "stem": "Identify the correct match:",
+      "options": [
+        "Kharif crops - Paddy and maize",
+        "Chemical fertilizers - Animal excreta, cow dung",
+        "Organic manure - Urea and super sulphate",
+        "Rabi crops - Cotton and soyabean"
+      ],
+      "answer": "A",
+      "explanation": "Paddy and maize are kharif crops. Cow dung is organic manure; urea is a chemical fertiliser; cotton and soyabean are kharif crops.",
+      "sourceRef": "S1 QID 98",
+      "tags": [
+        "agriculture"
+      ]
+    },
+    {
+      "section": "constitution",
+      "topic": "Landmark cases",
+      "difficulty": "medium",
+      "stem": "In which of the following cases, the Supreme Court of India prohibited smoking in public places?",
+      "options": [
+        "Kinkari Devi Vs. State of H.P.",
+        "M.C. Mehta Vs. Union of India",
+        "Indian Council of Enviro-Legal Action Vs. Union of India",
+        "Murli S. Deora Vs. Union of India"
+      ],
+      "answer": "D",
+      "explanation": "In Murli S. Deora v. Union of India (2001) the Supreme Court banned smoking in public places under Article 21.",
+      "sourceRef": "S1 QID 92",
+      "tags": [
+        "case-law",
+        "article-21"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Geography (minerals)",
+      "difficulty": "medium",
+      "stem": "According to the classification of minerals, which of the following is a Non-Ferrous metal?",
+      "options": [
+        "Manganese",
+        "Copper",
+        "Nickel",
+        "Chromium"
+      ],
+      "answer": "B",
+      "explanation": "Copper is non-ferrous. Manganese, nickel and chromium are ferrous minerals (used in steel alloys) in NCERT classification.",
+      "sourceRef": "S1 QID 86",
+      "tags": [
+        "minerals"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Science & tech",
+      "difficulty": "medium",
+      "stem": "Quantum Key Distribution (QKD) technology deals with:",
+      "options": [
+        "Data security",
+        "Data distribution",
+        "Data laws",
+        "Data communication"
+      ],
+      "answer": "A",
+      "explanation": "QKD uses quantum mechanics to generate and share encryption keys securely, so it is mainly about data security.",
+      "sourceRef": "S1 QID 88",
+      "tags": [
+        "technology"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Environment",
+      "difficulty": "medium",
+      "stem": "Which of the following is NOT correct?",
+      "options": [
+        "India is a party to the United Nations Framework Convention on Climate change (UNFCCC)",
+        "India is not a party to the UN Convention to Combat Desertification (UNCCD)",
+        "Central Arid Zone Research Institute (CAZRI) is located at Jodhpur",
+        "India is an active participant of Thematic Programme Network (TPN)"
+      ],
+      "answer": "B",
+      "explanation": "India is a party to UNCCD (ratified 1996), so statement B is the incorrect one.",
+      "sourceRef": "S1 QID 104",
+      "tags": [
+        "environment"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "General",
+      "difficulty": "easy",
+      "stem": "Who coined the phrase 'global village'?",
+      "options": [
+        "M. Edwards",
+        "I. Carlsson",
+        "Marshall McLuhan",
+        "P. Hirst"
+      ],
+      "answer": "C",
+      "explanation": "Marshall McLuhan coined it in the 1960s. (A candidate chose Carlsson.)",
+      "sourceRef": "S1 QID 96",
+      "tags": [
+        "communication"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "International organisations",
+      "difficulty": "hard",
+      "stem": "Which of the following is NOT correct about the International Labour Organization (ILO) as per its claim?",
+      "options": [
+        "It has played a key role in the victory over apartheid in South Africa.",
+        "It builds an ethical and productive framework for a fair globalization.",
+        "It celebrated its 100th anniversary in 2019.",
+        "It was created before the Treaty of Versailles."
+      ],
+      "answer": "D",
+      "explanation": "The ILO was created in 1919 as part of the Treaty of Versailles, not before it.",
+      "sourceRef": "S1 QID 90",
+      "tags": [
+        "ilo",
+        "un"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Art & culture",
+      "difficulty": "medium",
+      "stem": "Match the following: (a) Bharatnatyam (b) Kathak (c) Manipuri (d) Kathakali with (i) Birju Maharaj (ii) Jhaveri sisters (iii) Rukmini Devi (iv) Kalamandalam Gopi.",
+      "options": [
+        "a-(i), b-(ii), c-(iv), d-(iii)",
+        "a-(ii), b-(iv), c-(iii), d-(i)",
+        "a-(iii), b-(i), c-(ii), d-(iv)",
+        "a-(iv), b-(ii), c-(i), d-(iii)"
+      ],
+      "answer": "C",
+      "explanation": "Rukmini Devi - Bharatnatyam; Birju Maharaj - Kathak; Jhaveri sisters - Manipuri; Kalamandalam Gopi - Kathakali.",
+      "sourceRef": "S1 QID 95",
+      "tags": [
+        "dance"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Institutes",
+      "difficulty": "easy",
+      "stem": "National Institute of Virology is located in:",
+      "options": [
+        "Pune",
+        "Delhi",
+        "Chandigarh",
+        "Bangaluru"
+      ],
+      "answer": "A",
+      "explanation": "NIV is in Pune.",
+      "sourceRef": "S1 QID 99",
+      "tags": [
+        "institutes"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Art & culture",
+      "difficulty": "medium",
+      "stem": "Lalit Kala Akademi, the National Academy of Art, was set up in:",
+      "options": [
+        "1954",
+        "1961",
+        "1959",
+        "1951"
+      ],
+      "answer": "A",
+      "explanation": "Lalit Kala Akademi was established in 1954 (the Sahitya Akademi in 1954 and Sangeet Natak Akademi in 1953). A candidate chose 1961.",
+      "sourceRef": "S1 QID 102",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Schemes",
+      "difficulty": "hard",
+      "stem": "Which of the following statements is false with regard to Antyodaya Anna Yojana (AAY)?",
+      "options": [
+        "It started in the year 2000.",
+        "25 kg of food grains was to be made available for eligible family, subsequently revised to 35 kg in 2002.",
+        "It covers BPL families under the targeted public distribution system.",
+        "Poor families were identified by central rural development department in this."
+      ],
+      "answer": "D",
+      "explanation": "The poor families were identified by state governments, not a central department.",
+      "sourceRef": "S1 QID 82",
+      "tags": [
+        "schemes",
+        "pds"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "International organisations",
+      "difficulty": "medium",
+      "stem": "Which of the following is NOT correctly matched (UN Secretary-General : country)?",
+      "options": [
+        "Trygve Lie : Ghana",
+        "U. Thant : Burma (Myanmar)",
+        "Kurt Waldheim : Austria",
+        "Ban ki-moon : Republic of Korea (South Korea)"
+      ],
+      "answer": "A",
+      "explanation": "Trygve Lie was from Norway. Kofi Annan was the one from Ghana.",
+      "sourceRef": "S1 QID 91",
+      "tags": [
+        "un"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Economics",
+      "difficulty": "easy",
+      "stem": "Which of the following is NOT an example of fixed capital?",
+      "options": [
+        "Simple tools",
+        "Buildings",
+        "Sophisticated machines",
+        "Money in hand"
+      ],
+      "answer": "D",
+      "explanation": "Money in hand is working (circulating) capital.",
+      "sourceRef": "S1 QID 83",
+      "tags": [
+        "economics"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Environment",
+      "difficulty": "medium",
+      "stem": "In which of the following years did India launch its National Action Plan on Climate Change (NAPCC)?",
+      "options": [
+        "2004",
+        "2008",
+        "2014",
+        "2021"
+      ],
+      "answer": "B",
+      "explanation": "NAPCC was launched in 2008 with eight national missions. A candidate chose 2014.",
+      "sourceRef": "S1 QID 105",
+      "tags": [
+        "environment",
+        "napcc"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Books",
+      "difficulty": "easy",
+      "stem": "The book Gulamgiri was written by:",
+      "options": [
+        "Jyotirao Phule",
+        "Dr. B.R. Ambedkar",
+        "Pandita Ramabai",
+        "E.V. Ramaswamy Naicker"
+      ],
+      "answer": "A",
+      "explanation": "Gulamgiri (1873) is by Jyotirao Phule.",
+      "sourceRef": "S1 QID 84",
+      "tags": [
+        "books",
+        "social-reform"
+      ]
+    },
+    {
+      "section": "constitution",
+      "topic": "Fundamental rights",
+      "difficulty": "medium",
+      "stem": "Which one of the following statements is correct as per the Constitution of India?",
+      "options": [
+        "Equality before the law under Article 14 is available to Indian citizens only.",
+        "Equality of opportunity under Article 16 is available to all persons in India.",
+        "Right to freedom under Article 19 is available to Indian citizens only.",
+        "Protection of life and personal liberty under Article 21 is available to Indian citizens only."
+      ],
+      "answer": "C",
+      "explanation": "Articles 14 and 21 apply to all persons; Article 16 applies only to citizens; Article 19 is for citizens only. A candidate chose B.",
+      "sourceRef": "S1 QID 100",
+      "tags": [
+        "fundamental-rights",
+        "article-14",
+        "article-19"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Institutes",
+      "difficulty": "hard",
+      "stem": "Match: (a) Central Institute of Higher Tibetan Studies (b) National Research Laboratory for Conservation of Cultural Property (c) Khuda Bakhsh Oriental Public Library (d) Maulana Abul Kalam Azad Institute of Asian Studies with (i) Kolkatta (ii) Patna (iii) Lucknow (iv) Sarnath.",
+      "options": [
+        "a-(i), b-(ii), c-(iii), d-(iv)",
+        "a-(ii), b-(i), c-(iv), d-(iii)",
+        "a-(iii), b-(ii), c-(i), d-(iv)",
+        "a-(iv), b-(iii), c-(ii), d-(i)"
+      ],
+      "answer": "D",
+      "explanation": "CIHTS is at Sarnath, NRLC at Lucknow, Khuda Bakhsh Library at Patna, and the Azad Institute at Kolkata.",
+      "sourceRef": "S1 QID 94",
+      "tags": [
+        "institutes",
+        "culture"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "History",
+      "difficulty": "medium",
+      "stem": "Which of the following statements is NOT correct?",
+      "options": [
+        "Most Asokan inscriptions were in Prakrit language.",
+        "Most Prakrit inscriptions were written in the Brahmi script.",
+        "The Aramaic and Greek scripts were used for inscriptions in Afghanistan.",
+        "Inscriptions are writings on pottery and therefore are virtually non-permanent records of history."
+      ],
+      "answer": "D",
+      "explanation": "Inscriptions are engraved on stone and metal, which makes them durable records.",
+      "sourceRef": "S1 QID 85",
+      "tags": [
+        "history"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Schemes",
+      "difficulty": "hard",
+      "stem": "Which of the following statements is NOT correct regarding 'shramshakti'?",
+      "options": [
+        "It was launched in January 2021.",
+        "It is a national migration support portal.",
+        "It provides aid to formulation of programmes for child workers.",
+        "It provides to formulation of state and national level programmes for migrant workers."
+      ],
+      "answer": "C",
+      "explanation": "Shramshakti is about migrant workers, not child workers.",
+      "sourceRef": "S1 QID 81",
+      "tags": [
+        "schemes",
+        "labour"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Geography",
+      "difficulty": "medium",
+      "stem": "The term 'geography' was first coined by:",
+      "options": [
+        "Aristotle",
+        "Galileo",
+        "Herodotus",
+        "Eratosthenes"
+      ],
+      "answer": "D",
+      "explanation": "Eratosthenes coined the word 'geography' (c. 3rd century BCE).",
+      "sourceRef": "S1 QID 87",
+      "tags": [
+        "geography"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Awards",
+      "difficulty": "medium",
+      "stem": "Who was given Dronacharya Award 2021 (Regular Category) for boxing?",
+      "options": [
+        "Pritam Siwach",
+        "Ashan Kumar",
+        "Sarpal Singh",
+        "Sandhya Gurung"
+      ],
+      "answer": "D",
+      "explanation": "Sandhya Gurung received the 2021 Dronacharya Award (regular) for boxing; Pritam Siwach was honoured for hockey. Time-sensitive: verify against the official list.",
+      "sourceRef": "S1 QID 103",
+      "tags": [
+        "awards",
+        "sports"
+      ]
+    },
+    {
+      "section": "constitution",
+      "topic": "DPSP",
+      "difficulty": "easy",
+      "stem": "Which one of the following is correct in respect of Article 41 (Right to work) under the Constitution of India?",
+      "options": [
+        "It is a Fundamental Duty.",
+        "It is a Fundamental Right.",
+        "It is a Directive Principle of State Policy.",
+        "It was not in the original Constitution."
+      ],
+      "answer": "C",
+      "explanation": "Article 41 (right to work, education and public assistance) is in Part IV, the Directive Principles.",
+      "sourceRef": "S1 QID 101",
+      "tags": [
+        "dpsp",
+        "article-41"
+      ]
+    },
+    {
+      "section": "constitution",
+      "topic": "Schedules",
+      "difficulty": "easy",
+      "stem": "As per the Constitution of India, which of the following items is NOT correctly matched?",
+      "options": [
+        "Languages - Eighth Schedule",
+        "Provisions as to disqualification on ground of defection - Tenth Schedule",
+        "States and Union Territories - First Schedule",
+        "Union list, State list and Concurrent list - Fourth Schedule"
+      ],
+      "answer": "D",
+      "explanation": "The three lists are in the Seventh Schedule. The Fourth Schedule allocates Rajya Sabha seats.",
+      "sourceRef": "S1 QID 93",
+      "tags": [
+        "schedules"
+      ]
+    },
+    {
+      "section": "gk",
+      "topic": "Biology",
+      "difficulty": "medium",
+      "stem": "Identify the correct match:",
+      "options": [
+        "Tuberculosis - Bacteria - Water",
+        "Chicken Pox - Virus - air / contact",
+        "Hepatitis-A - Protozoa - water",
+        "Malaria - virus - food"
+      ],
+      "answer": "B",
+      "explanation": "Chickenpox is a viral disease spread by air and contact. TB is airborne; hepatitis A is a virus; malaria is a protozoan spread by mosquitoes.",
+      "sourceRef": "S1 QID 97",
+      "tags": [
+        "diseases"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Data to be transmitted over the network is divided into smaller chunks known as:",
+      "options": [
+        "bridges",
+        "switches",
+        "packets",
+        "hubs"
+      ],
+      "answer": "C",
+      "explanation": "Data is split into packets for transmission.",
+      "sourceRef": "S1 QID 116",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "______ refers to the code of responsible behaviour on the internet.",
+      "options": [
+        "Intellectual Property rights",
+        "Cyber ethics",
+        "Cyber law",
+        "Cyber security"
+      ],
+      "answer": "B",
+      "explanation": "Cyber ethics is the code of responsible online behaviour.",
+      "sourceRef": "S1 QID 122",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Filter functions of Excel are available under ______ tab.",
+      "options": [
+        "Data",
+        "Home",
+        "Review",
+        "View"
+      ],
+      "answer": "A",
+      "explanation": "Sort and Filter lives on the Data tab.",
+      "sourceRef": "S1 QID 109",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "______ is the screen that appears by default after switching on the computer.",
+      "options": [
+        "Web Browser",
+        "Icon",
+        "Documents",
+        "Desktop"
+      ],
+      "answer": "D",
+      "explanation": "The desktop appears first.",
+      "sourceRef": "S1 QID 127",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "If we want to change the character spacing in a PowerPoint presentation, which of the following groups should be used?",
+      "options": [
+        "Slides",
+        "Drawing",
+        "Paragraph",
+        "Font"
+      ],
+      "answer": "D",
+      "explanation": "Character Spacing is a button in the Font group on the Home tab. (A candidate chose Paragraph.)",
+      "sourceRef": "S1 QID 107",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Which of the following symbols is used to evaluate an expression in MS-Excel?",
+      "options": [
+        "*",
+        "/",
+        "=",
+        "!"
+      ],
+      "answer": "C",
+      "explanation": "Every formula starts with =.",
+      "sourceRef": "S1 QID 119",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Which of the following statements is false?",
+      "options": [
+        "Hard-disk of a computer can store a large amount of data.",
+        "The physical parts of a computer are called hardware.",
+        "The speed of a computer is measured by the speed of the clock.",
+        "Windows-7 is hardware required for operating a computer."
+      ],
+      "answer": "D",
+      "explanation": "Windows 7 is an operating system (software), not hardware.",
+      "sourceRef": "S1 QID 128",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "The full form of MICR is ______.",
+      "options": [
+        "Magnetic Input Character Reader",
+        "Magnetic Ink Character Reader",
+        "Mechanical Ink Character Reader",
+        "Mechanical Input Character Reader"
+      ],
+      "answer": "B",
+      "explanation": "MICR = Magnetic Ink Character Reader (used on cheques).",
+      "sourceRef": "S1 QID 130",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "The ______ can be used to align text, graphics and other elements in a word document.",
+      "options": [
+        "footer",
+        "ruler",
+        "header",
+        "ribbon"
+      ],
+      "answer": "B",
+      "explanation": "The ruler helps in aligning content and setting margins and tabs.",
+      "sourceRef": "S1 QID 114",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "______ devices are used to transfer information to the ______.",
+      "options": [
+        "Output, CPU",
+        "Output, User",
+        "Output, RAM",
+        "Input, User"
+      ],
+      "answer": "B",
+      "explanation": "Output devices present information to the user.",
+      "sourceRef": "S1 QID 129",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "In a network, MAC stands for:",
+      "options": [
+        "Medium Access Card",
+        "Media Access Control",
+        "Media Address Control",
+        "Media Access Card"
+      ],
+      "answer": "B",
+      "explanation": "MAC = Media Access Control (the address of a network interface). A candidate chose 'Media Access Card'.",
+      "sourceRef": "S1 QID 121",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Which of the following options is not available under the page set up group in MS-word?",
+      "options": [
+        "Borders",
+        "Size",
+        "Breaks",
+        "Orientation"
+      ],
+      "answer": "A",
+      "explanation": "Page Borders is in the Page Background group (Design tab), not Page Setup. A candidate chose 'Size'.",
+      "sourceRef": "S1 QID 115",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "______ are programmers who use their knowledge of gaining access to data in a computer system to prevent cyber crime and help the law makers.",
+      "options": [
+        "Hackers",
+        "Ethical Hackers",
+        "Spammers",
+        "Cyber stalkers"
+      ],
+      "answer": "B",
+      "explanation": "Ethical hackers test systems with permission to improve security.",
+      "sourceRef": "S1 QID 123",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Computer memory in which data is permanently written during manufacturing is called ______.",
+      "options": [
+        "Cache",
+        "Read Only Memory",
+        "Static Random access memory",
+        "Dynamic Random access memory"
+      ],
+      "answer": "B",
+      "explanation": "ROM is written at manufacture and retained without power.",
+      "sourceRef": "S1 QID 118",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "In MS-word ______ is used to select a word from its beginning to its end.",
+      "options": [
+        "SHIFT + LEFT ARROW",
+        "CTRL + SHIFT + RIGHT ARROW",
+        "SHIFT + END",
+        "CTRL + RIGHT ARROW"
+      ],
+      "answer": "B",
+      "explanation": "With the cursor at the start of a word, Ctrl+Shift+Right Arrow selects the whole word.",
+      "sourceRef": "S1 QID 112",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "If a column has a width of 0 (zero), then the column is ______ in an excel worksheet.",
+      "options": [
+        "highlighted",
+        "hidden",
+        "copied",
+        "pasted"
+      ],
+      "answer": "B",
+      "explanation": "Zero width means the column is hidden.",
+      "sourceRef": "S1 QID 111",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "______ are software that can be downloaded and used by anyone, but their source code may not be available.",
+      "options": [
+        "Open source software",
+        "Proprietary software",
+        "Free-ware",
+        "Application software"
+      ],
+      "answer": "C",
+      "explanation": "Freeware is free to use but the source code is typically closed.",
+      "sourceRef": "S1 QID 125",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Windows 10 is an example of:",
+      "options": [
+        "Hardware",
+        "Anti-virus software",
+        "Operating system",
+        "Application software"
+      ],
+      "answer": "C",
+      "explanation": "Windows 10 is an operating system.",
+      "sourceRef": "S1 QID 126",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Which of the following options is not available while inserting a video in a power point slide?",
+      "options": [
+        "Clip Art Video",
+        "Video from website",
+        "Video from file",
+        "Smart Art Video"
+      ],
+      "answer": "D",
+      "explanation": "SmartArt is a graphics feature; there is no 'Smart Art Video' option. A candidate chose 'Video from website'.",
+      "sourceRef": "S1 QID 106",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Which one of the following is not considered as stealing ideas or creations of others?",
+      "options": [
+        "Piracy",
+        "Plagiarism",
+        "Intellectual Property theft",
+        "Spamming"
+      ],
+      "answer": "D",
+      "explanation": "Spamming is sending unsolicited messages, not stealing someone's work.",
+      "sourceRef": "S1 QID 124",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Which of the following is not a benefit of e-shopping?",
+      "options": [
+        "Reduces infrastructure cost to the business.",
+        "Helps to move products faster.",
+        "Business has to continually protect against fraud and returning of the products sold.",
+        "Business benefits from the wider reach over the geographical area."
+      ],
+      "answer": "C",
+      "explanation": "Fraud protection and returns are a drawback, not a benefit.",
+      "sourceRef": "S1 QID 120",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Which of the following options is incorrect? MS Excel is an application program that -",
+      "options": [
+        "Allows storing, organizing and analyzing class result",
+        "Apply statistical functions to data",
+        "Create charts from data",
+        "Create posters for display"
+      ],
+      "answer": "D",
+      "explanation": "Excel is not meant for creating posters.",
+      "sourceRef": "S1 QID 110",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "The following options are true for deleting a row (column) in an Excel Worksheet except:",
+      "options": [
+        "Right click on the selected row (column) and press delete option",
+        "Right click on the selected row (column) and press D",
+        "Select the desired row (column) and click on delete button",
+        "Select the entire row (column) from the left (top) corner and press delete button"
+      ],
+      "answer": "B",
+      "explanation": "Pressing 'D' is not the standard method; the context-menu shortcut is not simply D. The key is B.",
+      "sourceRef": "S1 QID 108",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "When a word document is opened, the number of pages, zoom level and language is displayed in the ______.",
+      "options": [
+        "Scroll bar",
+        "Ruler bar",
+        "Work area",
+        "Status bar"
+      ],
+      "answer": "D",
+      "explanation": "The status bar at the bottom shows page count, zoom and language.",
+      "sourceRef": "S1 QID 113",
+      "tags": [
+        "computer"
+      ]
+    },
+    {
+      "section": "computer",
+      "topic": "Computer knowledge",
+      "difficulty": "easy",
+      "stem": "Cache memory in a computer system ______. (a) Increases the cost of the computer system (b) Increases the main memory (c) Improves the speed of program execution (d) Increases the speed of Input/Output. Mark the correct option:",
+      "options": [
+        "Only statements (a) and (b) are correct.",
+        "Only statements (a) and (d) are correct.",
+        "Only statements (a) and (c) are correct.",
+        "Only statements (b) and (c) are correct."
+      ],
+      "answer": "C",
+      "explanation": "Cache is costly and speeds up program execution; it does not increase main memory or I/O speed.",
+      "sourceRef": "S1 QID 117",
+      "tags": [
+        "computer"
+      ]
+    }
+  ]
+}

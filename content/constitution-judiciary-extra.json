@@ -1,0 +1,225 @@
+{
+  "paper": {
+    "title": "Constitution — Judiciary high-yield facts",
+    "source": "Constitution of India, Part V, Chapter IV",
+    "sourceType": "manual",
+    "keyStatus": "official",
+    "status": "published"
+  },
+  "questions": [
+    {
+      "section": "constitution",
+      "topic": "Article 124(3) — qualifications",
+      "difficulty": "easy",
+      "stem": "Under Article 124(3), a person qualified to be appointed a Judge of the Supreme Court must, among other things, have been:",
+      "options": [
+        "a Judge of a High Court for at least 5 years, or an advocate of a High Court for at least 10 years",
+        "a Judge of a High Court for at least 10 years, or an advocate of a High Court for at least 5 years",
+        "an advocate of the Supreme Court for at least 15 years",
+        "a civil servant of the Union for at least 15 years"
+      ],
+      "answer": "A",
+      "explanation": "Article 124(3) requires citizenship, plus either 5 years as a High Court Judge, 10 years as an advocate of a High Court, or recognition as a distinguished jurist in the President's opinion.",
+      "sourceRef": "Constitution of India, Art. 124(3)",
+      "tags": ["article-124", "qualifications"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 217 — High Court retirement age",
+      "difficulty": "easy",
+      "stem": "A Judge of a High Court holds office until attaining the age of:",
+      "options": ["60 years", "62 years", "65 years", "68 years"],
+      "answer": "B",
+      "explanation": "A High Court Judge retires at 62 under Article 217, while a Supreme Court Judge retires at 65 under Article 124B(a).",
+      "sourceRef": "Constitution of India, Art. 217",
+      "tags": ["article-217", "tenure"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 124(4) — removal ground",
+      "difficulty": "easy",
+      "stem": "A Judge of the Supreme Court may be removed by the President only on the ground of:",
+      "options": [
+        "misconduct at large",
+        "proved misbehaviour or incapacity",
+        "professional negligence",
+        "political bias"
+      ],
+      "answer": "B",
+      "explanation": "Article 124(4) permits removal only for proved misbehaviour or incapacity, on an address by both Houses of Parliament supported by a special majority in the same session.",
+      "sourceRef": "Constitution of India, Art. 124(4)",
+      "tags": ["article-124", "removal"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 124(4) — removal procedure",
+      "difficulty": "medium",
+      "stem": "The removal of a Supreme Court Judge requires an address by:",
+      "options": [
+        "each House of Parliament supported by a special majority, presented in the same session",
+        "the Lok Sabha by a simple majority",
+        "the Rajya Sabha by a two-thirds majority alone",
+        "the President after consulting the Chief Justice of India"
+      ],
+      "answer": "A",
+      "explanation": "Article 124(4) requires a special majority in each House separately, in the same session, followed by the President's order. The Judges (Inquiry) Act, 1968 sets up the 3-member committee.",
+      "sourceRef": "Constitution of India, Art. 124(4)",
+      "tags": ["article-124", "removal"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 124(4) — precedent",
+      "difficulty": "medium",
+      "stem": "Which statement about the removal of Supreme Court Judges is correct?",
+      "options": [
+        "Several Judges have been removed under Article 124(4) since 1950",
+        "No Judge has ever been removed under Article 124(4); Justice V. Ramaswami's removal motion failed in 1993",
+        "Justice Soumitra Sen was removed by impeachment in 2011",
+        "Removal motions require only a simple majority in the Lok Sabha"
+      ],
+      "answer": "B",
+      "explanation": "No Judge has ever been removed under Article 124(4). Justice V. Ramaswami's motion (1993) failed; Justice Soumitra Sen resigned (2011); Justice Dinakaran's motion lapsed.",
+      "sourceRef": "Constitution of India, Art. 124(4)",
+      "tags": ["article-124", "removal", "precedent"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 127 — ad hoc judges",
+      "difficulty": "easy",
+      "stem": "Under Article 127, an ad hoc Judge of the Supreme Court is:",
+      "options": [
+        "a retired Judge of the Supreme Court requested to sit again",
+        "a Judge of a High Court requested by the Chief Justice of India, with the President's consent, to attend sittings",
+        "a distinguished jurist appointed for a single case",
+        "an additional Judge appointed by Parliament for a fixed term"
+      ],
+      "answer": "B",
+      "explanation": "Article 127 allows the CJI, with the previous consent of the President, to request a High Court Judge to sit as an ad hoc Judge. Article 128 separately covers retired Supreme Court Judges.",
+      "sourceRef": "Constitution of India, Art. 127",
+      "tags": ["article-127", "ad-hoc"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 128 — retired judges",
+      "difficulty": "easy",
+      "stem": "Under Article 128, the Chief Justice of India may, with the President's consent, request a retired Judge of the Supreme Court to:",
+      "options": [
+        "sit and act as a Judge of the Court",
+        "serve as a Special Leave Petition examiner",
+        "head a commission of inquiry",
+        "sit as a High Court Judge"
+      ],
+      "answer": "A",
+      "explanation": "Article 128 lets the CJI ask a retired Supreme Court Judge to sit and act as a Judge of the Court. This is distinct from Article 127 (ad hoc judges from High Courts).",
+      "sourceRef": "Constitution of India, Art. 128",
+      "tags": ["article-128", "retired-judges"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 136 — SLP exception",
+      "difficulty": "medium",
+      "stem": "Special leave to appeal under Article 136 cannot be granted against:",
+      "options": [
+        "a judgment of a High Court in a civil matter",
+        "an order of a tribunal",
+        "a sentence passed by a court-martial",
+        "a decree of a civil court"
+      ],
+      "answer": "C",
+      "explanation": "Article 136 empowers the Supreme Court to grant special leave from any judgment, decree or order of any court or tribunal in India, except a sentence passed by a court-martial.",
+      "sourceRef": "Constitution of India, Art. 136",
+      "tags": ["article-136", "slp"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 137 — review",
+      "difficulty": "easy",
+      "stem": "Under Article 137, the Supreme Court has the power to:",
+      "options": [
+        "review any judgment or order made by it",
+        "review the judgments of High Courts only",
+        "revise orders of tribunals",
+        "re-hear appeals from the High Court"
+      ],
+      "answer": "A",
+      "explanation": "Article 137 allows the Supreme Court to review any judgment or order made by it, subject to the provisions of any law or rules made under Article 145.",
+      "sourceRef": "Constitution of India, Art. 137",
+      "tags": ["article-137", "review"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 143 — advisory jurisdiction",
+      "difficulty": "hard",
+      "stem": "Regarding advisory jurisdiction under Article 143, which statement is correct?",
+      "options": [
+        "The President may refer any question of public importance, and the Court may report on it",
+        "The President must refer every constitutional question, and the Court must report",
+        "The Court's advisory opinion is binding on the President",
+        "Only the Parliament may make a reference to the Court"
+      ],
+      "answer": "A",
+      "explanation": "Under Article 143(1) the President may refer questions of law or fact of public importance and the Court may report after hearing. Under Article 143(2) the President shall refer pre-Constitution treaty questions on which the Court must report.",
+      "sourceRef": "Constitution of India, Art. 143",
+      "tags": ["article-143", "advisory"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 125 — salaries",
+      "difficulty": "easy",
+      "stem": "The salaries of Supreme Court Judges are:",
+      "options": [
+        "charged on the Consolidated Fund of India and not votable by Parliament",
+        "votable by Parliament each year",
+        "fixed by the President",
+        "paid from the Judiciary Contingency Fund"
+      ],
+      "answer": "A",
+      "explanation": "Article 125(2) provides that the salaries, allowances and pensions of Judges are charged on the Consolidated Fund of India, and cannot be varied to a Judge's disadvantage during tenure.",
+      "sourceRef": "Constitution of India, Art. 125",
+      "tags": ["article-125", "salaries"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Supreme Court establishment",
+      "difficulty": "easy",
+      "stem": "The Supreme Court of India was inaugurated on:",
+      "options": [
+        "26 January 1950",
+        "28 January 1950",
+        "15 August 1947",
+        "26 November 1949"
+      ],
+      "answer": "B",
+      "explanation": "The Supreme Court was established on 26 January 1950 but formally inaugurated on 28 January 1950.",
+      "sourceRef": "Constitution of India — commencement",
+      "tags": ["establishment", "history"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Sanctioned strength",
+      "difficulty": "medium",
+      "stem": "The current sanctioned strength of the Supreme Court of India (CJI plus other Judges) is:",
+      "options": ["31", "33", "34", "36"],
+      "answer": "C",
+      "explanation": "The sanctioned strength is 34 — the Chief Justice of India plus 33 other Judges, per the Supreme Court (Number of Judges) Act, 1956 as amended.",
+      "sourceRef": "Supreme Court (Number of Judges) Act, 1956",
+      "tags": ["strength", "establishment"]
+    },
+    {
+      "section": "constitution",
+      "topic": "Article 126 — acting Chief Justice",
+      "difficulty": "medium",
+      "stem": "When the Chief Justice of India is temporarily unable to perform his duties, Article 126 empowers whom to appoint another Judge to act as Chief Justice?",
+      "options": [
+        "The President",
+        "The senior-most puisne Judge",
+        "The collegium",
+        "The Law Minister"
+      ],
+      "answer": "A",
+      "explanation": "Article 126 empowers the President to appoint another Judge of the Supreme Court to perform the duties of the Chief Justice when the office is vacant or the CJI is unable to perform them.",
+      "sourceRef": "Constitution of India, Art. 126",
+      "tags": ["article-126", "acting-cji"]
+    }
+  ]
+}

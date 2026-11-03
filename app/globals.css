@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #0b0d10;
+  --color-surface: #12151a;
+  --color-surface-2: #171b22;
+  --color-line: #232833;
+  --color-ink: #e7e9ee;
+  --color-muted: #8d94a1;
+  --color-accent: #d8a657;
+  --color-ok: #45c08a;
+  --color-bad: #e5645f;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-accent) 35%, transparent);
+}
+
+/* Thin scrollbars so the exam palette doesn't look like a browser default. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line) transparent;
+}
