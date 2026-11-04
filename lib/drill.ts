@@ -1,5 +1,5 @@
 import { and, asc, eq, inArray, sql } from "drizzle-orm";
-import { db } from "./db";
+import { db, dbReady } from "./db";
 import { answers, attempts, questions, tests, type Question } from "./db/schema";
 import { EXAM_PATTERN, getSection, patternSnapshot, SECTIONS } from "./pattern";
 import { shuffle, weightedSample } from "./pick";
@@ -25,13 +25,15 @@ export interface DrillOptions {
 
 export const DRILL_SECONDS_PER_QUESTION = 90;
 
-export function createDrill(options: DrillOptions = {}): string {
+export async function createDrill(userId: string, options: DrillOptions = {}): Promise<string> {
+  await dbReady;
+
   const count = Math.max(1, Math.min(40, options.count ?? 10));
   const mode = options.mode ?? "weak";
   const sectionId = options.sectionId;
   const random = options.random ?? Math.random;
 
-  const pool = db
+  const pool = await db
     .select()
     .from(questions)
     .where(
@@ -47,7 +49,7 @@ export function createDrill(options: DrillOptions = {}): string {
 
   // Weighted sample without replacement, then shuffle so two drills over the
   // same pool never serve the same questions in the same order.
-  const stats = questionStats();
+  const stats = await questionStats(userId);
   const nowMs = Date.now();
   const picked = weightedSample(
     pool,
@@ -89,7 +91,8 @@ export function createDrill(options: DrillOptions = {}): string {
   const testId = crypto.randomUUID();
   const now = new Date();
 
-  db.insert(tests)
+  await db
+    .insert(tests)
     .values({
       id: testId,
       title: label,
@@ -103,9 +106,11 @@ export function createDrill(options: DrillOptions = {}): string {
 
   const attemptId = crypto.randomUUID();
 
-  db.insert(attempts)
+  await db
+    .insert(attempts)
     .values({
       id: attemptId,
+      userId,
       testId,
       startedAt: now,
       endsAt: new Date(now.getTime() + durationSec * 1000),
@@ -132,11 +137,13 @@ export interface MistakeRow {
 }
 
 /**
- * Every question answered wrong at least once, with the most recent wrong
- * attempt so "review" can jump straight to it. Newest mistakes first.
+ * Every question one user answered wrong at least once, with the most recent
+ * wrong attempt so "review" can jump straight to it. Newest mistakes first.
  */
-export function getMistakes(sectionId?: string): MistakeRow[] {
-  const rows = db
+export async function getMistakes(userId: string, sectionId?: string): Promise<MistakeRow[]> {
+  await dbReady;
+
+  const rows = await db
     .select({
       questionId: answers.questionId,
       sectionId: questions.sectionId,
@@ -153,7 +160,13 @@ export function getMistakes(sectionId?: string): MistakeRow[] {
     .from(answers)
     .innerJoin(attempts, eq(attempts.id, answers.attemptId))
     .innerJoin(questions, eq(questions.id, answers.questionId))
-    .where(and(eq(attempts.status, "submitted"), eq(questions.isBonus, false)))
+    .where(
+      and(
+        eq(attempts.userId, userId),
+        eq(attempts.status, "submitted"),
+        eq(questions.isBonus, false),
+      ),
+    )
     .all();
 
   const byQuestion = new Map<string, MistakeRow>();
@@ -211,15 +224,18 @@ export interface BankRow {
   wrong: number;
 }
 
-export function listBank(sectionId?: string): BankRow[] {
-  const rows = db
+/** The bank is shared; the "seen/correct/wrong" columns are this user's history. */
+export async function listBank(userId: string, sectionId?: string): Promise<BankRow[]> {
+  await dbReady;
+
+  const rows = await db
     .select()
     .from(questions)
     .where(sectionId ? eq(questions.sectionId, sectionId) : undefined)
     .orderBy(asc(questions.sectionId), asc(questions.createdAt))
     .all();
 
-  const stats = questionStats();
+  const stats = await questionStats(userId);
 
   return rows.map((q) => {
     const stat = stats.get(q.id);
@@ -242,34 +258,44 @@ export function listBank(sectionId?: string): BankRow[] {
   });
 }
 
-export function bankCounts(): Map<string, number> {
-  const rows = db
+export async function bankCounts(): Promise<Map<string, number>> {
+  await dbReady;
+
+  const rows = await db
     .select({ sectionId: questions.sectionId, n: sql<number>`count(*)` })
     .from(questions)
     .where(eq(questions.status, "published"))
     .groupBy(questions.sectionId)
     .all();
-  return new Map(rows.map((r) => [r.sectionId, r.n]));
+  return new Map(rows.map((r) => [r.sectionId, Number(r.n)]));
 }
 
 /** Sections that actually have questions, for the drill picker. */
-export function availableSections(): Array<{ id: string; short: string; count: number }> {
-  const counts = bankCounts();
+export async function availableSections(): Promise<
+  Array<{ id: string; short: string; count: number }>
+> {
+  const counts = await bankCounts();
   return EXAM_PATTERN.sections
     .map((s) => ({ id: s.id, short: s.short, count: counts.get(s.id) ?? 0 }))
     .filter((s) => s.count > 0);
 }
 
 /** Question ids in a test, used by the result page's "drill these" link. */
-export function testQuestionIds(testId: string): string[] {
-  const test = db.select({ ids: tests.questionIds }).from(tests).where(eq(tests.id, testId)).get();
+export async function testQuestionIds(testId: string): Promise<string[]> {
+  await dbReady;
+  const test = await db
+    .select({ ids: tests.questionIds })
+    .from(tests)
+    .where(eq(tests.id, testId))
+    .get();
   return test?.ids ?? [];
 }
 
 /** Unused helper kept for the import pipeline: fetch by id in order. */
-export function questionsByIds(ids: string[]): Question[] {
+export async function questionsByIds(ids: string[]): Promise<Question[]> {
+  await dbReady;
   if (ids.length === 0) return [];
-  const rows = db.select().from(questions).where(inArray(questions.id, ids)).all();
+  const rows = await db.select().from(questions).where(inArray(questions.id, ids)).all();
   const byId = new Map(rows.map((r) => [r.id, r]));
   return ids.map((id) => byId.get(id)).filter((q): q is Question => Boolean(q));
 }

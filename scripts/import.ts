@@ -7,7 +7,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
-import { db } from "../lib/db";
+import { db, dbReady } from "../lib/db";
 import { importFileSchema, importPayload } from "../lib/import";
 
 function collect(targets: string[]): string[] {
@@ -29,7 +29,7 @@ function collect(targets: string[]): string[] {
   return files;
 }
 
-function main() {
+async function main(): Promise<void> {
   const args = process.argv.slice(2);
   const dryRun = args.includes("--dry-run");
   const targets = args.filter((a) => !a.startsWith("--"));
@@ -44,6 +44,8 @@ function main() {
     console.error("no .json files found");
     process.exit(1);
   }
+
+  await dbReady;
 
   let inserted = 0;
   let skipped = 0;
@@ -69,7 +71,7 @@ function main() {
       continue;
     }
 
-    const report = importPayload(
+    const report = await importPayload(
       parsed.data,
       {
         file: path.basename(file),
@@ -98,4 +100,7 @@ function main() {
   if (invalid > 0) process.exitCode = 1;
 }
 
-main();
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

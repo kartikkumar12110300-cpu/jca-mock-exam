@@ -68,6 +68,8 @@ cd /d "%~dp0"
 if not exist "data" mkdir "data"
 set PORT=3000
 set HOSTNAME=127.0.0.1
+rem Set a strong password before the first run, then remove the rem:
+rem set ADMIN_PASSWORD=choose-something-strong
 echo.
 echo   JCA Mock Exam
 echo   Starting at http://localhost:%PORT%

@@ -1,15 +1,15 @@
-import { desc, eq, notInArray } from "drizzle-orm";
-import { db } from "./db";
+import { and, desc, eq, notInArray } from "drizzle-orm";
+import { db, dbReady } from "./db";
 import { answers, attempts, questions, tests, type Score, type Test } from "./db/schema";
 import { getSection } from "./pattern";
 
 /**
- * Read-only aggregates over submitted attempts. Used by the dashboard,
- * the mistake notebook and the drill builder.
+ * Read-only aggregates over one user's submitted attempts. Used by the
+ * dashboard, the mistake notebook, the drill builder and the admin report.
  *
- * Everything here is derived on demand from the SQLite file — no counters to
- * keep in sync, which matters because attempts can be submitted at any time
- * (including by the auto-submit path).
+ * Everything is derived on demand from the database — no counters to keep in
+ * sync, which matters because attempts can be submitted at any time (including
+ * by the auto-submit path). `userId` is mandatory: there is no unscoped reader.
  */
 
 export interface AttemptSummary {
@@ -28,7 +28,7 @@ export interface AttemptSummary {
   accuracy: number;
 }
 
-function toSummary(row: {
+export function toSummary(row: {
   id: string;
   title: string;
   kind: string;
@@ -65,11 +65,19 @@ export interface ListAttemptsOptions {
 }
 
 /** Newest first. `limit` keeps the dashboard query cheap. */
-export function listAttempts(
+export async function listAttempts(
+  userId: string,
   limit = 25,
   options: ListAttemptsOptions = {},
-): AttemptSummary[] {
-  const rows = db
+): Promise<AttemptSummary[]> {
+  await dbReady;
+
+  const conditions = [eq(attempts.userId, userId)];
+  if (options.excludeKinds?.length) {
+    conditions.push(notInArray(tests.kind, options.excludeKinds));
+  }
+
+  const rows = await db
     .select({
       id: attempts.id,
       title: tests.title,
@@ -82,11 +90,7 @@ export function listAttempts(
     })
     .from(attempts)
     .innerJoin(tests, eq(tests.id, attempts.testId))
-    .where(
-      options.excludeKinds?.length
-        ? notInArray(tests.kind, options.excludeKinds)
-        : undefined,
-    )
+    .where(and(...conditions))
     .orderBy(desc(attempts.startedAt))
     .limit(limit)
     .all();
@@ -96,8 +100,13 @@ export function listAttempts(
   );
 }
 
-export function getAttemptSummary(id: string): AttemptSummary | null {
-  const row = db
+export async function getAttemptSummary(
+  userId: string,
+  id: string,
+): Promise<AttemptSummary | null> {
+  await dbReady;
+
+  const row = await db
     .select({
       id: attempts.id,
       title: tests.title,
@@ -110,7 +119,7 @@ export function getAttemptSummary(id: string): AttemptSummary | null {
     })
     .from(attempts)
     .innerJoin(tests, eq(tests.id, attempts.testId))
-    .where(eq(attempts.id, id))
+    .where(and(eq(attempts.id, id), eq(attempts.userId, userId)))
     .get();
 
   if (!row) return null;
@@ -132,17 +141,19 @@ export interface SectionMastery {
 }
 
 /**
- * Accuracy per section across every submitted attempt.
+ * Accuracy per section across one user's submitted attempts.
  * Bonus questions are ignored (they are free marks, not knowledge).
  *
  * Reads the stored `score.perSection` snapshot, so legacy papers keep their own
  * section breakdown even if the 2026 pattern later changes.
  */
-export function sectionMastery(): SectionMastery[] {
-  const rows = db
+export async function sectionMastery(userId: string): Promise<SectionMastery[]> {
+  await dbReady;
+
+  const rows = await db
     .select({ score: attempts.score })
     .from(attempts)
-    .where(eq(attempts.status, "submitted"))
+    .where(and(eq(attempts.userId, userId), eq(attempts.status, "submitted")))
     .all();
 
   const buckets = new Map<
@@ -204,9 +215,11 @@ export interface QuestionStat {
   lastSeen: number;
 }
 
-/** Per-question history, used to prioritise drills and build the notebook. */
-export function questionStats(): Map<string, QuestionStat> {
-  const rows = db
+/** Per-question history for one user, used to prioritise drills and build the notebook. */
+export async function questionStats(userId: string): Promise<Map<string, QuestionStat>> {
+  await dbReady;
+
+  const rows = await db
     .select({
       questionId: answers.questionId,
       sectionId: questions.sectionId,
@@ -218,7 +231,7 @@ export function questionStats(): Map<string, QuestionStat> {
     .from(answers)
     .innerJoin(attempts, eq(attempts.id, answers.attemptId))
     .innerJoin(questions, eq(questions.id, answers.questionId))
-    .where(eq(attempts.status, "submitted"))
+    .where(and(eq(attempts.userId, userId), eq(attempts.status, "submitted")))
     .all();
 
   const stats = new Map<string, QuestionStat>();

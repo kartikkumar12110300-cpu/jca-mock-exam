@@ -1,6 +1,7 @@
 import { and, eq, inArray } from "drizzle-orm";
-import { db } from "./db";
+import { db, dbReady } from "./db";
 import { answers, attempts, questions, tests, type Question } from "./db/schema";
+import { canReadUser, type Viewer } from "./auth/types";
 import { EXAM_PATTERN, SECTIONS, patternSnapshot } from "./pattern";
 import { shuffle, weightedSample } from "./pick";
 import { scoreAttempt, type MarkingScheme } from "./scoring";
@@ -25,14 +26,19 @@ export interface FullMockOptions {
  * rows. Sections are filled in paper order; if a section has fewer questions
  * than the paper asks for, the test simply has fewer — never duplicate a question.
  */
-export function createFullMock(options: FullMockOptions = {}): string {
+export async function createFullMock(
+  userId: string,
+  options: FullMockOptions = {},
+): Promise<string> {
+  await dbReady;
+
   const random = options.random ?? Math.random;
-  const stats = questionStats();
+  const stats = await questionStats(userId);
   const nowMs = Date.now();
   const questionIds: string[] = [];
 
   for (const section of SECTIONS) {
-    const pool = db
+    const pool = await db
       .select({ id: questions.id })
       .from(questions)
       .where(and(eq(questions.status, "published"), eq(questions.sectionId, section.id)))
@@ -56,7 +62,8 @@ export function createFullMock(options: FullMockOptions = {}): string {
   const testId = crypto.randomUUID();
   const now = new Date();
 
-  db.insert(tests)
+  await db
+    .insert(tests)
     .values({
       id: testId,
       title: "Full mock — 2026 pattern",
@@ -70,9 +77,11 @@ export function createFullMock(options: FullMockOptions = {}): string {
 
   const attemptId = crypto.randomUUID();
 
-  db.insert(attempts)
+  await db
+    .insert(attempts)
     .values({
       id: attemptId,
+      userId,
       testId,
       startedAt: now,
       endsAt: new Date(now.getTime() + EXAM_PATTERN.durationSec * 1000),
@@ -90,15 +99,25 @@ export interface AttemptBundle {
   answers: (typeof answers.$inferSelect)[];
 }
 
-export function getAttemptBundle(attemptId: string): AttemptBundle | null {
-  const attempt = db.select().from(attempts).where(eq(attempts.id, attemptId)).get();
-  if (!attempt) return null;
+/**
+ * Loads a paper for its owner. Admins may read any submitted attempt for
+ * monitoring; they never get write access through this path.
+ */
+export async function getAttemptBundle(
+  attemptId: string,
+  viewer: Viewer,
+): Promise<AttemptBundle | null> {
+  await dbReady;
 
-  const test = db.select().from(tests).where(eq(tests.id, attempt.testId)).get();
+  const attempt = await db.select().from(attempts).where(eq(attempts.id, attemptId)).get();
+  if (!attempt) return null;
+  if (!canReadUser(viewer, attempt.userId)) return null;
+
+  const test = await db.select().from(tests).where(eq(tests.id, attempt.testId)).get();
   if (!test) return null;
 
   const rows = test.questionIds.length
-    ? db.select().from(questions).where(inArray(questions.id, test.questionIds)).all()
+    ? await db.select().from(questions).where(inArray(questions.id, test.questionIds)).all()
     : [];
 
   const byId = new Map(rows.map((r) => [r.id, r]));
@@ -106,7 +125,7 @@ export function getAttemptBundle(attemptId: string): AttemptBundle | null {
     .map((id) => byId.get(id))
     .filter((q): q is Question => Boolean(q));
 
-  const saved = db.select().from(answers).where(eq(answers.attemptId, attemptId)).all();
+  const saved = await db.select().from(answers).where(eq(answers.attemptId, attemptId)).all();
 
   return { attempt, test, questions: ordered, answers: saved };
 }
@@ -120,18 +139,26 @@ export interface AnswerInput {
 
 export type SaveResult = { ok: true } | { ok: false; reason: "expired" | "submitted" | "missing" };
 
-export function saveAnswers(attemptId: string, entries: AnswerInput[]): SaveResult {
-  const attempt = db.select().from(attempts).where(eq(attempts.id, attemptId)).get();
+export async function saveAnswers(
+  attemptId: string,
+  viewer: Viewer,
+  entries: AnswerInput[],
+): Promise<SaveResult> {
+  await dbReady;
+
+  const attempt = await db.select().from(attempts).where(eq(attempts.id, attemptId)).get();
   if (!attempt) return { ok: false, reason: "missing" };
+  // Only the owner may write, even if the caller is an admin.
+  if (attempt.userId !== viewer.id) return { ok: false, reason: "missing" };
   if (attempt.status !== "in_progress") return { ok: false, reason: "submitted" };
 
   const now = Date.now();
   if (now > attempt.endsAt.getTime() + GRACE_MS) {
-    db.update(attempts).set({ status: "expired" }).where(eq(attempts.id, attemptId)).run();
+    await db.update(attempts).set({ status: "expired" }).where(eq(attempts.id, attemptId)).run();
     return { ok: false, reason: "expired" };
   }
 
-  const test = db.select().from(tests).where(eq(tests.id, attempt.testId)).get();
+  const test = await db.select().from(tests).where(eq(tests.id, attempt.testId)).get();
   const allowed = new Set(test?.questionIds ?? []);
 
   for (const entry of entries) {
@@ -140,7 +167,8 @@ export function saveAnswers(attemptId: string, entries: AnswerInput[]): SaveResu
       continue;
     }
 
-    db.insert(answers)
+    await db
+      .insert(answers)
       .values({
         attemptId,
         questionId: entry.questionId,
@@ -168,9 +196,13 @@ export type SubmitResult =
   | { ok: true; score: NonNullable<typeof attempts.$inferSelect.score> }
   | { ok: false; reason: "missing" };
 
-export function submitAttempt(attemptId: string) {
-  const bundle = getAttemptBundle(attemptId);
-  if (!bundle) return { ok: false as const, reason: "missing" as const };
+export async function submitAttempt(attemptId: string, viewer: Viewer) {
+  await dbReady;
+
+  const bundle = await getAttemptBundle(attemptId, viewer);
+  if (!bundle || bundle.attempt.userId !== viewer.id) {
+    return { ok: false as const, reason: "missing" as const };
+  }
 
   // Idempotent: a double click returns the stored score.
   if (bundle.attempt.status === "submitted" && bundle.attempt.score) {
@@ -193,7 +225,8 @@ export function submitAttempt(attemptId: string) {
   const now = Date.now();
   const expired = now > bundle.attempt.endsAt.getTime() + GRACE_MS;
 
-  db.update(attempts)
+  await db
+    .update(attempts)
     .set({
       status: expired ? "expired" : "submitted",
       submittedAt: new Date(),

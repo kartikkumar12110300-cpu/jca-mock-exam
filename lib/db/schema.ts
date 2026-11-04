@@ -4,6 +4,53 @@ import type { PatternSnapshot } from "../pattern";
 const id = () => text("id").primaryKey().$defaultFn(() => crypto.randomUUID());
 const now = () => integer("created_at", { mode: "timestamp_ms" }).notNull().$defaultFn(() => new Date());
 
+/**
+ * Accounts are seeded at first boot and never created through the UI.
+ * `password_hash` is a scrypt digest — see `lib/auth/password.ts`.
+ */
+export const users = sqliteTable(
+  "users",
+  {
+    id: id(),
+    username: text("username").notNull().unique(),
+    displayName: text("display_name").notNull().default(""),
+    passwordHash: text("password_hash").notNull(),
+    role: text("role", { enum: ["user", "admin"] }).notNull().default("user"),
+    isActive: integer("is_active", { mode: "boolean" }).notNull().default(true),
+    createdAt: now(),
+  },
+  (t) => [index("users_role_idx").on(t.role)],
+);
+
+/**
+ * DB-backed sessions, so logout and deactivation revoke access immediately.
+ * Only the sha256 of the cookie token is stored.
+ */
+export const sessions = sqliteTable(
+  "sessions",
+  {
+    id: id(),
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    tokenHash: text("token_hash").notNull().unique(),
+    createdAt: now(),
+    expiresAt: integer("expires_at", { mode: "timestamp_ms" }).notNull(),
+  },
+  (t) => [index("sessions_user_idx").on(t.userId)],
+);
+
+/**
+ * Login throttling that survives serverless cold starts.
+ * Key is `username|ip`; the window resets on a successful login.
+ */
+export const loginAttempts = sqliteTable("login_attempts", {
+  key: text("key").primaryKey(),
+  failures: integer("failures").notNull().default(0),
+  windowStart: integer("window_start", { mode: "timestamp_ms" }).notNull(),
+  updatedAt: integer("updated_at", { mode: "timestamp_ms" }).notNull(),
+});
+
 export const questions = sqliteTable(
   "questions",
   {
@@ -91,6 +138,10 @@ export const attempts = sqliteTable(
   "attempts",
   {
     id: id(),
+    /** Owner. Every read and write is scoped by this column. */
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
     testId: text("test_id")
       .notNull()
       .references(() => tests.id, { onDelete: "cascade" }),
@@ -104,7 +155,10 @@ export const attempts = sqliteTable(
     score: text("score", { mode: "json" }).$type<Score | null>(),
     createdAt: now(),
   },
-  (t) => [index("attempts_test_idx").on(t.testId)],
+  (t) => [
+    index("attempts_test_idx").on(t.testId),
+    index("attempts_user_started_idx").on(t.userId, t.startedAt),
+  ],
 );
 
 export const answers = sqliteTable(
@@ -128,6 +182,8 @@ export const answers = sqliteTable(
   (t) => [primaryKey({ columns: [t.attemptId, t.questionId] })],
 );
 
+export type Role = "user" | "admin";
+export type User = typeof users.$inferSelect;
 export type Question = typeof questions.$inferSelect;
 export type NewQuestion = typeof questions.$inferInsert;
 export type Test = typeof tests.$inferSelect;

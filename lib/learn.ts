@@ -1,7 +1,8 @@
 import { and, eq } from "drizzle-orm";
 import { getAttemptBundle } from "./attempts";
-import { db } from "./db";
+import { db, dbReady } from "./db";
 import { attempts, questions, tests, type Attempt, type Answer, type Question, type Test } from "./db/schema";
+import type { Viewer } from "./auth/types";
 import { getSection, patternSnapshot, SECTIONS } from "./pattern";
 import { shuffle, weightedSample } from "./pick";
 import { mockWeight } from "./selection";
@@ -48,13 +49,18 @@ export interface LearnBundle {
  * answered wrong, recently-served deprioritised — so learn mode also rotates
  * through the bank instead of drilling the same first ten rows.
  */
-export function createLearnSession(options: LearnOptions = {}): string {
+export async function createLearnSession(
+  userId: string,
+  options: LearnOptions = {},
+): Promise<string> {
+  await dbReady;
+
   const count = Math.max(1, Math.min(LEARN_MAX_QUESTIONS, options.count ?? LEARN_PAGE_SIZE));
   const random = options.random ?? Math.random;
-  const stats = questionStats();
+  const stats = await questionStats(userId);
   const nowMs = Date.now();
 
-  const pool = db
+  const pool = await db
     .select({ id: questions.id, sectionId: questions.sectionId })
     .from(questions)
     .where(
@@ -100,7 +106,8 @@ export function createLearnSession(options: LearnOptions = {}): string {
   const testId = crypto.randomUUID();
   const now = new Date();
 
-  db.insert(tests)
+  await db
+    .insert(tests)
     .values({
       id: testId,
       title: label,
@@ -114,9 +121,11 @@ export function createLearnSession(options: LearnOptions = {}): string {
 
   const attemptId = crypto.randomUUID();
 
-  db.insert(attempts)
+  await db
+    .insert(attempts)
     .values({
       id: attemptId,
+      userId,
       testId,
       startedAt: now,
       endsAt: new Date(now.getTime() + LEARN_WINDOW_MS),
@@ -127,10 +136,15 @@ export function createLearnSession(options: LearnOptions = {}): string {
   return attemptId;
 }
 
-/** Loads a learn session, or null if the id is not a learn attempt. */
-export function getLearnBundle(attemptId: string): LearnBundle | null {
-  const bundle = getAttemptBundle(attemptId);
+/** Loads a learn session for its owner, or null if the id is not a learn attempt. */
+export async function getLearnBundle(
+  attemptId: string,
+  viewer: Viewer,
+): Promise<LearnBundle | null> {
+  const bundle = await getAttemptBundle(attemptId, viewer);
   if (!bundle || bundle.test.kind !== "learn") return null;
+  // The instant answer key stays with the owner.
+  if (bundle.attempt.userId !== viewer.id) return null;
 
   return {
     attempt: bundle.attempt,

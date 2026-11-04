@@ -74,11 +74,11 @@ function toIndex(answer: z.infer<typeof answerSchema>): number {
 
 const SECTION_IDS = new Set<string>(SECTIONS.map((s) => s.id));
 
-export function importPayload(
+export async function importPayload(
   payload: ImportFile,
   options: { file?: string; dryRun?: boolean },
   database: DB,
-): ImportReport {
+): Promise<ImportReport> {
   const report: ImportReport = {
     file: options.file ?? "<inline>",
     total: payload.questions.length,
@@ -89,7 +89,9 @@ export function importPayload(
   };
 
   const existing = new Set(
-    database.select({ hash: questions.contentHash }).from(questions).all().map((r) => r.hash),
+    (await database.select({ hash: questions.contentHash }).from(questions).all()).map(
+      (r) => r.hash,
+    ),
   );
 
   const rows: NewQuestion[] = [];
@@ -136,7 +138,7 @@ export function importPayload(
   report.inserted = rows.length;
 
   if (!report.dryRun && rows.length > 0) {
-    database.insert(questions).values(rows).run();
+    await database.insert(questions).values(rows).run();
   }
 
   return report;

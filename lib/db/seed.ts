@@ -8,19 +8,29 @@
  *
  * It is idempotent — questions already in the bank are skipped by content hash.
  */
-import { db } from "./index";
+import { db, dbReady } from "./index";
 import { questions } from "./schema";
 import { seedRows } from "./seed-data";
 
-const rows = seedRows();
-const existing = new Set<string>(
-  db.select({ hash: questions.contentHash }).from(questions).all().map((r) => r.hash),
-);
-const missing = rows.filter((row) => !existing.has(row.contentHash ?? ""));
+async function main(): Promise<void> {
+  await dbReady;
 
-if (missing.length === 0) {
-  console.log(`Question bank already has all ${rows.length} seed questions.`);
-} else {
-  db.insert(questions).values(missing).run();
+  const rows = seedRows();
+  const existing = new Set<string>(
+    (await db.select({ hash: questions.contentHash }).from(questions).all()).map((r) => r.hash),
+  );
+  const missing = rows.filter((row) => !existing.has(row.contentHash ?? ""));
+
+  if (missing.length === 0) {
+    console.log(`Question bank already has all ${rows.length} seed questions.`);
+    return;
+  }
+
+  await db.insert(questions).values(missing).run();
   console.log(`Seeded ${missing.length} question(s).`);
 }
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { getCurrentUser } from "@/lib/auth/session";
+import { logoutAction } from "@/lib/auth/actions";
 import { EXAM_PATTERN } from "@/lib/pattern";
 
 function daysUntil(dateIso: string): number {
@@ -17,8 +19,12 @@ const LINKS = [
   { href: "/settings", label: "Settings" },
 ];
 
-export function SiteHeader() {
+export async function SiteHeader() {
   const days = daysUntil(EXAM_PATTERN.examDate);
+  const user = await getCurrentUser();
+
+  const links =
+    user?.role === "admin" ? [...LINKS, { href: "/admin", label: "Admin" }] : LINKS;
 
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-canvas/95 backdrop-blur">
@@ -37,7 +43,7 @@ export function SiteHeader() {
           aria-label="Main"
           className="-mx-1 flex items-center gap-0.5 overflow-x-auto px-1 text-sm [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          {LINKS.map((link) => (
+          {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -48,11 +54,24 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="ml-auto shrink-0 text-right">
-          <span className="font-mono text-sm text-accent">{days}</span>
-          <span className="ml-1.5 hidden text-xs uppercase tracking-widest text-muted sm:inline">
-            days to paper
-          </span>
+        <div className="ml-auto flex shrink-0 items-center gap-3">
+          <div className="hidden text-right sm:block">
+            <span className="block text-xs font-medium leading-tight">
+              {user?.displayName || user?.username}
+            </span>
+            <span className="text-[10px] uppercase tracking-widest text-muted">
+              {user?.role ?? "guest"} · <span className="font-mono">{days}d</span>
+            </span>
+          </div>
+
+          <form action={logoutAction}>
+            <button
+              type="submit"
+              className="rounded-md border border-line px-2.5 py-1.5 text-xs text-muted transition hover:border-bad/50 hover:text-bad focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              Sign out
+            </button>
+          </form>
         </div>
       </div>
     </header>

@@ -12,3 +12,18 @@ export const saveAnswersSchema = z.object({
 });
 
 export type SaveAnswersBody = z.infer<typeof saveAnswersSchema>;
+
+export const loginSchema = z.object({
+  username: z.string().trim().min(1).max(64),
+  password: z.string().min(1).max(200),
+  next: z
+    .string()
+    .trim()
+    .max(512)
+    .optional()
+    .refine((value) => !value || (value.startsWith("/") && !value.startsWith("//")), {
+      message: "next must be an internal path",
+    }),
+});
+
+export type LoginBody = z.infer<typeof loginSchema>;
