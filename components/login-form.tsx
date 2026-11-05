@@ -3,6 +3,9 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+const INPUT =
+  "mt-1 w-full rounded-md border border-line bg-surface-2 px-3 py-2.5 text-sm text-ink placeholder:text-muted focus-visible:border-accent/60";
+
 export function LoginForm({ nextPath }: { nextPath?: string }) {
   const router = useRouter();
   const [username, setUsername] = useState("");
@@ -24,7 +27,7 @@ export function LoginForm({ nextPath }: { nextPath?: string }) {
       const data = (await response.json()) as {
         ok?: boolean;
         error?: string;
-        user?: { role: "user" | "admin" };
+        user?: { role: "user" | "admin"; mustChangePassword?: boolean };
       };
 
       if (!response.ok || !data.ok) {
@@ -32,8 +35,10 @@ export function LoginForm({ nextPath }: { nextPath?: string }) {
         return;
       }
 
-      const target =
-        nextPath && nextPath.startsWith("/")
+      // Seeded passwords must be replaced before the account is used.
+      const target = data.user?.mustChangePassword
+        ? "/settings"
+        : nextPath && nextPath.startsWith("/")
           ? nextPath
           : data.user?.role === "admin"
             ? "/admin"
@@ -50,10 +55,7 @@ export function LoginForm({ nextPath }: { nextPath?: string }) {
   return (
     <form onSubmit={submit} className="space-y-4">
       <div>
-        <label
-          htmlFor="username"
-          className="text-sm font-medium text-slate-700"
-        >
+        <label htmlFor="username" className="text-[11px] font-medium uppercase tracking-widest text-muted">
           Username
         </label>
         <input
@@ -63,16 +65,13 @@ export function LoginForm({ nextPath }: { nextPath?: string }) {
           required
           value={username}
           onChange={(event) => setUsername(event.target.value)}
-          className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm outline-none focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10"
-          placeholder="user1"
+          className={INPUT}
+          placeholder="username"
         />
       </div>
 
       <div>
-        <label
-          htmlFor="password"
-          className="text-sm font-medium text-slate-700"
-        >
+        <label htmlFor="password" className="text-[11px] font-medium uppercase tracking-widest text-muted">
           Password
         </label>
         <input
@@ -83,7 +82,7 @@ export function LoginForm({ nextPath }: { nextPath?: string }) {
           required
           value={password}
           onChange={(event) => setPassword(event.target.value)}
-          className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm outline-none focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10"
+          className={INPUT}
           placeholder="••••••"
         />
       </div>
@@ -91,7 +90,7 @@ export function LoginForm({ nextPath }: { nextPath?: string }) {
       {error ? (
         <p
           role="alert"
-          className="rounded-xl border border-rose-200 bg-rose-50 px-3 py-2 text-sm text-rose-700"
+          className="rounded-md border border-bad/40 bg-bad/10 px-3 py-2 text-sm text-bad"
         >
           {error}
         </p>
@@ -100,7 +99,7 @@ export function LoginForm({ nextPath }: { nextPath?: string }) {
       <button
         type="submit"
         disabled={loading}
-        className="w-full rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800 disabled:opacity-50"
+        className="w-full rounded-md bg-accent px-4 py-2.5 text-sm font-semibold text-canvas transition hover:brightness-110 disabled:opacity-50"
       >
         {loading ? "Signing in…" : "Sign in"}
       </button>

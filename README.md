@@ -9,15 +9,16 @@ A private, multi-user mock-exam platform for the Supreme Court of India **Junior
 ## What it does
 
 - **Full mocks** use the 2026 pattern: 100 questions across 7 sections in 90 minutes.
-- **Marking:** +1 correct, −0.25 wrong, 0 skipped, +1 for bonus questions. Pass mark 50, target 78.
+- **Learn mode:** 10-question pages with no clock; each answer is marked immediately, the key and explanation are revealed, and the choice locks so it is a rep rather than a guess. Sessions resume for 30 days.
+- **Marking:** +1 correct, −0.25 wrong, 0 skipped, +1 for bonus questions. Pass mark 50, target 78. Short papers use proportionally scaled pass and target marks.
 - **Fresh papers:** each attempt is assembled from the bank, preferring unseen questions, then previously wrong ones, then the rest.
 - **Drills:** 5–30 questions from one section or all sections, with the same marking.
 - **Question bank:** searchable and filterable by section and topic, with answers and explanations.
 - **Mistake notebook:** every wrong answer, newest first, with the correct option and explanation.
-- **History and results:** per-section breakdown, net marks, and full question review.
+- **History and results:** per-section breakdown, net marks, verdict against the scaled targets, and full question review.
 - **Private data:** candidates only ever read and write their own attempts. No public registration.
-- **Admin dashboard:** candidate list, per-candidate attempts, section accuracy, pass rate, recent submissions, and the most-missed questions. Admins cannot see or reset passwords.
-- **Backup / restore / reset:** each candidate can export and restore their own attempt data.
+- **Admin dashboard:** candidate list, per-candidate attempts, section accuracy, full-mock pass rate, recent submissions, and the most-missed questions. Admins cannot see or reset passwords.
+- **Backup / restore / reset:** each candidate can export and restore their own attempt data, in merge or replace mode.
 
 ## Tech stack
 
@@ -34,18 +35,18 @@ A private, multi-user mock-exam platform for the Supreme Court of India **Junior
 
 ## Seeded accounts
 
-Seeding is idempotent. Existing accounts are left alone unless `SEED_FORCE_PASSWORD=true` is set.
+Seeding is idempotent and reads every credential from the environment. The
+repository no longer publishes account passwords.
 
-| Username | Role | Initial password |
-| --- | --- | --- |
-| `admin` | admin | `admin` |
-| `user1` | user | `test1` |
-| `user2` | user | `test2` |
-| `user3` | user | `test3` |
-| `user4` | user | `test4` |
-| `user5` | user | `test5` |
+- `ADMIN_USERNAME` / `ADMIN_PASSWORD` create the administrator.
+- `SEED_USER_PASSWORDS` is a comma-separated list for `user1`..`user5`.
 
-These are weak passwords chosen deliberately by the owner for a small private deployment. Change them from **Settings** if the URL is shared more widely. There is no self-service registration and no administrator password-reset feature.
+Seeded accounts are flagged `mustChangePassword`. After signing in, they land on
+**Settings** with a banner until they set a personal password. Changing a
+password bumps `tokenVersion`, which signs out every older session. Existing
+accounts are left alone unless `SEED_FORCE_PASSWORD=true` is set; a forced reset
+also bumps `tokenVersion` and re-flags the account. There is no self-service
+registration and no administrator password-reset feature.
 
 ## Local setup
 
@@ -118,7 +119,28 @@ render.yaml             Render Blueprint
 1. A test and an `in_progress` attempt are created together.
 2. Answers autosave individually with selected option, review flag, and time spent.
 3. Submitting — or the timer expiring — scores the attempt and stores a snapshot.
-4. Results expose per-section totals and explanations.
+4. Results expose per-section totals, a verdict against scaled pass/target marks, and explanations.
+
+### Learn mode
+
+- A learn session is a normal attempt with `kind: "learn"`, no clock, and a
+  30-day resume window.
+- The answer key is sent to the client as soon as the session starts. To stop a
+  learner from revealing the key and then changing their mind, the first choice
+  for a question is final; later writes return `409` with reason `locked`.
+- Ten questions a page, up to 50 a session. Answers still feed section mastery
+  and the mistake notebook.
+- Finishing early submits the session; unanswered questions are skipped.
+
+### Backup and restore
+
+- A backup is a JSON file with tests, attempts, and answers.
+- **Merge** (default) keeps existing attempts and adds the file's, skipping
+  duplicates by paper title + creation time (±1s).
+- **Replace** deletes the account's current attempts before importing.
+- The file is untrusted. Restore re-marks every answer against the question
+  bank and re-scores every submitted paper on the server, so a hand-edited
+  backup cannot inflate a candidate's record or the admin dashboard.
 
 ### Access control
 
@@ -127,7 +149,16 @@ Every page and API checks the session server-side.
 - Users can only read and write their own attempts, answers, history, and mistakes.
 - Admins can read aggregate and per-user performance, but never passwords.
 - There is no registration endpoint. Only seeded accounts exist.
-- Login is rate-limited per IP + username: 5 failures in 15 minutes blocks further attempts.
+- Login is rate-limited: 5 failures per IP + username and a separate per-IP cap, both for 15 minutes.
+- Sessions carry a `tokenVersion`. A password change invalidates every older session.
+- Admin pass rate and average are computed from full mocks only; short drills are not counted as failures.
+
+### Interface
+
+A single dark theme is defined as Tailwind 4 `@theme` tokens in
+`app/globals.css` (canvas, surface, line, ink, muted, accent, ok, bad) with Geist
+Sans and Geist Mono. A sticky header shows the countdown to the exam date, and
+the exam runner keeps its clock and question palette fixed while scrolling.
 
 ## Scripts
 
@@ -145,7 +176,7 @@ Every page and API checks the session server-side.
 
 ## Tests
 
-Unit tests cover the exam pattern, marking and section totals, question selection, session tokens, password hashing, and backup validation. See [TESTS.md](./TESTS.md) for the full checklist and the integration checks performed against the live database.
+Unit tests cover the exam pattern and scaled verdicts, marking and section totals, question selection, session tokens, password hashing, learn-mode limits, and backup/restore validation. See [TESTS.md](./TESTS.md) for the full checklist and the integration checks performed against the live database.
 
 ```bash
 npm test
@@ -160,8 +191,8 @@ A Render Blueprint is included in [`render.yaml`](./render.yaml).
 1. Create a **New Blueprint Instance** on Render and connect this GitHub repository.
 2. Set the secret environment variables when prompted:
    - `MONGODB_URI` — the Atlas connection string
-   - `ADMIN_PASSWORD` — `admin` for this deployment
-   - `SEED_USER_PASSWORDS` — `test1,test2,test3,test4,test5`
+   - `ADMIN_USERNAME` and `ADMIN_PASSWORD` — the administrator account
+   - `SEED_USER_PASSWORDS` — comma-separated passwords for the candidate accounts
 3. Render generates `AUTH_SECRET`, builds with `npm ci && npm run build`, then runs `npm run start:render`.
 4. The start command seeds indexes, the six accounts, and the question bank idempotently before `next start`.
 5. Atlas must allow Render's outbound IPs. For a small private deployment, an Atlas IP access-list entry of `0.0.0.0/0` is the simplest option.

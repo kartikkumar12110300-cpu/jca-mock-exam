@@ -19,7 +19,7 @@ export default async function MistakesPage() {
         action={
           <Link
             href="/drill"
-            className="rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800"
+            className="rounded-md border border-line px-4 py-2 text-sm text-muted transition hover:border-accent/50 hover:text-ink"
           >
             Drill these areas
           </Link>
@@ -31,7 +31,10 @@ export default async function MistakesPage() {
           title="No mistakes recorded yet"
           description="Once you submit a paper or drill, every wrong answer lands here with the correct option and explanation."
           action={
-            <Link href="/new" className="text-sm font-medium text-emerald-700">
+            <Link
+              href="/new"
+              className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-canvas transition hover:brightness-110"
+            >
               Start a full mock
             </Link>
           }
@@ -44,14 +47,12 @@ export default async function MistakesPage() {
                 <div className="flex flex-wrap items-center gap-2">
                   <Badge tone="blue">{item.section}</Badge>
                   {item.topic ? <Badge>{item.topic}</Badge> : null}
-                  <span className="ml-auto text-xs text-slate-400">
+                  <span className="ml-auto text-xs text-muted">
                     Last missed {formatDateTime(item.lastAttemptAt)}
                   </span>
                 </div>
 
-                <p className="mt-3 whitespace-pre-line text-sm leading-6 text-slate-900">
-                  {item.stem}
-                </p>
+                <p className="mt-3 whitespace-pre-line text-sm leading-6">{item.stem}</p>
 
                 <ul className="mt-3 grid gap-1.5 sm:grid-cols-2">
                   {item.options.map((option, index) => {
@@ -62,21 +63,21 @@ export default async function MistakesPage() {
                         key={index}
                         className={
                           isCorrect
-                            ? "rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm text-emerald-900"
+                            ? "rounded-md border border-ok/50 bg-ok/10 px-3 py-2 text-sm"
                             : isChosen
-                              ? "rounded-lg border border-rose-200 bg-rose-50 px-3 py-2 text-sm text-rose-900"
-                              : "rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-700"
+                              ? "rounded-md border border-bad/50 bg-bad/10 px-3 py-2 text-sm"
+                              : "rounded-md border border-line px-3 py-2 text-sm text-muted"
                         }
                       >
-                        <span className="mr-2 font-semibold text-slate-400">
+                        <span className="mr-2 font-mono text-xs text-muted">
                           {String.fromCharCode(65 + index)}
                         </span>
                         {option}
                         {isCorrect ? (
-                          <span className="ml-2 text-xs font-medium text-emerald-700">correct</span>
+                          <span className="ml-2 text-xs font-medium text-ok">correct</span>
                         ) : null}
                         {isChosen ? (
-                          <span className="ml-2 text-xs font-medium text-rose-700">your answer</span>
+                          <span className="ml-2 text-xs font-medium">your answer</span>
                         ) : null}
                       </li>
                     );
@@ -84,7 +85,7 @@ export default async function MistakesPage() {
                 </ul>
 
                 {item.explanation ? (
-                  <p className="mt-3 rounded-xl bg-slate-50 px-3 py-2.5 text-sm leading-6 text-slate-700">
+                  <p className="mt-3 rounded-lg border border-line bg-surface-2 px-3 py-2.5 text-sm leading-6 text-muted">
                     {item.explanation}
                   </p>
                 ) : null}

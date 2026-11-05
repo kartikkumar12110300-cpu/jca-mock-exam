@@ -234,45 +234,47 @@ export function AttemptRunner({
     const answered = answer?.selectedIndex !== null && answer?.selectedIndex !== undefined;
     const marked = answer?.markedForReview;
     return cn(
-      "grid size-9 place-items-center rounded-lg border text-xs font-semibold transition",
-      isCurrent && "ring-2 ring-[#12211c] ring-offset-1",
+      "grid size-8 place-items-center rounded-md border font-mono text-xs transition",
+      isCurrent && "ring-2 ring-accent ring-offset-1 ring-offset-surface",
       marked
-        ? "border-amber-300 bg-amber-100 text-amber-900"
+        ? "border-accent/60 bg-accent/15 text-accent"
         : answered
-          ? "border-emerald-300 bg-emerald-100 text-emerald-900"
-          : "border-slate-200 bg-white text-slate-500 hover:bg-slate-50",
+          ? "border-ok/50 bg-ok/15 text-ok"
+          : "border-line bg-surface-2 text-muted hover:border-muted/60 hover:text-ink",
     );
   }
 
   if (!question) {
-    return <p className="p-8 text-sm text-slate-600">This paper has no questions.</p>;
+    return <p className="p-8 text-sm text-muted">This paper has no questions.</p>;
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#f7f6f1]">
-      <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
+    <div className="flex min-h-dvh flex-col bg-canvas">
+      <header className="sticky top-0 z-20 border-b border-line bg-canvas/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
           <div className="min-w-0">
-            <p className="truncate text-sm font-semibold text-slate-900">{title}</p>
-            <p className="text-xs text-slate-500">
+            <p className="truncate text-sm font-semibold">{title}</p>
+            <p className="text-xs text-muted">
               {answeredCount}/{questions.length} answered · {markedCount} marked ·{" "}
               {saving === "saving" ? "saving…" : saving === "error" ? "not saved" : "autosaved"}
             </p>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <div
               className={cn(
-                "rounded-xl px-4 py-2 text-center tabular-nums",
-                urgent ? "bg-rose-600 text-white" : "bg-[#12211c] text-white",
+                "rounded-lg border px-4 py-1.5 text-center",
+                urgent
+                  ? "border-bad/50 bg-bad/15 text-bad"
+                  : "border-line bg-surface-2 text-ink",
               )}
             >
-              <p className="text-[10px] uppercase tracking-[0.16em] opacity-70">Time left</p>
-              <p className="text-lg font-semibold leading-tight">{formatClock(remaining)}</p>
+              <p className="text-[9px] uppercase tracking-[0.16em] text-muted">Time left</p>
+              <p className="font-mono text-lg leading-tight">{formatClock(remaining)}</p>
             </div>
             <button
               type="button"
               onClick={() => setShowPalette((value) => !value)}
-              className="rounded-xl border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 lg:hidden"
+              className="rounded-md border border-line px-3 py-2 text-sm text-muted transition hover:text-ink lg:hidden"
             >
               Palette
             </button>
@@ -284,68 +286,71 @@ export function AttemptRunner({
                 }
               }}
               disabled={submitting}
-              className="rounded-xl bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700 disabled:opacity-50"
+              className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-canvas transition hover:brightness-110 disabled:opacity-50"
             >
               {submitting ? "Submitting…" : "Submit"}
             </button>
           </div>
         </div>
-        <div className="h-1 w-full bg-slate-100">
+        <div className="h-0.5 w-full bg-line">
           <div
-            className="h-full bg-emerald-500 transition-all"
+            className="h-full bg-accent/80 transition-all"
             style={{ width: `${progress}%` }}
           />
         </div>
       </header>
 
       {error ? (
-        <div role="alert" className="bg-rose-50 px-4 py-2 text-center text-xs text-rose-700">
+        <div
+          role="alert"
+          className="border-b border-bad/40 bg-bad/10 px-4 py-2 text-center text-xs text-bad"
+        >
           {error}
         </div>
       ) : null}
 
-      <div className="mx-auto grid w-full max-w-7xl flex-1 gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[1fr_300px]">
+      <div className="mx-auto grid w-full max-w-7xl flex-1 gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[1fr_280px]">
         <main>
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+          <div className="rounded-xl border border-line bg-surface p-5 sm:p-7">
             <div className="flex flex-wrap items-center gap-2 text-xs">
-              <span className="rounded-full bg-sky-100 px-2.5 py-0.5 font-medium text-sky-800">
+              <span className="rounded-full border border-ink/20 bg-ink/5 px-2.5 py-0.5 font-medium">
                 {sectionName(question.sectionId)}
               </span>
               {question.topic ? (
-                <span className="rounded-full bg-slate-100 px-2.5 py-0.5 font-medium text-slate-600">
+                <span className="rounded-full border border-line bg-surface-2 px-2.5 py-0.5 text-muted">
                   {question.topic}
                 </span>
               ) : null}
-              <span className="ml-auto tabular-nums text-slate-400">
+              <span className="ml-auto font-mono text-muted">
                 Question {current + 1} of {questions.length}
               </span>
             </div>
 
-            <p className="mt-4 whitespace-pre-line text-base leading-7 text-slate-900">
-              {question.stem}
-            </p>
+            <p className="mt-4 whitespace-pre-line text-[15px] leading-7">{question.stem}</p>
 
-            <div className="mt-5 grid gap-2">
+            <div role="radiogroup" aria-label="Answer options" className="mt-5 grid gap-2">
               {question.options.map((option, index) => {
                 const selected = answers[question.id]?.selectedIndex === index;
                 return (
                   <button
                     key={index}
                     type="button"
-                    onClick={() =>
-                      update({ selectedIndex: selected ? null : index })
-                    }
+                    role="radio"
+                    aria-checked={selected}
+                    onClick={() => update({ selectedIndex: selected ? null : index })}
                     className={cn(
-                      "flex w-full items-start gap-3 rounded-xl border px-4 py-3 text-left text-sm transition",
+                      "flex w-full items-start gap-3 rounded-lg border px-4 py-3 text-left text-sm transition",
                       selected
-                        ? "border-[#12211c] bg-[#12211c] text-white"
-                        : "border-slate-200 bg-white text-slate-800 hover:border-slate-400 hover:bg-slate-50",
+                        ? "border-accent/70 bg-accent/10"
+                        : "border-line bg-surface-2 hover:border-muted/50",
                     )}
                   >
                     <span
                       className={cn(
-                        "mt-0.5 grid size-6 shrink-0 place-items-center rounded-md text-xs font-semibold",
-                        selected ? "bg-white/15 text-white" : "bg-slate-100 text-slate-600",
+                        "mt-0.5 grid size-6 shrink-0 place-items-center rounded-md border font-mono text-xs",
+                        selected
+                          ? "border-accent bg-accent text-canvas"
+                          : "border-line text-muted",
                       )}
                     >
                       {String.fromCharCode(65 + index)}
@@ -356,12 +361,12 @@ export function AttemptRunner({
               })}
             </div>
 
-            <div className="mt-6 flex flex-wrap items-center gap-2 border-t border-slate-100 pt-4">
+            <div className="mt-6 flex flex-wrap items-center gap-2 border-t border-line pt-4">
               <button
                 type="button"
                 onClick={() => goTo(current - 1)}
                 disabled={current === 0}
-                className="rounded-xl border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-40"
+                className="rounded-md border border-line px-4 py-2 text-sm text-muted transition hover:text-ink disabled:opacity-40"
               >
                 Previous
               </button>
@@ -369,7 +374,7 @@ export function AttemptRunner({
                 type="button"
                 onClick={() => goTo(current + 1)}
                 disabled={current === questions.length - 1}
-                className="rounded-xl border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-40"
+                className="rounded-md border border-line px-4 py-2 text-sm text-muted transition hover:text-ink disabled:opacity-40"
               >
                 Next
               </button>
@@ -377,10 +382,10 @@ export function AttemptRunner({
                 type="button"
                 onClick={() => update({ markedForReview: !answers[question.id]?.markedForReview })}
                 className={cn(
-                  "rounded-xl border px-4 py-2 text-sm font-medium",
+                  "rounded-md border px-4 py-2 text-sm transition",
                   answers[question.id]?.markedForReview
-                    ? "border-amber-300 bg-amber-100 text-amber-900"
-                    : "border-slate-300 text-slate-700 hover:bg-slate-50",
+                    ? "border-accent/60 bg-accent/15 text-accent"
+                    : "border-line text-muted hover:text-ink",
                 )}
               >
                 {answers[question.id]?.markedForReview ? "Unmark" : "Mark for review"}
@@ -388,12 +393,12 @@ export function AttemptRunner({
               <button
                 type="button"
                 onClick={() => update({ selectedIndex: null })}
-                className="rounded-xl border border-slate-300 px-4 py-2 text-sm font-medium text-slate-500 hover:bg-slate-50"
+                className="rounded-md border border-line px-4 py-2 text-sm text-muted transition hover:text-ink"
               >
                 Clear
               </button>
-              <span className="ml-auto text-xs text-slate-400">
-                Shortcuts · A–D select · ← → navigate
+              <span className="ml-auto hidden text-xs text-muted sm:inline">
+                A–D select · ← → navigate
               </span>
             </div>
           </div>
@@ -403,37 +408,37 @@ export function AttemptRunner({
           className={cn(
             "lg:block",
             showPalette
-              ? "fixed inset-x-0 bottom-0 z-30 max-h-[70vh] overflow-y-auto rounded-t-2xl border-t border-slate-200 bg-white p-4 shadow-2xl lg:static lg:max-h-none lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none"
+              ? "fixed inset-x-0 bottom-0 z-30 max-h-[70vh] overflow-y-auto rounded-t-2xl border-t border-line bg-surface p-4 lg:static lg:max-h-none lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0"
               : "hidden",
           )}
         >
-          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+          <div className="rounded-xl border border-line bg-surface p-4">
             <div className="flex items-center justify-between">
-              <h2 className="text-sm font-semibold text-slate-900">Question palette</h2>
+              <h2 className="text-sm font-semibold">Question palette</h2>
               <button
                 type="button"
                 onClick={() => setShowPalette(false)}
-                className="text-xs text-slate-500 lg:hidden"
+                className="text-xs text-muted lg:hidden"
               >
                 Close
               </button>
             </div>
-            <div className="mt-3 flex flex-wrap gap-3 text-[11px] text-slate-500">
+            <div className="mt-3 flex flex-wrap gap-3 text-[11px] text-muted">
               <span className="flex items-center gap-1.5">
-                <span className="size-2.5 rounded-full bg-emerald-400" /> Answered
+                <span className="size-2.5 rounded-full bg-ok/70" /> Answered
               </span>
               <span className="flex items-center gap-1.5">
-                <span className="size-2.5 rounded-full bg-amber-400" /> Marked
+                <span className="size-2.5 rounded-full bg-accent/80" /> Marked
               </span>
               <span className="flex items-center gap-1.5">
-                <span className="size-2.5 rounded-full bg-slate-300" /> Unseen
+                <span className="size-2.5 rounded-full bg-line" /> Unseen
               </span>
             </div>
 
             <div className="mt-4 space-y-4">
               {sections.map((group) => (
                 <div key={`${group.sectionId}-${group.items[0]?.id}`}>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-slate-400">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-muted">
                     {sectionName(group.sectionId)}
                   </p>
                   <div className="mt-1.5 flex flex-wrap gap-1.5">
@@ -467,11 +472,11 @@ export function AttemptRunner({
                 }
               }}
               disabled={submitting}
-              className="mt-5 w-full rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700 disabled:opacity-50"
+              className="mt-5 w-full rounded-md bg-accent px-4 py-2.5 text-sm font-semibold text-canvas transition hover:brightness-110 disabled:opacity-50"
             >
               {submitting ? "Submitting…" : "Submit paper"}
             </button>
-            <p className="mt-2 text-center text-[11px] text-slate-400">
+            <p className="mt-2 text-center text-[11px] text-muted">
               Total time {Math.round(durationSec / 60)} minutes
             </p>
           </div>

@@ -4,13 +4,18 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { DRILL_COUNTS, SECTIONS } from "@/lib/exam/pattern";
 
+const FIELD =
+  "mt-1.5 w-full rounded-md border border-line bg-surface-2 px-3 py-2 text-sm text-ink focus-visible:border-accent/60";
+
 export function DrillForm({
   sectionCounts,
+  defaultSection = "",
 }: {
   sectionCounts: Record<string, number>;
+  defaultSection?: string;
 }) {
   const router = useRouter();
-  const [sectionId, setSectionId] = useState("");
+  const [sectionId, setSectionId] = useState(defaultSection);
   const [count, setCount] = useState(10);
   const [order, setOrder] = useState<"weak" | "unseen" | "random">("weak");
   const [loading, setLoading] = useState(false);
@@ -51,14 +56,14 @@ export function DrillForm({
   return (
     <form onSubmit={start} className="space-y-5">
       <div>
-        <label htmlFor="section" className="text-sm font-medium text-slate-700">
+        <label htmlFor="section" className="text-[11px] font-medium uppercase tracking-widest text-muted">
           Section
         </label>
         <select
           id="section"
           value={sectionId}
           onChange={(event) => setSectionId(event.target.value)}
-          className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm"
+          className={FIELD}
         >
           <option value="">All sections</option>
           {SECTIONS.map((section) => (
@@ -70,14 +75,14 @@ export function DrillForm({
       </div>
 
       <div>
-        <label htmlFor="count" className="text-sm font-medium text-slate-700">
+        <label htmlFor="count" className="text-[11px] font-medium uppercase tracking-widest text-muted">
           Questions
         </label>
         <select
           id="count"
           value={count}
           onChange={(event) => setCount(Number(event.target.value))}
-          className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm"
+          className={FIELD}
         >
           {DRILL_COUNTS.map((value) => (
             <option key={value} value={value}>
@@ -88,7 +93,7 @@ export function DrillForm({
       </div>
 
       <fieldset>
-        <legend className="text-sm font-medium text-slate-700">
+        <legend className="text-[11px] font-medium uppercase tracking-widest text-muted">
           Question order
         </legend>
         <div className="mt-2 grid gap-2">
@@ -111,7 +116,11 @@ export function DrillForm({
           ].map((option) => (
             <label
               key={option.value}
-              className="flex cursor-pointer gap-3 rounded-xl border border-slate-200 p-3 hover:border-slate-300"
+              className={`flex cursor-pointer gap-3 rounded-lg border p-3 transition ${
+                order === option.value
+                  ? "border-accent/60 bg-accent/5"
+                  : "border-line hover:border-muted/50"
+              }`}
             >
               <input
                 type="radio"
@@ -119,15 +128,11 @@ export function DrillForm({
                 value={option.value}
                 checked={order === option.value}
                 onChange={() => setOrder(option.value)}
-                className="mt-1"
+                className="mt-1 accent-[var(--color-accent)]"
               />
               <span>
-                <span className="block text-sm font-medium text-slate-900">
-                  {option.title}
-                </span>
-                <span className="block text-xs text-slate-500">
-                  {option.hint}
-                </span>
+                <span className="block text-sm font-medium">{option.title}</span>
+                <span className="block text-xs text-muted">{option.hint}</span>
               </span>
             </label>
           ))}
@@ -135,7 +140,7 @@ export function DrillForm({
       </fieldset>
 
       {error ? (
-        <p role="alert" className="text-sm text-rose-700">
+        <p role="alert" className="text-sm text-bad">
           {error}
         </p>
       ) : null}
@@ -143,7 +148,7 @@ export function DrillForm({
       <button
         type="submit"
         disabled={loading}
-        className="rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800 disabled:opacity-50"
+        className="rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-canvas transition hover:brightness-110 disabled:opacity-50"
       >
         {loading ? "Building drill…" : "Start drill"}
       </button>

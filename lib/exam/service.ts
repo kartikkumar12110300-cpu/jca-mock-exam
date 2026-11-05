@@ -4,9 +4,12 @@ import type { AnswerDoc, AttemptDoc, QuestionDoc, TestDoc } from "@/lib/db/types
 import {
   DRILL_SECONDS_PER_QUESTION,
   EXAM_PATTERN,
+  LEARN_MAX_QUESTIONS,
+  LEARN_WINDOW_SEC,
   SECTION_IDS,
   TOTAL_QUESTIONS,
   sectionName,
+  sectionShort,
   type SectionId,
 } from "@/lib/exam/pattern";
 import { scoreAttempt } from "@/lib/exam/scoring";
@@ -98,6 +101,37 @@ export async function createAttempt(
       questionIds: picked.map((candidate) => candidate.id),
       isTemplate: false,
     };
+  } else if (input.kind === "learn") {
+    const candidates = await publishedCandidates(input.sectionId);
+    const wanted = Math.min(
+      LEARN_MAX_QUESTIONS,
+      Math.max(1, input.count ?? LEARN_MAX_QUESTIONS / 2),
+    );
+    const selected = pickQuestions(candidates, Math.min(wanted, candidates.length), history, "weak");
+    if (selected.length === 0) {
+      throw new BankError("No questions available for this learn session.");
+    }
+
+    const cleanSection = SECTION_IDS.includes(input.sectionId as SectionId)
+      ? input.sectionId
+      : null;
+    const label = cleanSection ? `Learn - ${sectionShort(cleanSection)}` : "Learn - mixed";
+
+    test = {
+      title: `${label} - ${selected.length} questions`,
+      kind: "learn",
+      pattern: {
+        kind: "learn",
+        label,
+        sectionId: cleanSection,
+        count: selected.length,
+        marking: EXAM_PATTERN.marking,
+      },
+      // Learn mode has no clock; the runner shows one page at a time.
+      durationSec: 0,
+      questionIds: selected.map((candidate) => candidate.id),
+      isTemplate: false,
+    };
   } else {
     const candidates = await publishedCandidates(input.sectionId);
     const selected = pickQuestions(
@@ -143,12 +177,15 @@ export async function createAttempt(
     createdAt: now,
   });
 
+  // Learn sessions stay resumable for a month; a real paper ends with its clock.
+  const windowSec = test.kind === "learn" ? LEARN_WINDOW_SEC : test.durationSec;
+
   await (await attempts()).insertOne({
     _id: attemptId,
     userId,
     testId,
     startedAt: now,
-    endsAt: new Date(now.getTime() + test.durationSec * 1000),
+    endsAt: new Date(now.getTime() + windowSec * 1000),
     submittedAt: null,
     status: "in_progress",
     score: null,
@@ -245,7 +282,13 @@ export async function saveAnswer(
     markedForReview?: boolean;
     timeSpentMs?: number;
   },
-): Promise<{ ok: true; answer: AnswerDoc } | { ok: false; reason: "not_found" | "submitted" | "expired" | "invalid_question" }> {
+): Promise<
+  | { ok: true; answer: AnswerDoc }
+  | {
+      ok: false;
+      reason: "not_found" | "submitted" | "expired" | "invalid_question" | "locked";
+    }
+> {
   const attempt = await (await attempts()).findOne({ _id: attemptId, userId });
   if (!attempt) return { ok: false, reason: "not_found" };
   if (attempt.status === "submitted") return { ok: false, reason: "submitted" };
@@ -262,6 +305,19 @@ export async function saveAnswer(
 
   const question = await (await questions()).findOne({ _id: input.questionId });
   if (!question) return { ok: false, reason: "invalid_question" };
+
+  // In learn mode the answer key is shown the moment an option is picked, so
+  // the choice must be final. Otherwise a learner could reveal the key and then
+  // switch to the right option.
+  if (test.kind === "learn") {
+    const existing = await (await answers()).findOne({
+      attemptId,
+      questionId: input.questionId,
+    });
+    if (existing && existing.selectedIndex !== null) {
+      return { ok: false, reason: "locked" };
+    }
+  }
 
   const isCorrect =
     input.selectedIndex === null

@@ -6,6 +6,7 @@ const payload = {
   username: "user1",
   role: "user" as const,
   displayName: "User 1",
+  ver: 0,
 };
 
 describe("session tokens", () => {

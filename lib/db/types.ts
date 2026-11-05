@@ -12,6 +12,13 @@ export interface UserDoc {
   role: Role;
   displayName: string;
   active: boolean;
+  /**
+   * Bumped whenever the password changes. A session token carries the value it
+   * was minted with, so changing a password revokes every older session.
+   */
+  tokenVersion?: number;
+  /** Seeded accounts keep this true until the owner sets a personal password. */
+  mustChangePassword?: boolean;
   createdAt: Date;
   lastLoginAt: Date | null;
 }
@@ -50,7 +57,7 @@ export interface TestDoc {
   _id: string;
   userId: string;
   title: string;
-  kind: "full" | "drill";
+  kind: "full" | "drill" | "learn";
   pattern: unknown;
   durationSec: number;
   questionIds: string[];

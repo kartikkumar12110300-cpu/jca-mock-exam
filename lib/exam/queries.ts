@@ -1,6 +1,6 @@
 import { answers, attempts, questions, tests } from "@/lib/db/collections";
 import type { AttemptDoc, QuestionDoc } from "@/lib/db/types";
-import { sectionName } from "@/lib/exam/pattern";
+import { SECTIONS, sectionName } from "@/lib/exam/pattern";
 
 export interface AttemptSummary {
   id: string;
@@ -10,11 +10,15 @@ export interface AttemptSummary {
   startedAt: Date;
   endsAt: Date;
   submittedAt: Date | null;
+  /** Net marks after the 0.25 penalty. */
   score: number;
+  /** Net marks as a percentage of the paper's maximum. */
   percent: number;
   correct: number;
   wrong: number;
   skipped: number;
+  /** Questions in this paper — the honest denominator for short mocks. */
+  max: number;
 }
 
 export async function listAttempts(
@@ -51,25 +55,49 @@ async function hydrate(docs: AttemptDoc[]): Promise<AttemptSummary[]> {
       correct: attempt.score?.correct ?? 0,
       wrong: attempt.score?.wrong ?? 0,
       skipped: attempt.score?.skipped ?? 0,
+      max: attempt.score?.max ?? test?.questionIds.length ?? 0,
     };
   });
+}
+
+export interface SectionMastery {
+  sectionId: string;
+  section: string;
+  accuracy: number;
+  correct: number;
+  wrong: number;
+  /** Questions attempted (correct + wrong). */
+  attempted: number;
+  /** Questions put in front of the candidate. */
+  total: number;
 }
 
 export interface DashboardData {
   submitted: number;
   inProgress: number;
-  averagePercent: number;
-  bestPercent: number;
+  /** Mean net marks across submitted papers. */
+  averageNet: number;
+  bestNet: number | null;
+  lastNet: number | null;
+  lastAt: Date | null;
   studyMinutes: number;
   totalQuestions: number;
+  bankCounts: Record<string, number>;
   recent: AttemptSummary[];
-  sections: { section: string; accuracy: number; total: number }[];
+  /** Oldest to newest, for the trend strip. */
+  trend: AttemptSummary[];
+  sections: SectionMastery[];
 }
 
 export async function getDashboard(userId: string): Promise<DashboardData> {
-  const [attemptDocs, totalQuestions, timeRows] = await Promise.all([
+  const [attemptDocs, bankRows, timeRows] = await Promise.all([
     (await attempts()).find({ userId }).sort({ startedAt: -1 }).toArray(),
-    (await questions()).countDocuments({ status: "published" }),
+    (await questions())
+      .aggregate<{ _id: string; count: number }>([
+        { $match: { status: "published" } },
+        { $group: { _id: "$sectionId", count: { $sum: 1 } } },
+      ])
+      .toArray(),
     (await answers())
       .aggregate<{ _id: null; total: number }>([
         { $match: { userId } },
@@ -79,42 +107,60 @@ export async function getDashboard(userId: string): Promise<DashboardData> {
   ]);
 
   const submittedDocs = attemptDocs.filter((doc) => doc.status === "submitted");
-  const averagePercent =
+  const averageNet =
     submittedDocs.length > 0
-      ? submittedDocs.reduce((sum, doc) => sum + (doc.score?.percent ?? 0), 0) /
+      ? submittedDocs.reduce((sum, doc) => sum + (doc.score?.total ?? 0), 0) /
         submittedDocs.length
       : 0;
-  const bestPercent =
+  const bestNet =
     submittedDocs.length > 0
-      ? Math.max(...submittedDocs.map((doc) => doc.score?.percent ?? 0))
-      : 0;
+      ? Math.max(...submittedDocs.map((doc) => doc.score?.total ?? 0))
+      : null;
+  const last = submittedDocs[0] ?? null;
 
-  const sectionTotals = new Map<string, { correct: number; total: number }>();
+  const sectionTotals = new Map<string, { correct: number; wrong: number; total: number }>();
   for (const doc of submittedDocs) {
     for (const section of doc.score?.sections ?? []) {
-      const current = sectionTotals.get(section.sectionId) ?? { correct: 0, total: 0 };
+      const current = sectionTotals.get(section.sectionId) ?? {
+        correct: 0,
+        wrong: 0,
+        total: 0,
+      };
       current.correct += section.correct;
-      current.total += section.correct + section.wrong;
+      current.wrong += section.wrong;
+      current.total += section.total;
       sectionTotals.set(section.sectionId, current);
     }
   }
 
+  const bankCounts = Object.fromEntries(bankRows.map((row) => [row._id, row.count]));
+
   return {
     submitted: submittedDocs.length,
     inProgress: attemptDocs.length - submittedDocs.length,
-    averagePercent: round(averagePercent),
-    bestPercent: round(bestPercent),
+    averageNet: round(averageNet),
+    bestNet,
+    lastNet: last ? (last.score?.total ?? 0) : null,
+    lastAt: last?.submittedAt ?? last?.startedAt ?? null,
     studyMinutes: Math.round((timeRows[0]?.total ?? 0) / 60000),
-    totalQuestions,
-    recent: await hydrate(attemptDocs.slice(0, 5)),
-    sections: Array.from(sectionTotals.entries())
-      .map(([sectionId, value]) => ({
-        section: sectionName(sectionId),
-        accuracy:
-          value.total > 0 ? round((value.correct / value.total) * 100) : 0,
-        total: value.total,
-      }))
-      .sort((a, b) => a.section.localeCompare(b.section)),
+    totalQuestions: bankRows.reduce((sum, row) => sum + row.count, 0),
+    bankCounts,
+    recent: await hydrate(attemptDocs.slice(0, 6)),
+    trend: (await hydrate(submittedDocs.slice(0, 14))).reverse(),
+    // Every section is listed, even untouched ones, so the gaps are visible.
+    sections: SECTIONS.map((section) => {
+      const row = sectionTotals.get(section.id) ?? { correct: 0, wrong: 0, total: 0 };
+      const attempted = row.correct + row.wrong;
+      return {
+        sectionId: section.id,
+        section: sectionName(section.id),
+        accuracy: attempted > 0 ? round((row.correct / attempted) * 100) : 0,
+        correct: row.correct,
+        wrong: row.wrong,
+        attempted,
+        total: row.total,
+      };
+    }),
   };
 }
 
@@ -141,18 +187,30 @@ export interface MistakeItem {
   lastAttemptAt: Date;
 }
 
+/**
+ * The mistake notebook shows a question only while its *latest* answer is
+ * wrong. Answering it correctly in a later paper clears it — so the notebook
+ * shrinks as the candidate improves instead of growing forever.
+ */
 export async function listMistakes(userId: string): Promise<MistakeItem[]> {
   const rows = await (await answers())
-    .aggregate<{ _id: string; selectedIndex: number | null; lastAt: Date }>([
-      { $match: { userId, isCorrect: false } },
+    .aggregate<{
+      _id: string;
+      isCorrect: boolean | null;
+      selectedIndex: number | null;
+      lastAt: Date;
+    }>([
+      { $match: { userId } },
       { $sort: { updatedAt: -1 } },
       {
         $group: {
           _id: "$questionId",
+          isCorrect: { $first: "$isCorrect" },
           selectedIndex: { $first: "$selectedIndex" },
           lastAt: { $first: "$updatedAt" },
         },
       },
+      { $match: { isCorrect: false } },
       { $sort: { lastAt: -1 } },
       { $limit: 100 },
     ])

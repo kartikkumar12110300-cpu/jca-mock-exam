@@ -1,43 +1,46 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans:
-    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  --font-serif:
-    "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia,
-    serif;
+  --color-canvas: #0b0d10;
+  --color-surface: #12151a;
+  --color-surface-2: #171b22;
+  --color-line: #232833;
+  --color-ink: #e7e9ee;
+  --color-muted: #8d94a1;
+  --color-accent: #d8a657;
+  --color-ok: #45c08a;
+  --color-bad: #e5645f;
 }
 
-:root {
-  color-scheme: light;
-}
-
-* {
-  box-sizing: border-box;
+/* `inline` because these reference the next/font variables, not literals. */
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  color-scheme: dark;
 }
 
 body {
-  margin: 0;
-  background: #f7f6f1;
-  color: #0f172a;
-  font-family: var(--font-sans);
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 ::selection {
-  background: #bbf7d0;
-  color: #052e16;
+  background: color-mix(in oklab, var(--color-accent) 35%, transparent);
 }
 
 :focus-visible {
-  outline: 2px solid #059669;
+  outline: 2px solid var(--color-accent);
   outline-offset: 2px;
+}
+
+/* Thin scrollbars so the exam palette doesn't look like a browser default. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line) transparent;
 }
 
 @media (prefers-reduced-motion: reduce) {

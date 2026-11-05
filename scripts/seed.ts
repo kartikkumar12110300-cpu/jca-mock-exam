@@ -135,7 +135,13 @@ async function seedUsers(): Promise<{ created: number; existing: number }> {
       if (force) {
         await collection.updateOne(
           { _id: found._id },
-          { $set: { passwordHash: await hashPassword(seed.password) } },
+          {
+            $set: {
+              passwordHash: await hashPassword(seed.password),
+              tokenVersion: (found.tokenVersion ?? 0) + 1,
+              mustChangePassword: true,
+            },
+          },
         );
       }
       continue;
@@ -148,6 +154,9 @@ async function seedUsers(): Promise<{ created: number; existing: number }> {
       role: seed.role,
       displayName: seed.displayName,
       active: true,
+      // Seeded passwords are shared and published, so force a personal one.
+      tokenVersion: 0,
+      mustChangePassword: true,
       createdAt: new Date(),
       lastLoginAt: null,
     });

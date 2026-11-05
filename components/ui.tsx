@@ -9,12 +9,7 @@ export function Card({
   className?: string;
 }) {
   return (
-    <div
-      className={cn(
-        "rounded-2xl border border-slate-200/90 bg-white p-5 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_8px_24px_-16px_rgba(15,23,42,0.18)]",
-        className,
-      )}
-    >
+    <div className={cn("rounded-xl border border-line bg-surface p-5", className)}>
       {children}
     </div>
   );
@@ -24,47 +19,44 @@ export function StatCard({
   label,
   value,
   hint,
+  tone,
 }: {
   label: string;
   value: ReactNode;
   hint?: string;
+  tone?: string;
 }) {
   return (
-    <Card className="relative overflow-hidden p-4">
-      <span
-        aria-hidden
-        className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-emerald-500 via-emerald-300 to-transparent"
-      />
-      <p className="text-xs font-medium uppercase tracking-[0.14em] text-slate-500">
+    <div className="rounded-lg border border-line bg-surface px-4 py-3">
+      <p className="text-[11px] font-medium uppercase tracking-widest text-muted">
         {label}
       </p>
-      <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900">
-        {value}
-      </p>
-      {hint ? <p className="mt-1 text-xs text-slate-500">{hint}</p> : null}
-    </Card>
+      <p className={cn("mt-1 font-mono text-2xl leading-none", tone)}>{value}</p>
+      {hint ? <p className="mt-1 text-xs text-muted">{hint}</p> : null}
+    </div>
   );
 }
+
+const TONES = {
+  slate: "border-line bg-surface-2 text-muted",
+  green: "border-ok/40 bg-ok/10 text-ok",
+  amber: "border-accent/40 bg-accent/10 text-accent",
+  red: "border-bad/40 bg-bad/10 text-bad",
+  blue: "border-ink/20 bg-ink/5 text-ink",
+} as const;
 
 export function Badge({
   children,
   tone = "slate",
 }: {
   children: ReactNode;
-  tone?: "slate" | "green" | "amber" | "red" | "blue";
+  tone?: keyof typeof TONES;
 }) {
-  const tones = {
-    slate: "bg-slate-100 text-slate-700",
-    green: "bg-emerald-100 text-emerald-800",
-    amber: "bg-amber-100 text-amber-800",
-    red: "bg-rose-100 text-rose-800",
-    blue: "bg-sky-100 text-sky-800",
-  };
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium",
-        tones[tone],
+        "inline-flex items-center rounded-full border px-2.5 py-0.5 text-[11px] font-medium",
+        TONES[tone],
       )}
     >
       {children}
@@ -72,19 +64,24 @@ export function Badge({
   );
 }
 
-export function ProgressBar({ value }: { value: number }) {
+export function ProgressBar({
+  value,
+  tone,
+}: {
+  value: number;
+  tone?: "ok" | "accent" | "bad";
+}) {
   const width = Math.max(0, Math.min(100, value));
+  const fill =
+    tone === "ok" || (!tone && width >= 70)
+      ? "bg-ok/80"
+      : tone === "accent" || (!tone && width >= 40)
+        ? "bg-accent/80"
+        : "bg-bad/70";
   return (
-    <div className="h-2 w-full overflow-hidden rounded-full bg-slate-100">
+    <div className="h-1.5 w-full overflow-hidden rounded-full bg-line">
       <div
-        className={cn(
-          "h-full rounded-full",
-          width >= 70
-            ? "bg-emerald-500"
-            : width >= 40
-              ? "bg-amber-500"
-              : "bg-rose-500",
-        )}
+        className={cn("h-full rounded-full transition-[width]", fill)}
         style={{ width: `${width}%` }}
       />
     </div>
@@ -101,11 +98,13 @@ export function EmptyState({
   action?: ReactNode;
 }) {
   return (
-    <Card className="flex flex-col items-start gap-3 border-dashed">
-      <h2 className="text-lg font-semibold text-slate-900">{title}</h2>
-      <p className="max-w-prose text-sm text-slate-600">{description}</p>
-      {action}
-    </Card>
+    <div className="rounded-xl border border-dashed border-line px-5 py-10 text-center">
+      <h2 className="text-sm font-semibold">{title}</h2>
+      <p className="mx-auto mt-1 max-w-prose text-sm leading-relaxed text-muted">
+        {description}
+      </p>
+      {action ? <div className="mt-4 flex justify-center">{action}</div> : null}
+    </div>
   );
 }
 
@@ -124,16 +123,18 @@ export function PageHeader({
     <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
       <div>
         {eyebrow ? (
-          <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700">
-            <span aria-hidden className="h-px w-6 bg-emerald-600/50" />
+          <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">
+            <span aria-hidden className="h-px w-6 bg-accent/50" />
             {eyebrow}
           </p>
         ) : null}
-        <h1 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+        <h1 className="mt-2 text-xl font-semibold tracking-tight sm:text-2xl">
           {title}
         </h1>
         {description ? (
-          <p className="mt-2 max-w-2xl text-sm text-slate-600">{description}</p>
+          <p className="mt-1.5 max-w-2xl text-sm leading-relaxed text-muted">
+            {description}
+          </p>
         ) : null}
       </div>
       {action}

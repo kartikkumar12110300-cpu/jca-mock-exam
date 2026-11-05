@@ -7,6 +7,12 @@ import { formatDate, formatDateTime, formatMarks, formatPercent } from "@/lib/ut
 
 export const dynamic = "force-dynamic";
 
+const KIND_LABEL: Record<string, string> = {
+  full: "Full mock",
+  drill: "Drill",
+  learn: "Learn set",
+};
+
 export default async function AdminUserPage({
   params,
 }: {
@@ -27,13 +33,13 @@ export default async function AdminUserPage({
           <div className="flex gap-2">
             <Link
               href="/admin/users"
-              className="rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50"
+              className="rounded-md border border-line px-4 py-2 text-sm text-muted transition hover:border-accent/50 hover:text-ink"
             >
               All users
             </Link>
             <Link
               href="/admin"
-              className="rounded-xl bg-[#12211c] px-4 py-2 text-sm font-semibold text-white hover:bg-[#1b332b]"
+              className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-canvas transition hover:brightness-110"
             >
               Overview
             </Link>
@@ -41,10 +47,23 @@ export default async function AdminUserPage({
         }
       />
 
-      <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <StatCard label="Submitted" value={performance.submitted} hint={`${performance.inProgress} in progress`} />
-        <StatCard label="Average" value={formatPercent(performance.averagePercent)} hint="All submitted papers" />
-        <StatCard label="Best" value={formatPercent(performance.bestPercent)} hint="Highest paper score" />
+      <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        <StatCard
+          label="Submitted"
+          value={performance.submitted}
+          hint={`${performance.inProgress} in progress`}
+        />
+        <StatCard
+          label="Average net"
+          value={performance.submitted > 0 ? formatMarks(performance.averageNet) : "—"}
+          hint={`${formatPercent(performance.averagePercent)} average`}
+          tone="text-accent"
+        />
+        <StatCard
+          label="Best net"
+          value={performance.bestNet === null ? "—" : formatMarks(performance.bestNet)}
+          hint={`${performance.fullMocks} full mock${performance.fullMocks === 1 ? "" : "s"}`}
+        />
         <StatCard
           label="Account"
           value={performance.active ? "Active" : "Inactive"}
@@ -54,23 +73,23 @@ export default async function AdminUserPage({
 
       <div className="grid gap-6 lg:grid-cols-[1.2fr_1fr]">
         <Card className="p-0">
-          <div className="border-b border-slate-100 px-5 py-4">
-            <h2 className="text-sm font-semibold text-slate-900">Section accuracy</h2>
-            <p className="text-xs text-slate-500">Correct ÷ attempted for this candidate</p>
+          <div className="border-b border-line px-5 py-4">
+            <h2 className="text-sm font-semibold">Section accuracy</h2>
+            <p className="text-xs text-muted">Correct ÷ attempted for this candidate</p>
           </div>
-          <ul className="divide-y divide-slate-100">
+          <ul className="divide-y divide-line">
             {performance.sections.map((section) => (
               <li key={section.sectionId} className="px-5 py-3.5">
                 <div className="flex items-center justify-between gap-3">
-                  <p className="text-sm font-medium text-slate-800">{section.section}</p>
-                  <span className="text-xs font-semibold tabular-nums text-slate-700">
-                    {formatPercent(section.accuracy)}
+                  <p className="text-sm">{section.section}</p>
+                  <span className="font-mono text-xs">
+                    {section.total === 0 ? "—" : formatPercent(section.accuracy)}
                   </span>
                 </div>
                 <div className="mt-2">
                   <ProgressBar value={section.accuracy} />
                 </div>
-                <p className="mt-1 text-[11px] text-slate-400">
+                <p className="mt-1 text-[11px] text-muted">
                   {section.correct} correct · {section.wrong} wrong · {section.total} questions seen
                 </p>
               </li>
@@ -79,23 +98,21 @@ export default async function AdminUserPage({
         </Card>
 
         <Card className="p-0">
-          <div className="border-b border-slate-100 px-5 py-4">
-            <h2 className="text-sm font-semibold text-slate-900">Most missed</h2>
-            <p className="text-xs text-slate-500">Questions this candidate keeps getting wrong</p>
+          <div className="border-b border-line px-5 py-4">
+            <h2 className="text-sm font-semibold">Most missed</h2>
+            <p className="text-xs text-muted">Questions this candidate keeps getting wrong</p>
           </div>
           {performance.mostMissed.length === 0 ? (
-            <p className="px-5 py-8 text-sm text-slate-500">No wrong answers yet.</p>
+            <p className="px-5 py-8 text-sm text-muted">No wrong answers yet.</p>
           ) : (
-            <ol className="divide-y divide-slate-100">
+            <ol className="divide-y divide-line">
               {performance.mostMissed.map((question) => (
                 <li key={question.questionId} className="px-5 py-3.5">
                   <div className="flex items-center justify-between gap-3">
                     <Badge tone="blue">{question.section}</Badge>
-                    <span className="text-xs font-semibold text-rose-700">
-                      {question.wrong} wrong
-                    </span>
+                    <span className="font-mono text-xs text-bad">{question.wrong} wrong</span>
                   </div>
-                  <p className="mt-2 line-clamp-3 text-sm leading-5 text-slate-700">
+                  <p className="mt-2 line-clamp-3 text-sm leading-5 text-muted">
                     {question.stem}
                   </p>
                 </li>
@@ -106,43 +123,45 @@ export default async function AdminUserPage({
       </div>
 
       <Card className="p-0">
-        <div className="border-b border-slate-100 px-5 py-4">
-          <h2 className="text-sm font-semibold text-slate-900">Attempt history</h2>
-          <p className="text-xs text-slate-500">Latest twenty submitted papers</p>
+        <div className="border-b border-line px-5 py-4">
+          <h2 className="text-sm font-semibold">Attempt history</h2>
+          <p className="text-xs text-muted">Latest twenty submitted papers</p>
         </div>
 
         {performance.attempts.length === 0 ? (
-          <p className="px-5 py-8 text-sm text-slate-500">This candidate has not submitted a paper.</p>
+          <p className="px-5 py-8 text-sm text-muted">
+            This candidate has not submitted a paper.
+          </p>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
-              <thead className="bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
+              <thead className="bg-surface-2 text-[10px] uppercase tracking-widest text-muted">
                 <tr>
                   <th className="px-5 py-3 font-medium">Paper</th>
                   <th className="px-5 py-3 font-medium">Kind</th>
-                  <th className="px-5 py-3 font-medium">Score</th>
-                  <th className="px-5 py-3 font-medium">Percent</th>
+                  <th className="px-5 py-3 text-right font-medium">Net</th>
+                  <th className="px-5 py-3 text-right font-medium">Percent</th>
                   <th className="px-5 py-3 font-medium">Submitted</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100">
+              <tbody className="divide-y divide-line">
                 {performance.attempts.map((attempt) => (
-                  <tr key={attempt.id} className="hover:bg-slate-50/70">
+                  <tr key={attempt.id} className="transition hover:bg-surface-2/60">
                     <td className="max-w-xs px-5 py-3">
-                      <p className="truncate font-medium text-slate-800">{attempt.title}</p>
+                      <p className="truncate">{attempt.title}</p>
                     </td>
                     <td className="px-5 py-3">
                       <Badge tone={attempt.kind === "full" ? "blue" : "slate"}>
-                        {attempt.kind === "full" ? "Full mock" : "Drill"}
+                        {KIND_LABEL[attempt.kind] ?? attempt.kind}
                       </Badge>
                     </td>
-                    <td className="px-5 py-3 tabular-nums text-slate-800">
+                    <td className="px-5 py-3 text-right font-mono">
                       {formatMarks(attempt.score)}
                     </td>
-                    <td className="px-5 py-3 tabular-nums text-slate-800">
+                    <td className="px-5 py-3 text-right font-mono text-muted">
                       {formatPercent(attempt.percent)}
                     </td>
-                    <td className="whitespace-nowrap px-5 py-3 text-slate-500">
+                    <td className="whitespace-nowrap px-5 py-3 font-mono text-xs text-muted">
                       {formatDateTime(attempt.submittedAt)}
                     </td>
                   </tr>

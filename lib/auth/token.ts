@@ -12,6 +12,8 @@ export interface SessionPayload {
   username: string;
   role: Role;
   displayName: string;
+  /** Matches UserDoc.tokenVersion; a mismatch invalidates the session. */
+  ver: number;
 }
 
 function secret(): Uint8Array {
@@ -23,6 +25,7 @@ export async function createSessionToken(payload: SessionPayload): Promise<strin
     username: payload.username,
     role: payload.role,
     displayName: payload.displayName,
+    ver: payload.ver,
   })
     .setProtectedHeader({ alg: "HS256" })
     .setSubject(payload.sub)
@@ -55,6 +58,8 @@ export async function verifySessionToken(
       username: payload.username,
       role: payload.role,
       displayName: payload.displayName,
+      // Older tokens (minted before this field existed) map to version 0.
+      ver: typeof payload.ver === "number" ? payload.ver : 0,
     };
   } catch {
     return null;

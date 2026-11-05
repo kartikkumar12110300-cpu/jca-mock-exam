@@ -1,5 +1,9 @@
 import { z } from "zod";
-import { DRILL_COUNTS, SECTION_IDS } from "@/lib/exam/pattern";
+import {
+  DRILL_COUNTS,
+  LEARN_MAX_QUESTIONS,
+  SECTION_IDS,
+} from "@/lib/exam/pattern";
 
 export const loginSchema = z.object({
   username: z
@@ -21,6 +25,11 @@ export const createAttemptSchema = z.discriminatedUnion("kind", [
       .int()
       .refine((value) => (DRILL_COUNTS as readonly number[]).includes(value)),
     order: z.enum(["weak", "unseen", "random"]),
+  }),
+  z.object({
+    kind: z.literal("learn"),
+    sectionId: z.enum([...SECTION_IDS] as [string, ...string[]]).optional(),
+    count: z.number().int().min(1).max(LEARN_MAX_QUESTIONS).optional(),
   }),
 ]);
 

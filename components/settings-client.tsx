@@ -2,12 +2,20 @@
 
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
+import { cn } from "@/lib/utils";
+
+const INPUT =
+  "w-full rounded-md border border-line bg-surface-2 px-3 py-2.5 text-sm text-ink placeholder:text-muted focus-visible:border-accent/60";
+
+const BUTTON =
+  "rounded-md border border-line px-4 py-2 text-sm text-muted transition hover:border-accent/50 hover:text-ink disabled:opacity-50";
 
 export function SettingsClient() {
   const router = useRouter();
   const fileRef = useRef<HTMLInputElement>(null);
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
+  const [restoreMode, setRestoreMode] = useState<"merge" | "replace">("merge");
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
@@ -30,7 +38,8 @@ export function SettingsClient() {
       }
       setCurrentPassword("");
       setNewPassword("");
-      setMessage("Password updated.");
+      setMessage("Password updated. Other sessions have been signed out.");
+      router.refresh();
     } catch {
       setError("Network error. Please try again.");
     } finally {
@@ -61,6 +70,16 @@ export function SettingsClient() {
   }
 
   async function restoreBackup(file: File) {
+    if (
+      restoreMode === "replace" &&
+      !window.confirm(
+        "Replace mode deletes the attempts currently on this account before restoring. Continue?",
+      )
+    ) {
+      if (fileRef.current) fileRef.current.value = "";
+      return;
+    }
+
     setBusy("restore");
     setMessage(null);
     setError(null);
@@ -70,18 +89,21 @@ export function SettingsClient() {
       const response = await fetch("/api/restore", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({ ...payload, mode: restoreMode }),
       });
       const data = (await response.json()) as {
         ok?: boolean;
         error?: string;
         attempts?: number;
+        skipped?: number;
       };
       if (!response.ok || !data.ok) {
         setError(data.error || "Could not restore backup");
         return;
       }
-      setMessage(`Restored ${data.attempts ?? 0} attempts.`);
+      setMessage(
+        `Restored ${data.attempts ?? 0} attempts${data.skipped ? ` · ${data.skipped} skipped` : ""} (${restoreMode}).`,
+      );
       router.refresh();
     } catch {
       setError("Invalid backup file.");
@@ -115,10 +137,11 @@ export function SettingsClient() {
 
   return (
     <div className="grid gap-6 lg:grid-cols-2">
-      <section className="rounded-2xl border border-slate-200 bg-white p-5">
-        <h2 className="text-lg font-semibold text-slate-900">Change password</h2>
-        <p className="mt-1 text-sm text-slate-600">
-          Your password is stored as a bcrypt hash. Only you can change it.
+      <section className="rounded-xl border border-line bg-surface p-5">
+        <h2 className="text-base font-semibold">Change password</h2>
+        <p className="mt-1 text-sm text-muted">
+          Your password is stored as a bcrypt hash. Changing it signs out every
+          other session.
         </p>
         <form onSubmit={changePassword} className="mt-4 space-y-3">
           <input
@@ -128,7 +151,7 @@ export function SettingsClient() {
             placeholder="Current password"
             value={currentPassword}
             onChange={(event) => setCurrentPassword(event.target.value)}
-            className="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm"
+            className={INPUT}
           />
           <input
             type="password"
@@ -138,29 +161,73 @@ export function SettingsClient() {
             placeholder="New password (6+ characters)"
             value={newPassword}
             onChange={(event) => setNewPassword(event.target.value)}
-            className="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm"
+            className={INPUT}
           />
           <button
             type="submit"
             disabled={busy === "password"}
-            className="rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white disabled:opacity-50"
+            className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-canvas transition hover:brightness-110 disabled:opacity-50"
           >
             {busy === "password" ? "Updating…" : "Update password"}
           </button>
         </form>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-5">
-        <h2 className="text-lg font-semibold text-slate-900">Your data</h2>
-        <p className="mt-1 text-sm text-slate-600">
+      <section className="rounded-xl border border-line bg-surface p-5">
+        <h2 className="text-base font-semibold">Your data</h2>
+        <p className="mt-1 text-sm text-muted">
           Attempts, answers, and history are private to your account.
         </p>
+
+        <fieldset className="mt-4">
+          <legend className="text-[11px] font-medium uppercase tracking-widest text-muted">
+            Restore mode
+          </legend>
+          <div className="mt-2 grid gap-2 sm:grid-cols-2">
+            {[
+              {
+                value: "merge" as const,
+                title: "Merge",
+                hint: "Keep current attempts and add the file's.",
+              },
+              {
+                value: "replace" as const,
+                title: "Replace",
+                hint: "Delete current attempts first.",
+              },
+            ].map((option) => (
+              <label
+                key={option.value}
+                className={cn(
+                  "cursor-pointer rounded-lg border p-3 transition",
+                  restoreMode === option.value
+                    ? "border-accent/60 bg-accent/5"
+                    : "border-line hover:border-muted/50",
+                )}
+              >
+                <span className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="restoreMode"
+                    value={option.value}
+                    checked={restoreMode === option.value}
+                    onChange={() => setRestoreMode(option.value)}
+                    className="accent-[var(--color-accent)]"
+                  />
+                  <span className="text-sm font-medium">{option.title}</span>
+                </span>
+                <span className="mt-1 block pl-6 text-xs text-muted">{option.hint}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+
         <div className="mt-4 flex flex-wrap gap-2">
           <button
             type="button"
             onClick={downloadBackup}
             disabled={busy === "backup"}
-            className="rounded-xl border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-50"
+            className={BUTTON}
           >
             {busy === "backup" ? "Preparing…" : "Download backup"}
           </button>
@@ -168,15 +235,15 @@ export function SettingsClient() {
             type="button"
             onClick={() => fileRef.current?.click()}
             disabled={busy === "restore"}
-            className="rounded-xl border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-50"
+            className={BUTTON}
           >
-            {busy === "restore" ? "Restoring…" : "Restore backup"}
+            {busy === "restore" ? "Restoring…" : `Restore (${restoreMode})`}
           </button>
           <button
             type="button"
             onClick={resetData}
             disabled={busy === "reset"}
-            className="rounded-xl border border-rose-300 px-4 py-2 text-sm font-medium text-rose-700 hover:bg-rose-50 disabled:opacity-50"
+            className="rounded-md border border-bad/40 px-4 py-2 text-sm text-bad transition hover:bg-bad/10 disabled:opacity-50"
           >
             {busy === "reset" ? "Deleting…" : "Reset my data"}
           </button>
@@ -194,14 +261,14 @@ export function SettingsClient() {
       </section>
 
       {message ? (
-        <p className="rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800 lg:col-span-2">
+        <p className="rounded-lg border border-ok/40 bg-ok/10 px-4 py-3 text-sm text-ok lg:col-span-2">
           {message}
         </p>
       ) : null}
       {error ? (
         <p
           role="alert"
-          className="rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-800 lg:col-span-2"
+          className="rounded-lg border border-bad/40 bg-bad/10 px-4 py-3 text-sm text-bad lg:col-span-2"
         >
           {error}
         </p>

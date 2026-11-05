@@ -8,6 +8,9 @@ export const dynamic = "force-dynamic";
 
 const PAGE_SIZE = 12;
 
+const FIELD =
+  "mt-1 w-full rounded-md border border-line bg-surface-2 px-3 py-2 text-sm text-ink focus-visible:border-accent/60";
+
 function pageHref(params: {
   section?: string;
   topic?: string;
@@ -54,14 +57,10 @@ export default async function BankPage({
       <Card>
         <form method="get" className="grid gap-3 sm:grid-cols-[1fr_1fr_1.4fr_auto]">
           <label className="block">
-            <span className="text-xs font-medium uppercase tracking-wide text-slate-500">
+            <span className="text-[11px] font-medium uppercase tracking-widest text-muted">
               Section
             </span>
-            <select
-              name="section"
-              defaultValue={params.section ?? ""}
-              className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm"
-            >
+            <select name="section" defaultValue={params.section ?? ""} className={FIELD}>
               <option value="">All sections</option>
               {SECTIONS.map((section) => (
                 <option key={section.id} value={section.id}>
@@ -72,14 +71,10 @@ export default async function BankPage({
           </label>
 
           <label className="block">
-            <span className="text-xs font-medium uppercase tracking-wide text-slate-500">
+            <span className="text-[11px] font-medium uppercase tracking-widest text-muted">
               Topic
             </span>
-            <select
-              name="topic"
-              defaultValue={params.topic ?? ""}
-              className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm"
-            >
+            <select name="topic" defaultValue={params.topic ?? ""} className={FIELD}>
               <option value="">All topics</option>
               {result.topics.map((topic) => (
                 <option key={topic} value={topic}>
@@ -90,27 +85,27 @@ export default async function BankPage({
           </label>
 
           <label className="block">
-            <span className="text-xs font-medium uppercase tracking-wide text-slate-500">
+            <span className="text-[11px] font-medium uppercase tracking-widest text-muted">
               Search
             </span>
             <input
               name="q"
               defaultValue={params.q ?? ""}
               placeholder="Search question, topic, tag"
-              className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm"
+              className={FIELD}
             />
           </label>
 
           <div className="flex items-end gap-2">
             <button
               type="submit"
-              className="rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800"
+              className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-canvas transition hover:brightness-110"
             >
               Filter
             </button>
             <Link
               href="/bank"
-              className="rounded-xl border border-slate-300 px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50"
+              className="rounded-md border border-line px-4 py-2 text-sm text-muted transition hover:border-accent/50 hover:text-ink"
             >
               Clear
             </Link>
@@ -119,26 +114,29 @@ export default async function BankPage({
       </Card>
 
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="text-sm text-slate-500">
-          Showing <span className="font-medium text-slate-700">{start}–{end}</span> of{" "}
-          <span className="font-medium text-slate-700">{result.total}</span> questions
+        <p className="text-sm text-muted">
+          Showing{" "}
+          <span className="font-mono text-ink">
+            {start}–{end}
+          </span>{" "}
+          of <span className="font-mono text-ink">{result.total}</span> questions
         </p>
         <div className="flex items-center gap-2 text-sm">
           {result.page > 1 ? (
             <Link
               href={pageHref({ ...params, page: result.page - 1 })}
-              className="rounded-lg border border-slate-300 px-3 py-1.5 font-medium text-slate-700 hover:bg-slate-50"
+              className="rounded-md border border-line px-3 py-1.5 text-muted transition hover:border-accent/50 hover:text-ink"
             >
               Previous
             </Link>
           ) : null}
-          <span className="text-slate-500">
+          <span className="font-mono text-xs text-muted">
             Page {result.page} / {totalPages}
           </span>
           {result.page < totalPages ? (
             <Link
               href={pageHref({ ...params, page: result.page + 1 })}
-              className="rounded-lg border border-slate-300 px-3 py-1.5 font-medium text-slate-700 hover:bg-slate-50"
+              className="rounded-md border border-line px-3 py-1.5 text-muted transition hover:border-accent/50 hover:text-ink"
             >
               Next
             </Link>
@@ -148,8 +146,8 @@ export default async function BankPage({
 
       {result.items.length === 0 ? (
         <Card className="border-dashed py-12 text-center">
-          <p className="text-sm text-slate-600">No questions match these filters.</p>
-          <Link href="/bank" className="mt-2 inline-block text-sm font-medium text-emerald-700">
+          <p className="text-sm text-muted">No questions match these filters.</p>
+          <Link href="/bank" className="mt-2 inline-block text-sm font-medium text-accent">
             Clear filters
           </Link>
         </Card>
@@ -161,18 +159,24 @@ export default async function BankPage({
                 <div className="flex flex-wrap items-center gap-2">
                   <Badge tone="blue">{sectionName(question.sectionId)}</Badge>
                   {question.topic ? <Badge>{question.topic}</Badge> : null}
-                  <Badge tone={question.difficulty === "hard" ? "red" : question.difficulty === "easy" ? "green" : "amber"}>
+                  <Badge
+                    tone={
+                      question.difficulty === "hard"
+                        ? "red"
+                        : question.difficulty === "easy"
+                          ? "green"
+                          : "amber"
+                    }
+                  >
                     {question.difficulty}
                   </Badge>
                   {question.isBonus ? <Badge tone="green">Bonus</Badge> : null}
-                  <span className="ml-auto text-xs tabular-nums text-slate-400">
+                  <span className="ml-auto font-mono text-xs text-muted">
                     {start + index}
                   </span>
                 </div>
 
-                <p className="mt-3 whitespace-pre-line text-sm leading-6 text-slate-900">
-                  {question.stem}
-                </p>
+                <p className="mt-3 whitespace-pre-line text-sm leading-6">{question.stem}</p>
 
                 <ul className="mt-3 grid gap-1.5 sm:grid-cols-2">
                   {question.options.map((option, optionIndex) => {
@@ -182,18 +186,16 @@ export default async function BankPage({
                         key={optionIndex}
                         className={
                           correct
-                            ? "rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm text-emerald-900"
-                            : "rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-700"
+                            ? "rounded-md border border-ok/50 bg-ok/10 px-3 py-2 text-sm"
+                            : "rounded-md border border-line px-3 py-2 text-sm text-muted"
                         }
                       >
-                        <span className="mr-2 font-semibold text-slate-400">
+                        <span className="mr-2 font-mono text-xs text-muted">
                           {String.fromCharCode(65 + optionIndex)}
                         </span>
                         {option}
                         {correct ? (
-                          <span className="ml-2 text-xs font-medium text-emerald-700">
-                            correct
-                          </span>
+                          <span className="ml-2 text-xs font-medium text-ok">correct</span>
                         ) : null}
                       </li>
                     );
@@ -201,13 +203,11 @@ export default async function BankPage({
                 </ul>
 
                 {question.explanation ? (
-                  <details className="mt-3 rounded-xl bg-slate-50 px-3 py-2">
-                    <summary className="cursor-pointer text-xs font-medium text-slate-600">
+                  <details className="mt-3 rounded-lg border border-line bg-surface-2 px-3 py-2">
+                    <summary className="cursor-pointer text-xs font-medium text-muted">
                       Explanation
                     </summary>
-                    <p className="mt-2 text-sm leading-6 text-slate-700">
-                      {question.explanation}
-                    </p>
+                    <p className="mt-2 text-sm leading-6 text-muted">{question.explanation}</p>
                   </details>
                 ) : null}
               </Card>

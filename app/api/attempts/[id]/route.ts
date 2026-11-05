@@ -16,7 +16,9 @@ export async function GET(
     const view = await getAttemptForUser(id, user.id);
     if (!view) return failure("Attempt not found", 404);
 
-    const submitted = view.attempt.status === "submitted";
+    // Learn mode reveals the key immediately; a mock or drill only after submit.
+    const revealKey =
+      view.attempt.status === "submitted" || view.test.kind === "learn";
     return json({
       ok: true,
       attempt: {
@@ -40,7 +42,7 @@ export async function GET(
         difficulty: question.difficulty,
         stem: question.stem,
         options: question.options,
-        ...(submitted
+        ...(revealKey
           ? {
               correctIndex: question.correctIndex,
               explanation: question.explanation,

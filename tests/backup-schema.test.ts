@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { backupSchema } from "@/lib/backup";
+import { backupSchema, restoreModeSchema } from "@/lib/backup";
 
 const valid = {
   version: 1,
@@ -62,5 +62,19 @@ describe("backup schema", () => {
     const { exportedAt: _ignored, ...rest } = valid;
     void _ignored;
     expect(backupSchema.safeParse(rest).success).toBe(false);
+  });
+
+  it("accepts learn sessions in a backup", () => {
+    const parsed = backupSchema.safeParse({
+      ...valid,
+      tests: [{ ...valid.tests[0], kind: "learn" }],
+    });
+    expect(parsed.success).toBe(true);
+  });
+
+  it("accepts only the two documented restore modes", () => {
+    expect(restoreModeSchema.safeParse("merge").success).toBe(true);
+    expect(restoreModeSchema.safeParse("replace").success).toBe(true);
+    expect(restoreModeSchema.safeParse("overwrite").success).toBe(false);
   });
 });

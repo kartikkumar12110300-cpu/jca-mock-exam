@@ -40,12 +40,12 @@ export function StartMockButton() {
         type="button"
         onClick={start}
         disabled={loading}
-        className="rounded-xl bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-700 disabled:opacity-50"
+        className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-canvas transition hover:brightness-110 disabled:opacity-50"
       >
         {loading ? "Building your paper…" : "Start full mock"}
       </button>
       {error ? (
-        <p role="alert" className="text-sm text-rose-700">
+        <p role="alert" className="text-xs text-bad">
           {error}
         </p>
       ) : null}

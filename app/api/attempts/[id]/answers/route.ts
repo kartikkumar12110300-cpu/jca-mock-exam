@@ -31,9 +31,11 @@ export async function POST(
           ? "Time is up. The paper was submitted."
           : result.reason === "submitted"
             ? "This paper is already submitted."
-            : result.reason === "invalid_question"
-              ? "Question does not belong to this paper."
-              : "Attempt not found";
+            : result.reason === "locked"
+              ? "This answer is locked. Move on to the next question."
+              : result.reason === "invalid_question"
+                ? "Question does not belong to this paper."
+                : "Attempt not found";
       return failure(message, status);
     }
 

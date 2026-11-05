@@ -7,6 +7,8 @@ interface AttemptAggregate {
   attempts: number;
   avgPercent: number;
   bestPercent: number;
+  avgNet: number;
+  bestNet: number;
   lastSubmittedAt: Date | null;
 }
 
@@ -21,6 +23,8 @@ export interface UserSummary {
   attempts: number;
   avgPercent: number;
   bestPercent: number;
+  avgNet: number;
+  bestNet: number;
   lastSubmittedAt: Date | null;
 }
 
@@ -36,6 +40,8 @@ export async function listUserSummaries(): Promise<UserSummary[]> {
             attempts: { $sum: 1 },
             avgPercent: { $avg: "$score.percent" },
             bestPercent: { $max: "$score.percent" },
+            avgNet: { $avg: "$score.total" },
+            bestNet: { $max: "$score.total" },
             lastSubmittedAt: { $max: "$submittedAt" },
           },
         },
@@ -58,6 +64,8 @@ export async function listUserSummaries(): Promise<UserSummary[]> {
       attempts: stats?.attempts ?? 0,
       avgPercent: round(stats?.avgPercent ?? 0),
       bestPercent: round(stats?.bestPercent ?? 0),
+      avgNet: round(stats?.avgNet ?? 0),
+      bestNet: round(stats?.bestNet ?? 0),
       lastSubmittedAt: stats?.lastSubmittedAt ?? null,
     };
   });
@@ -96,7 +104,10 @@ export interface AdminOverview {
   activeUsers: number;
   submittedAttempts: number;
   inProgressAttempts: number;
+  /** Submitted full mocks only — the papers the pass mark applies to. */
+  fullMocks: number;
   averagePercent: number;
+  averageNet: number;
   passRate: number;
   sections: SectionAccuracy[];
   recentAttempts: RecentAttempt[];
@@ -116,13 +127,32 @@ export async function getAdminOverview(): Promise<AdminOverview> {
     (await users()).find({}).toArray(),
     (await attempts()).countDocuments({ status: "submitted" }),
     (await attempts()).countDocuments({ status: "in_progress" }),
+    // Pass mark and average are only meaningful for full mocks. Drills are
+    // short, so counting a 10-question drill as "below pass" would be a lie.
     (await attempts())
-      .aggregate<{ avgPercent: number; passCount: number }>([
+      .aggregate<{
+        avgPercent: number;
+        avgNet: number;
+        passCount: number;
+        fullMocks: number;
+      }>([
         { $match: { status: "submitted" } },
+        {
+          $lookup: {
+            from: "tests",
+            localField: "testId",
+            foreignField: "_id",
+            as: "test",
+          },
+        },
+        { $unwind: "$test" },
+        { $match: { "test.kind": "full" } },
         {
           $group: {
             _id: null,
+            fullMocks: { $sum: 1 },
             avgPercent: { $avg: "$score.percent" },
+            avgNet: { $avg: "$score.total" },
             passCount: {
               $sum: {
                 $cond: [{ $gte: ["$score.total", EXAM_PATTERN.passMark] }, 1, 0],
@@ -167,6 +197,7 @@ export async function getAdminOverview(): Promise<AdminOverview> {
   ]);
 
   const stats = scoreStats[0];
+  const fullMocks = stats?.fullMocks ?? 0;
   const sectionMap = new Map(sectionRows.map((row) => [row._id, row]));
 
   const sections: SectionAccuracy[] = EXAM_PATTERN.sections.map((section) => {
@@ -192,9 +223,10 @@ export async function getAdminOverview(): Promise<AdminOverview> {
     activeUsers: userDocs.filter((user) => user.role === "user" && user.active).length,
     submittedAttempts: submittedCount,
     inProgressAttempts: inProgressCount,
+    fullMocks,
     averagePercent: round(stats?.avgPercent ?? 0),
-    passRate:
-      submittedCount > 0 ? round(((stats?.passCount ?? 0) / submittedCount) * 100) : 0,
+    averageNet: round(stats?.avgNet ?? 0),
+    passRate: fullMocks > 0 ? round(((stats?.passCount ?? 0) / fullMocks) * 100) : 0,
     sections,
     recentAttempts,
     mostMissed,
@@ -264,8 +296,12 @@ export interface UserPerformance {
   attempts: RecentAttempt[];
   submitted: number;
   inProgress: number;
+  fullMocks: number;
   averagePercent: number;
   bestPercent: number;
+  averageNet: number;
+  bestNet: number | null;
+  lastNet: number | null;
   sections: SectionAccuracy[];
   mostMissed: MissedQuestion[];
 }
@@ -282,6 +318,17 @@ export async function getUserPerformance(
     .toArray();
   const submittedDocs = attemptDocs.filter((doc) => doc.status === "submitted");
 
+  const testDocs =
+    attemptDocs.length === 0
+      ? []
+      : await (await tests())
+          .find({ _id: { $in: attemptDocs.map((doc) => doc.testId) } })
+          .toArray();
+  const kindById = new Map(testDocs.map((test) => [test._id, test.kind]));
+  const fullMocks = submittedDocs.filter(
+    (doc) => kindById.get(doc.testId) === "full",
+  ).length;
+
   const avgPercent =
     submittedDocs.length > 0
       ? submittedDocs.reduce((sum, doc) => sum + (doc.score?.percent ?? 0), 0) /
@@ -290,6 +337,11 @@ export async function getUserPerformance(
   const bestPercent =
     submittedDocs.length > 0
       ? Math.max(...submittedDocs.map((doc) => doc.score?.percent ?? 0))
+      : 0;
+  const avgNet =
+    submittedDocs.length > 0
+      ? submittedDocs.reduce((sum, doc) => sum + (doc.score?.total ?? 0), 0) /
+        submittedDocs.length
       : 0;
 
   const sectionTotals = new Map<
@@ -344,8 +396,15 @@ export async function getUserPerformance(
     attempts: await hydrateAttempts(submittedDocs.slice(0, 20)),
     submitted: submittedDocs.length,
     inProgress: attemptDocs.length - submittedDocs.length,
+    fullMocks,
     averagePercent: round(avgPercent),
     bestPercent: round(bestPercent),
+    averageNet: round(avgNet),
+    bestNet:
+      submittedDocs.length > 0
+        ? Math.max(...submittedDocs.map((doc) => doc.score?.total ?? 0))
+        : null,
+    lastNet: submittedDocs[0] ? (submittedDocs[0].score?.total ?? 0) : null,
     sections,
     mostMissed: await hydrateMissed(missedRows),
   };
