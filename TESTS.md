@@ -1,6 +1,9 @@
 # Test checklist
 
-Last run: 2026-11-03. Unit suite: **30 passed / 30**. Production build and lint pass.
+Last local run: 2026-11-18. Unit suite: **43 passed / 43** across 8 files.
+`npm run typecheck`, `npm run lint` and `npm run build` also pass.
+The integration and live-deployment checks below were performed on 2026-11-03/04 and
+remain recorded as historical verification.
 
 ## Unit (`npm test`)
 
