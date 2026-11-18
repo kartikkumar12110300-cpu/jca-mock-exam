@@ -14,6 +14,8 @@ const eslintConfig = [
       ".next/**",
       "node_modules/**",
       "jca-mock-exam-vault/**",
+      "data/**",
+      "dist/**",
       "coverage/**",
       "next-env.d.ts",
     ],

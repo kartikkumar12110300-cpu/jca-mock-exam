@@ -19,6 +19,10 @@ jca-mock-exam-vault/
 coverage/
 *.tsbuildinfo
 
+# local artifacts
+data/
+dist/
+
 # os
 .DS_Store
 Thumbs.db
